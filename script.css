@@ -1,7 +1,7 @@
 /* =====================================================================
-   ST. CLARE MONASTERY HELICICULTURE — MAIN STYLESHEET
+   ST. CLARE MONASTERY HELICICULTURE — MAIN STYLESHEET  (V2 · BOOM)
    File: style.css
-   Purpose: Mathematical light effects + monastic brown theme
+   Purpose: Explosive radiant light + monastic brown theme
 ===================================================================== */
 
 /* ---------------------------------------------------------------------
@@ -16,7 +16,6 @@
 }
 
 :root {
-  /* Monastic brown palette */
   --brown-deepest: #1e140e;
   --brown-deep:    #2b1c11;
   --brown-monastic:#4a2c1b;
@@ -24,19 +23,17 @@
   --brown-light:   #5e3a24;
   --brown-soft:    #7d5d3f;
 
-  /* Gold / light palette */
   --gold:        #b58b5a;
   --gold-light:  #dbbd97;
   --gold-pale:   #e6c8a0;
   --gold-shine:  #ffe9c4;
   --gold-blaze:  #fff6e2;
+  --gold-super:  #fffaf0;
 
-  /* Cream / text palette */
   --cream:        #f5efe6;
   --cream-soft:   #d9c2a7;
   --cream-bright: #f3e3d3;
 
-  /* WhatsApp */
   --green-wa:       #1f3a1f;
   --green-wa-light: #b5e3b5;
 }
@@ -59,70 +56,106 @@ body {
 }
 
 /* ---------------------------------------------------------------------
-   2. MATHEMATICAL SPARKLING BACKGROUND
-   Multiple radial gradients that pulse at different rates & positions.
-   Each gradient is a "ray of light" radiating from a corner or center.
+   2. EXPLOSIVE SPARKLING BACKGROUND — layered radiant light
 --------------------------------------------------------------------- */
 body::before {
   content: "";
   position: fixed;
-  inset: -10%;              /* Overshoot to hide edges */
-  z-index: -2;
+  inset: -15%;
+  z-index: -3;
   pointer-events: none;
 
-  /* Multiple radial light sources = "sparkling stars" */
   background-image:
-    radial-gradient(circle at 15% 20%, rgba(255, 233, 196, 0.10) 0%, transparent 35%),
-    radial-gradient(circle at 85% 15%, rgba(219, 189, 151, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 75% 85%, rgba(255, 233, 196, 0.09) 0%, transparent 38%),
-    radial-gradient(circle at 20% 90%, rgba(230, 200, 160, 0.07) 0%, transparent 42%),
-    radial-gradient(circle at 50% 50%, rgba(181, 139, 90, 0.05) 0%, transparent 55%);
+    radial-gradient(circle at 12% 18%, rgba(255, 246, 226, 0.22) 0%, transparent 38%),
+    radial-gradient(circle at 88% 12%, rgba(255, 233, 196, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 78% 82%, rgba(255, 246, 226, 0.20) 0%, transparent 40%),
+    radial-gradient(circle at 22% 88%, rgba(230, 200, 160, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(181, 139, 90, 0.14) 0%, transparent 60%);
 
-  animation: bgDrift 18s ease-in-out infinite alternate;
+  animation: bgExplode 12s ease-in-out infinite alternate;
+  filter: blur(0.5px);
 }
 
-/* A slowly rotating "star of light" layer */
+/* Rotating star field — big slow rays */
 body::after {
   content: "";
   position: fixed;
-  inset: -20%;
-  z-index: -1;
+  inset: -25%;
+  z-index: -2;
   pointer-events: none;
 
   background:
     conic-gradient(
       from 0deg at 50% 50%,
       transparent 0deg,
-      rgba(255, 233, 196, 0.035) 15deg,
-      transparent 30deg,
+      rgba(255, 233, 196, 0.10) 8deg,
+      transparent 16deg,
+      transparent 40deg,
+      rgba(219, 189, 151, 0.08) 48deg,
+      transparent 56deg,
       transparent 90deg,
-      rgba(219, 189, 151, 0.03) 105deg,
-      transparent 120deg,
+      rgba(255, 246, 226, 0.11) 98deg,
+      transparent 106deg,
+      transparent 130deg,
+      rgba(219, 189, 151, 0.08) 138deg,
+      transparent 146deg,
       transparent 180deg,
-      rgba(255, 233, 196, 0.035) 195deg,
-      transparent 210deg,
+      rgba(255, 233, 196, 0.10) 188deg,
+      transparent 196deg,
+      transparent 220deg,
+      rgba(219, 189, 151, 0.08) 228deg,
+      transparent 236deg,
       transparent 270deg,
-      rgba(219, 189, 151, 0.03) 285deg,
-      transparent 300deg
+      rgba(255, 246, 226, 0.11) 278deg,
+      transparent 286deg,
+      transparent 310deg,
+      rgba(219, 189, 151, 0.08) 318deg,
+      transparent 326deg,
+      transparent 360deg
     );
 
-  animation: rotateStar 60s linear infinite;
-  opacity: 0.9;
+  animation: rotateStar 40s linear infinite;
+  opacity: 1;
+  filter: blur(4px);
 }
 
-@keyframes bgDrift {
+/* Extra third layer — fast pulsing "spark" dots across the page */
+body > .hero::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 8% 15%,  rgba(255, 250, 240, 0.9) 0%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 25% 40%, rgba(255, 233, 196, 0.8) 0%, transparent 60%),
+    radial-gradient(2px 2px at 68% 22%, rgba(255, 246, 226, 0.95) 0%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 82% 68%, rgba(255, 233, 196, 0.85) 0%, transparent 60%),
+    radial-gradient(2px 2px at 45% 85%, rgba(255, 250, 240, 0.9) 0%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 12% 72%, rgba(219, 189, 151, 0.85) 0%, transparent 60%),
+    radial-gradient(2px 2px at 92% 35%, rgba(255, 233, 196, 0.9) 0%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 55% 55%, rgba(255, 246, 226, 0.9) 0%, transparent 60%);
+  animation: sparkleField 4s ease-in-out infinite;
+}
+
+@keyframes bgExplode {
   0% {
     transform: translate(0, 0) scale(1);
-    filter: brightness(1);
+    filter: brightness(1) blur(0.5px);
   }
   50% {
-    transform: translate(-1.5%, 1.5%) scale(1.03);
-    filter: brightness(1.15);
+    transform: translate(-1.5%, 1.5%) scale(1.05);
+    filter: brightness(1.35) blur(1px);
   }
   100% {
-    transform: translate(1.5%, -1.5%) scale(1);
-    filter: brightness(1);
+    transform: translate(1.5%, -1.5%) scale(1.02);
+    filter: brightness(1.1) blur(0.5px);
   }
+}
+
+@keyframes sparkleField {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.05); }
 }
 
 @keyframes rotateStar {
@@ -131,7 +164,7 @@ body::after {
 }
 
 /* ---------------------------------------------------------------------
-   3. HERO SECTION
+   3. HERO
 --------------------------------------------------------------------- */
 .hero {
   position: relative;
@@ -140,190 +173,289 @@ body::after {
   border-bottom: 3px solid var(--gold);
   overflow: hidden;
   z-index: 1;
+  isolation: isolate;
+}
+
+/* Big warm radial pool behind the hero */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -20% -10% 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at 50% 30%,
+    rgba(255, 233, 196, 0.22) 0%,
+    rgba(219, 189, 151, 0.10) 30%,
+    transparent 65%);
+  animation: heroGlow 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes heroGlow {
+  from { opacity: 0.7; transform: scale(1); }
+  to   { opacity: 1;   transform: scale(1.08); }
 }
 
 /* ---------------------------------------------------------------------
-   4. THE LOGO — "STAR OF SNAILS BLOOMING"
-   Multiple concentric halos + rotating rays + breathing pulse.
+   4. THE LOGO — "STAR OF SNAILS" EXPLOSION
 --------------------------------------------------------------------- */
 .hero-logo-wrap {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 260px;
   margin: 0 auto 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
 }
 
-/* Layer 1: Pulsing halo rings behind the logo */
+/* Layer 1: Deep pulsing halo */
 .hero-logo-wrap::before {
   content: "";
   position: absolute;
-  inset: -40%;
+  inset: -60%;
   border-radius: 50%;
   background:
     radial-gradient(circle,
-      rgba(255, 246, 226, 0.35) 0%,
-      rgba(230, 200, 160, 0.18) 25%,
-      rgba(181, 139, 90, 0.10) 45%,
-      transparent 70%);
-  filter: blur(6px);
-  animation: logoBreathe 4.5s ease-in-out infinite;
+      rgba(255, 250, 240, 0.55) 0%,
+      rgba(255, 233, 196, 0.32) 18%,
+      rgba(230, 200, 160, 0.20) 35%,
+      rgba(181, 139, 90, 0.12) 55%,
+      transparent 75%);
+  filter: blur(10px);
+  animation: logoBreathe 3.6s ease-in-out infinite;
   z-index: 0;
+  pointer-events: none;
 }
 
-/* Layer 2: Rotating "star of snails" — conic rays around the logo */
+/* Layer 2: FAST rotating "star of snails" — 16 rays */
 .hero-logo-wrap::after {
   content: "";
   position: absolute;
-  inset: -55%;
+  inset: -70%;
   border-radius: 50%;
   background:
     conic-gradient(
       from 0deg at 50% 50%,
       transparent 0deg,
-      rgba(255, 233, 196, 0.40) 8deg,
-      transparent 16deg,
-      transparent 45deg,
-      rgba(219, 189, 151, 0.30) 53deg,
-      transparent 61deg,
-      transparent 90deg,
-      rgba(255, 246, 226, 0.42) 98deg,
-      transparent 106deg,
-      transparent 135deg,
-      rgba(219, 189, 151, 0.28) 143deg,
-      transparent 151deg,
+      rgba(255, 250, 240, 0.85) 4deg,
+      rgba(255, 233, 196, 0.45) 8deg,
+      transparent 14deg,
+
+      transparent 30deg,
+      rgba(255, 246, 226, 0.75) 34deg,
+      rgba(219, 189, 151, 0.40) 38deg,
+      transparent 44deg,
+
+      transparent 75deg,
+      rgba(255, 250, 240, 0.85) 79deg,
+      rgba(255, 233, 196, 0.45) 83deg,
+      transparent 89deg,
+
+      transparent 105deg,
+      rgba(255, 246, 226, 0.75) 109deg,
+      rgba(219, 189, 151, 0.40) 113deg,
+      transparent 119deg,
+
+      transparent 150deg,
+      rgba(255, 250, 240, 0.85) 154deg,
+      rgba(255, 233, 196, 0.45) 158deg,
+      transparent 164deg,
+
       transparent 180deg,
-      rgba(255, 233, 196, 0.40) 188deg,
-      transparent 196deg,
+      rgba(255, 246, 226, 0.75) 184deg,
+      rgba(219, 189, 151, 0.40) 188deg,
+      transparent 194deg,
+
       transparent 225deg,
-      rgba(219, 189, 151, 0.30) 233deg,
-      transparent 241deg,
-      transparent 270deg,
-      rgba(255, 246, 226, 0.42) 278deg,
-      transparent 286deg,
-      transparent 315deg,
-      rgba(219, 189, 151, 0.28) 323deg,
-      transparent 331deg,
+      rgba(255, 250, 240, 0.85) 229deg,
+      rgba(255, 233, 196, 0.45) 233deg,
+      transparent 239deg,
+
+      transparent 255deg,
+      rgba(255, 246, 226, 0.75) 259deg,
+      rgba(219, 189, 151, 0.40) 263deg,
+      transparent 269deg,
+
+      transparent 300deg,
+      rgba(255, 250, 240, 0.85) 304deg,
+      rgba(255, 233, 196, 0.45) 308deg,
+      transparent 314deg,
+
+      transparent 330deg,
+      rgba(255, 246, 226, 0.75) 334deg,
+      rgba(219, 189, 151, 0.40) 338deg,
+      transparent 344deg,
+
       transparent 360deg
     );
-  animation: rotateStar 22s linear infinite;
-  filter: blur(3px);
-  opacity: 0.95;
+  animation: rotateStarFast 14s linear infinite;
+  filter: blur(4px);
+  opacity: 1;
   z-index: 0;
   pointer-events: none;
 }
 
-/* The actual logo image */
+/* Layer 3: A wider, slower second ring for depth */
+.hero-logo-wrap .halo-outer {
+  position: absolute;
+  inset: -95%;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      from 90deg at 50% 50%,
+      transparent 0deg,
+      rgba(255, 233, 196, 0.35) 5deg,
+      transparent 12deg,
+      transparent 60deg,
+      rgba(255, 246, 226, 0.30) 65deg,
+      transparent 72deg,
+      transparent 120deg,
+      rgba(255, 233, 196, 0.35) 125deg,
+      transparent 132deg,
+      transparent 180deg,
+      rgba(255, 246, 226, 0.30) 185deg,
+      transparent 192deg,
+      transparent 240deg,
+      rgba(255, 233, 196, 0.35) 245deg,
+      transparent 252deg,
+      transparent 300deg,
+      rgba(255, 246, 226, 0.30) 305deg,
+      transparent 312deg,
+      transparent 360deg
+    );
+  filter: blur(8px);
+  animation: rotateStarReverse 30s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* The logo image itself — BOOM glow */
 .hero-logo {
   position: relative;
-  z-index: 2;
-  width: 180px;
-  height: 180px;
+  z-index: 3;
+  width: 190px;
+  height: 190px;
   object-fit: contain;
   background: var(--cream);
   border-radius: 50%;
   padding: 0.9rem;
   border: 4px solid var(--gold-light);
   box-shadow:
-    0 0 0 6px rgba(181, 139, 90, 0.18),
-    0 0 30px 6px rgba(255, 233, 196, 0.45),
-    0 0 60px 14px rgba(219, 189, 151, 0.30),
-    0 0 100px 24px rgba(181, 139, 90, 0.20),
-    0 15px 40px rgba(0, 0, 0, 0.65);
+    0 0 0 8px rgba(181, 139, 90, 0.25),
+    0 0 40px 8px rgba(255, 246, 226, 0.75),
+    0 0 90px 20px rgba(255, 233, 196, 0.55),
+    0 0 160px 40px rgba(219, 189, 151, 0.40),
+    0 0 240px 60px rgba(181, 139, 90, 0.25),
+    0 20px 50px rgba(0, 0, 0, 0.7);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  animation: logoSway 6s ease-in-out infinite;
+  animation: logoSway 5s ease-in-out infinite, logoPulseGlow 3s ease-in-out infinite;
 }
 
 .hero-logo-wrap:hover .hero-logo {
-  transform: scale(1.05) rotate(-2deg);
+  transform: scale(1.08) rotate(-2deg);
   box-shadow:
-    0 0 0 8px rgba(181, 139, 90, 0.25),
-    0 0 45px 10px rgba(255, 246, 226, 0.65),
-    0 0 90px 22px rgba(219, 189, 151, 0.42),
-    0 0 140px 32px rgba(181, 139, 90, 0.28),
-    0 20px 50px rgba(0, 0, 0, 0.7);
+    0 0 0 10px rgba(181, 139, 90, 0.35),
+    0 0 60px 14px rgba(255, 250, 240, 0.95),
+    0 0 130px 32px rgba(255, 233, 196, 0.75),
+    0 0 220px 60px rgba(219, 189, 151, 0.55),
+    0 0 320px 90px rgba(181, 139, 90, 0.35),
+    0 25px 60px rgba(0, 0, 0, 0.75);
 }
 
-/* Sparkling twinkles around the logo */
+/* Sparkles — bigger & brighter */
 .hero-logo-wrap .sparkle {
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--gold-blaze);
-  box-shadow: 0 0 12px 4px rgba(255, 233, 196, 0.9);
-  z-index: 3;
+  background: var(--gold-super);
+  box-shadow:
+    0 0 14px 6px rgba(255, 250, 240, 0.95),
+    0 0 30px 12px rgba(255, 233, 196, 0.65);
+  z-index: 4;
   pointer-events: none;
-  animation: twinkle 3s ease-in-out infinite;
-}
-
-.hero-logo-wrap .sparkle:nth-child(1) {
-  top: 8%;
-  left: 12%;
-  animation-delay: 0s;
+  animation: twinkle 2.4s ease-in-out infinite;
 }
 
 .hero-logo-wrap .sparkle:nth-child(2) {
-  top: 12%;
-  right: 10%;
-  animation-delay: 0.8s;
-  width: 4px;
-  height: 4px;
+  top: 4%;
+  left: 8%;
+  animation-delay: 0s;
 }
 
 .hero-logo-wrap .sparkle:nth-child(3) {
-  bottom: 10%;
-  left: 15%;
-  animation-delay: 1.6s;
+  top: 8%;
+  right: 6%;
+  animation-delay: 0.5s;
+  width: 7px;
+  height: 7px;
+}
+
+.hero-logo-wrap .sparkle:nth-child(4) {
+  bottom: 6%;
+  left: 10%;
+  animation-delay: 1s;
+  width: 8px;
+  height: 8px;
+}
+
+.hero-logo-wrap .sparkle:nth-child(5) {
+  bottom: 8%;
+  right: 8%;
+  animation-delay: 1.5s;
+  width: 6px;
+  height: 6px;
+}
+
+.hero-logo-wrap .sparkle:nth-child(6) {
+  top: 50%;
+  left: -6%;
+  animation-delay: 0.75s;
   width: 5px;
   height: 5px;
 }
 
-.hero-logo-wrap .sparkle:nth-child(4) {
-  bottom: 14%;
-  right: 12%;
-  animation-delay: 2.4s;
-  width: 4px;
-  height: 4px;
+.hero-logo-wrap .sparkle:nth-child(7) {
+  top: 50%;
+  right: -6%;
+  animation-delay: 1.25s;
+  width: 7px;
+  height: 7px;
 }
 
-/* Keyframe animations for the logo lights */
 @keyframes logoBreathe {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.85;
-  }
-  50% {
-    transform: scale(1.08);
-    opacity: 1;
-  }
+  0%, 100% { transform: scale(1);    opacity: 0.85; }
+  50%      { transform: scale(1.12); opacity: 1; }
 }
 
 @keyframes logoSway {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-8px) rotate(0.6deg); }
+}
+
+@keyframes logoPulseGlow {
   0%, 100% {
-    transform: translateY(0) rotate(0deg);
+    filter: brightness(1);
   }
   50% {
-    transform: translateY(-6px) rotate(0.5deg);
+    filter: brightness(1.12);
   }
 }
 
-@keyframes rotateStar {
+@keyframes rotateStarFast {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
 
+@keyframes rotateStarReverse {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+
 @keyframes twinkle {
-  0%, 100% {
-    opacity: 0.2;
-    transform: scale(0.6);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.4);
-  }
+  0%, 100% { opacity: 0.15; transform: scale(0.5); }
+  50%      { opacity: 1;    transform: scale(1.6); }
 }
 
 /* ---------------------------------------------------------------------
@@ -338,15 +470,22 @@ body::after {
   letter-spacing: 2px;
   color: var(--cream-bright);
   text-shadow:
-    0 0 20px rgba(255, 233, 196, 0.35),
+    0 0 30px rgba(255, 246, 226, 0.55),
+    0 0 60px rgba(255, 233, 196, 0.35),
     3px 3px 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
+  animation: titleGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from { text-shadow: 0 0 20px rgba(255, 246, 226, 0.4), 0 0 40px rgba(255, 233, 196, 0.25), 3px 3px 0 rgba(0,0,0,0.5); }
+  to   { text-shadow: 0 0 35px rgba(255, 250, 240, 0.75), 0 0 70px rgba(255, 233, 196, 0.45), 3px 3px 0 rgba(0,0,0,0.5); }
 }
 
 .hero h1 i {
   color: var(--gold-pale);
   margin-right: 14px;
-  filter: drop-shadow(0 0 8px rgba(255, 233, 196, 0.6));
+  filter: drop-shadow(0 0 12px rgba(255, 246, 226, 0.9));
 }
 
 .hero-divider {
@@ -362,13 +501,14 @@ body::after {
 
 .hero-divider .line {
   height: 1px;
-  width: 80px;
-  background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+  width: 90px;
+  background: linear-gradient(to right, transparent, var(--gold-shine), transparent);
+  box-shadow: 0 0 8px rgba(255, 246, 226, 0.6);
 }
 
 .hero-divider i {
-  font-size: 1.2rem;
-  filter: drop-shadow(0 0 6px rgba(255, 233, 196, 0.5));
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 10px rgba(255, 246, 226, 0.9));
 }
 
 .hero .tagline {
@@ -381,7 +521,7 @@ body::after {
   max-width: 700px;
   margin: 0 auto 2.4rem;
   letter-spacing: 0.8px;
-  text-shadow: 0 0 12px rgba(255, 233, 196, 0.15);
+  text-shadow: 0 0 14px rgba(255, 233, 196, 0.25);
 }
 
 /* ---------------------------------------------------------------------
@@ -398,6 +538,8 @@ body::after {
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .top-bar span {
@@ -449,11 +591,11 @@ body::after {
 
 .holistic-btn:hover {
   background: var(--brown-light);
-  border-color: var(--gold-pale);
+  border-color: var(--gold-blaze);
   transform: translateY(-3px);
   box-shadow:
     0 9px 0 var(--brown-deepest),
-    0 0 25px 4px rgba(255, 233, 196, 0.35);
+    0 0 35px 8px rgba(255, 246, 226, 0.55);
 }
 
 .holistic-btn:active {
@@ -462,7 +604,7 @@ body::after {
 }
 
 /* ---------------------------------------------------------------------
-   8. MAIN CONTAINER
+   8. MAIN
 --------------------------------------------------------------------- */
 .container {
   max-width: 1200px;
@@ -480,13 +622,15 @@ body::after {
   align-items: center;
   justify-content: center;
   gap: 14px;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+  text-shadow:
+    0 0 20px rgba(255, 246, 226, 0.35),
+    2px 2px 0 rgba(0, 0, 0, 0.4);
 }
 
 .section-title i {
   color: var(--gold-light);
   font-size: 0.9em;
-  filter: drop-shadow(0 0 6px rgba(255, 233, 196, 0.4));
+  filter: drop-shadow(0 0 10px rgba(255, 246, 226, 0.75));
 }
 
 .section-subtitle {
@@ -523,12 +667,26 @@ body::after {
   overflow: hidden;
 }
 
+.snail-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 246, 226, 0.08), transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .snail-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   box-shadow:
-    0 22px 40px rgba(0, 0, 0, 0.6),
-    inset 0 0 0 1px var(--gold-pale),
-    0 0 30px 4px rgba(255, 233, 196, 0.25);
+    0 25px 45px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 1px var(--gold-blaze),
+    0 0 45px 10px rgba(255, 246, 226, 0.35);
+}
+
+.snail-card:hover::after {
+  opacity: 1;
 }
 
 .snail-card .card-icon {
@@ -536,13 +694,14 @@ body::after {
   color: var(--gold-light);
   margin-bottom: 1.4rem;
   display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(255, 233, 196, 0.4));
+  transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 14px rgba(255, 246, 226, 0.55));
 }
 
 .snail-card:hover .card-icon {
-  transform: scale(1.12) rotate(-4deg);
-  color: var(--gold-pale);
+  transform: scale(1.15) rotate(-5deg);
+  color: var(--gold-blaze);
+  filter: drop-shadow(0 0 22px rgba(255, 250, 240, 0.95));
 }
 
 .snail-card h3 {
@@ -567,7 +726,9 @@ body::after {
   margin-bottom: 4rem;
   border-left: 8px solid var(--gold);
   border-right: 8px solid var(--gold);
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.55),
+    0 0 45px 6px rgba(255, 233, 196, 0.12);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -586,7 +747,7 @@ body::after {
   color: var(--gold-light);
   flex-shrink: 0;
   margin-top: 4px;
-  filter: drop-shadow(0 0 8px rgba(255, 233, 196, 0.4));
+  filter: drop-shadow(0 0 12px rgba(255, 246, 226, 0.65));
 }
 
 .service-item strong {
@@ -614,6 +775,14 @@ body::after {
   padding: 2.2rem 2rem;
   border: 1px solid var(--brown-soft);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.55),
+    0 0 35px 6px rgba(255, 233, 196, 0.18);
 }
 
 .contact-card h3 {
@@ -629,6 +798,7 @@ body::after {
 .contact-card h3 i {
   color: var(--gold-light);
   font-size: 1.6rem;
+  filter: drop-shadow(0 0 8px rgba(255, 246, 226, 0.6));
 }
 
 .contact-detail {
@@ -656,11 +826,11 @@ body::after {
 }
 
 .contact-detail a:hover {
-  color: var(--gold-pale);
+  color: var(--gold-blaze);
   text-decoration: underline;
 }
 
-/* WhatsApp Button */
+/* WhatsApp Button — glow */
 .whatsapp-chat-btn {
   background: var(--green-wa);
   border: 2px solid #7db87d;
@@ -694,7 +864,7 @@ body::after {
   transform: translateY(-3px);
   box-shadow:
     0 11px 0 #0e1f0e,
-    0 0 25px 4px rgba(181, 227, 181, 0.35);
+    0 0 35px 8px rgba(181, 227, 181, 0.55);
 }
 
 .whatsapp-chat-btn:active {
@@ -742,6 +912,7 @@ body::after {
   gap: 1.8rem;
   border: 1px dashed var(--gold);
   margin-bottom: 2rem;
+  box-shadow: 0 0 40px 4px rgba(255, 233, 196, 0.08);
 }
 
 .address-text {
@@ -757,7 +928,7 @@ body::after {
   font-size: 2rem;
   color: var(--gold-light);
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(255, 233, 196, 0.35));
+  filter: drop-shadow(0 0 10px rgba(255, 246, 226, 0.7));
 }
 
 .address-text strong {
@@ -776,6 +947,7 @@ body::after {
   align-items: center;
   gap: 10px;
   font-size: 1rem;
+  box-shadow: 0 0 18px 2px rgba(255, 233, 196, 0.2);
 }
 
 .pobox i {
@@ -806,6 +978,7 @@ body::after {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  text-shadow: 0 0 15px rgba(255, 246, 226, 0.4);
 }
 
 .footer i {
@@ -833,14 +1006,17 @@ body::after {
   }
 
   .hero-logo-wrap {
-    width: 160px;
-    height: 160px;
+    width: 190px;
+    height: 190px;
   }
 
   .hero-logo {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
   }
+
+  .hero-logo-wrap::after { inset: -50%; }
+  .hero-logo-wrap .halo-outer { inset: -70%; }
 
   .container {
     padding: 2.8rem 1.2rem;
@@ -869,7 +1045,7 @@ body::after {
 }
 
 /* ---------------------------------------------------------------------
-   15. ACCESSIBILITY — Respect reduced motion
+   15. ACCESSIBILITY
 --------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *,
