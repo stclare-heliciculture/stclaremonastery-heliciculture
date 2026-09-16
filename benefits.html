@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Health benefits of snail meat — rich in protein, iron, Vitamin B12, and essential minerals. A lean, nutritious, blood-supporting protein from St. Clare Monastery Heliciculture." />
+  <meta name="keywords" content="snail meat benefits, health benefits snails, iron rich food, protein, Vitamin B12, snail nutrition Nigeria" />
+  <meta name="author" content="St. Clare Monastery Heliciculture" />
+  <title>Health Benefits | St. Clare Monastery Heliciculture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" type="image/png" href="st. clare monastery heliciculture.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* =========================================================
+       BENEFITS PAGE — BLOOD-NUTRIENT VISUAL THEME
+    ========================================================= */
+
+    /* Blood-drop accent color */
+    :root {
+      --blood-red: #8b1a1a;
+      --blood-red-soft: #a83232;
+      --blood-red-glow: #c94040;
+    }
+
+    /* ---- Hemoglobin hero accent (subtle) ---- */
+    .benefits-hero-accent {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 1.5rem;
+      padding: 10px 22px;
+      background: rgba(139, 26, 26, 0.18);
+      border: 1px solid var(--blood-red-soft);
+      border-radius: 3px;
+      font-size: 0.85rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #f5efe6;
+    }
+
+    .benefits-hero-accent i {
+      color: var(--blood-red-glow);
+      filter: drop-shadow(0 0 6px rgba(201, 64, 64, 0.7));
+    }
+
+    /* ---- Nutrient grid ---- */
+    .nutrient-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.6rem;
+      margin-bottom: 4rem;
+    }
+
+    .nutrient-card {
+      position: relative;
+      background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
+      border-radius: 8px;
+      padding: 2rem 1.8rem;
+      box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px var(--gold-core);
+      transition: transform 0.32s ease, box-shadow 0.32s ease;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Soft blood-red pulse line on each card */
+    .nutrient-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg,
+        var(--blood-red) 0%,
+        var(--blood-red-glow) 50%,
+        var(--blood-red) 100%);
+      opacity: 0.8;
+    }
+
+    .nutrient-card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 22px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px var(--gold-blaze),
+        0 0 40px 8px rgba(255, 246, 226, 0.22);
+    }
+
+    .nutrient-card .nutrient-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #ffe9c4 0%, #b58b5a 70%);
+      color: var(--brown-void);
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      box-shadow:
+        0 0 0 2px rgba(255, 233, 196, 0.25),
+        0 0 16px 2px rgba(255, 233, 196, 0.3);
+    }
+
+    .nutrient-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      color: var(--cream-bright);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nutrient-card h3 i {
+      color: var(--blood-red-glow);
+      font-size: 0.85em;
+      filter: drop-shadow(0 0 6px rgba(201, 64, 64, 0.5));
+    }
+
+    .nutrient-card p {
+      font-size: 1rem;
+      color: var(--cream-soft);
+      line-height: 1.7;
+    }
+
+    /* ---- Blood-connection band ---- */
+    .blood-band {
+      position: relative;
+      background:
+        linear-gradient(135deg, #1e140e 0%, #2a1c12 100%);
+      border-radius: 8px;
+      padding: 3rem 2.5rem;
+      margin-bottom: 4rem;
+      border-left: 6px solid var(--blood-red);
+      border-right: 6px solid var(--blood-red);
+      box-shadow:
+        inset 0 0 60px rgba(139, 26, 26, 0.15),
+        0 0 40px 4px rgba(139, 26, 26, 0.15);
+      text-align: center;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Faint red radial glow behind the band */
+    .blood-band::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 50%,
+          rgba(139, 26, 26, 0.18) 0%,
+          transparent 60%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .blood-band .band-icon {
+      font-size: 3rem;
+      color: var(--blood-red-glow);
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 20px rgba(201, 64, 64, 0.6));
+      display: inline-block;
+    }
+
+    .blood-band h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+      color: var(--cream-bright);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 25px rgba(255, 253, 248, 0.3);
+    }
+
+    .blood-band p {
+      font-size: 1.1rem;
+      color: var(--cream-soft);
+      max-width: 780px;
+      margin: 0 auto 1rem;
+      line-height: 1.8;
+    }
+
+    .blood-band p strong {
+      color: var(--cream-bright);
+      font-weight: 600;
+    }
+
+    /* ---- Why-choose band ---- */
+    .why-choose {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, var(--brown-deep) 0%, #3a261a 100%);
+      border-radius: 8px;
+      border-top: 2px solid var(--gold-core);
+      border-bottom: 2px solid var(--gold-core);
+    }
+
+    .why-choose .why-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+      font-style: italic;
+      color: var(--cream-bright);
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .why-choose .why-line span {
+      color: var(--gold-light);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .why-choose .why-note {
+      font-size: 1.05rem;
+      color: var(--cream-soft);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* ---- Order band (bottom CTA) ---- */
+    .order-band {
+      background: linear-gradient(135deg, var(--brown-deepest) 0%, #2a1c12 100%);
+      border-radius: 8px;
+      padding: 3rem 2.4rem;
+      border-left: 6px solid var(--gold-core);
+      border-right: 6px solid var(--gold-core);
+      text-align: center;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+      margin-bottom: 2rem;
+    }
+
+    .order-band h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--cream-bright);
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 20px rgba(255, 253, 248, 0.3);
+    }
+
+    .order-band p {
+      font-size: 1.05rem;
+      color: var(--cream-soft);
+      max-width: 720px;
+      margin: 0 auto 1.8rem;
+      line-height: 1.7;
+    }
+
+    .order-band .order-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 720px) {
+      .blood-band { padding: 2.2rem 1.6rem; }
+      .why-choose { padding: 2rem 1.4rem; }
+      .order-band { padding: 2.4rem 1.6rem; }
+      .nutrient-card { padding: 1.8rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <span><i class="fas fa-map-pin"></i> Ikoto, Ijebu-Ode, Ogun State, Nigeria</span>
+    <span><i class="fas fa-envelope"></i> stclaremonasteryhelicicuture@gmail.com</span>
+    <span><i class="fas fa-phone-alt"></i> 07043021005 · 09160500267</span>
+  </div>
+
+  <!-- ==================== JESUIT-STYLE NAVIGATION ==================== -->
+  <nav class="jesuit-nav" aria-label="Primary navigation">
+    <a href="index.html" class="jesuit-btn">Home</a>
+    <a href="about.html" class="jesuit-btn">Our Story</a>
+    <a href="gallery.html" class="jesuit-btn">Our Work</a>
+    <a href="benefits.html" class="jesuit-btn">Benefits</a>
+    <a href="index.html#contact" class="jesuit-btn">Contact</a>
+    <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
+       class="jesuit-btn jesuit-btn-primary"
+       target="_blank"
+       rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i> Order
+    </a>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="hero" style="padding: 3rem 2rem 3.5rem;">
+    <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: 2px; color: var(--cream-bright); text-shadow: 0 0 25px rgba(255, 253, 248, 0.5), 3px 3px 0 rgba(0,0,0,0.5); margin-bottom: 0.6rem;">
+      <i class="fas fa-heart-pulse" style="color: var(--gold-pale); margin-right: 12px; filter: drop-shadow(0 0 12px rgba(255,253,248,0.8));"></i>
+      Health Benefits of Snail Meat
+    </h1>
+
+    <div class="hero-divider">
+      <span class="line"></span>
+      <i class="fas fa-droplet"></i>
+      <span class="line"></span>
+    </div>
+
+    <p class="tagline">
+      A nutritious, lean source of animal protein —<br />
+      and a valuable addition to a balanced diet.
+    </p>
+
+    <div class="benefits-hero-accent">
+      <i class="fas fa-droplet"></i>
+      Supports healthy blood &amp; red blood cell formation
+    </div>
+  </header>
+
+  <!-- ==================== MAIN ==================== -->
+  <main class="container">
+
+    <!-- ---------- NUTRITIONAL BENEFITS GRID ---------- -->
+    <section id="nutrition">
+      <h2 class="section-title"><i class="fas fa-leaf"></i> Nutritional Benefits</h2>
+      <p class="section-subtitle">
+        Seven reasons why snail meat is one of the most complete lean proteins you can serve your family.
+      </p>
+
+      <div class="nutrient-grid">
+
+        <article class="nutrient-card">
+          <div class="nutrient-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3><i class="fas fa-droplet"></i> Rich in Protein</h3>
+          <p>Supports muscle growth, repair, and overall body maintenance.</p>
+        </article>
+
+        <article class="nutrient-card">
+          <div class="nutrient-icon"><i class="fas fa-feather"></i></div>
+          <h3><i class="fas fa-droplet"></i> Low in Fat</h3>
+          <p>A naturally lean alternative to many conventional meats.</p>
+        </article>
+
+        <article class="nutrient-card">
+          <div class="nutrient-icon"><i class="fas fa-droplet"></i></div>
+          <h3><i class="fas fa-droplet"></i> Good Source of Iron</h3>
+          <p>Contributes to the formation of healthy red blood cells and supports normal energy metabolism.</p>
+        </article>
+
+        <article class="nutrient-card">
+          <div class="nutrient-icon"><i class="fas fa-gem"></i></div>
+          <h3><i class="fas fa-droplet"></i> Essential Minerals</h3>
+          <p>Provides calcium, magnesium, phosphorus, zinc, and potassium — all of which support normal body functions.</p>
+        </article>
+
+        <article class="nutrient-card">
+          <div class="nutrient-icon"><i class="fas fa-bolt"></i></div>
+          <h3><i class="fas fa-droplet"></i> Vitamin B12</h3>
+          <p>Important for normal nerve function and healthy red blood cell formation.</p>
+        </article>
+
+        <article class="nutrient-card">
+          <div class="nutrient-icon"><i class="fas fa-scale-balanced"></i></div>
+          <h3><i class="fas fa-droplet"></i> Supports a Balanced Diet</h3>
+          <p>Its combination of protein and essential nutrients makes it a nutritious choice for health-conscious consumers.</p>
+        </article>
+
+        <article class="nutrient-card">
+          <div class="nutrient-icon"><i class="fas fa-utensils"></i></div>
+          <h3><i class="fas fa-droplet"></i> A Versatile Food</h3>
+          <p>Can be prepared in different ways — making it easy to incorporate into a variety of healthy meals.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ---------- BLOOD CONNECTION BAND ---------- -->
+    <section class="blood-band">
+      <div class="band-icon"><i class="fas fa-heart-pulse"></i></div>
+      <h2>How Snail Meat Supports Your Blood</h2>
+      <p>
+        The human body depends on a steady supply of <strong>iron</strong>, <strong>Vitamin B12</strong>,
+        and <strong>high-quality protein</strong> to build and maintain healthy red blood cells.
+        Snail meat delivers all three in a naturally lean package.
+      </p>
+      <p>
+        <strong>Iron</strong> helps form hemoglobin — the protein that carries oxygen through your bloodstream.
+        <strong>Vitamin B12</strong> supports the normal production of red blood cells and protects nerve health.
+        Together, they help maintain steady energy, healthy circulation, and a body that feels strong every day.
+      </p>
+    </section>
+
+    <!-- ---------- WHY CHOOSE ---------- -->
+    <section class="why-choose">
+      <h2 class="section-title"><i class="fas fa-check-circle"></i> Why Choose Snail Meat?</h2>
+      <p class="why-line">
+        <span>Nutritious.</span> <span>Lean.</span> <span>Protein-rich.</span> <span>Naturally wholesome.</span>
+      </p>
+      <p class="why-note">
+        Snail meat offers a delicious alternative to conventional meats while providing valuable nutrients
+        for a balanced and healthy diet.
+      </p>
+    </section>
+
+    <!-- ---------- ORDER BAND (BOTTOM CTA) ---------- -->
+    <section class="order-band" id="order">
+      <h2><i class="fas fa-pray"></i> Place Your Order</h2>
+      <p>
+        Order fresh live or frozen snails from St. Clare Monastery Heliciculture — delivered across Nigeria.
+        Message us on WhatsApp with your quantity and location, and we'll take care of the rest.
+      </p>
+
+      <div class="order-actions">
+        <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%20Heliciculture%2C%20I%20would%20like%20to%20order%20snails."
+           class="jesuit-btn jesuit-btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> Order on WhatsApp
+        </a>
+
+        <a href="gallery.html" class="jesuit-btn">
+          <i class="fas fa-images"></i> View Our Products
+        </a>
+
+        <a href="index.html#contact" class="jesuit-btn">
+          <i class="fas fa-envelope"></i> Contact Details
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <i class="fas fa-church"></i> St. Clare Monastery Heliciculture
+    </div>
+    <p>
+      <i class="fas fa-dove"></i>
+      Sustainable snail farming, rooted in faith and tradition.
+      <i class="fas fa-leaf"></i>
+    </p>
+    <p style="margin-top: 0.8rem; font-size: 0.85rem;">
+      &copy; <span id="year"></span> St. Clare Monastery Heliciculture · Ikoto, Ijebu-Ode, Ogun State, Nigeria
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
