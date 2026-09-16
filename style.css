@@ -1,7 +1,7 @@
 /* =====================================================================
-   ST. CLARE MONASTERY HELICICULTURE — STYLE.CSS  (V4 · STABLE LIGHT)
+   ST. CLARE MONASTERY HELICICULTURE — STYLE.CSS  (V5 · SINGLE PATTERN)
    File: style.css
-   Purpose: Smooth, consistent, professional light system
+   Purpose: One single, smooth, synchronized halo rotation
 ===================================================================== */
 
 *,
@@ -27,7 +27,6 @@
   --gold-shine:  #ffe9c4;
   --gold-blaze:  #fff6e2;
   --gold-super:  #fffaf0;
-  --gold-white:  #fffdf8;
 
   --cream:        #f5efe6;
   --cream-soft:   #d9c2a7;
@@ -55,77 +54,36 @@ body {
 }
 
 /* =====================================================================
-   1. STABLE BACKGROUND LIGHT
-   Two layers only. No fast movement. Gentle 22s drift.
+   1. BACKGROUND — STATIC. No animation. No drift. No glitch.
 ===================================================================== */
-
-/* Layer 1 — soft warm pools */
 body::before {
   content: "";
   position: fixed;
-  inset: -10%;
+  inset: 0;
   z-index: -3;
   pointer-events: none;
 
+  background-color: var(--brown-monastic);
   background-image:
-    radial-gradient(circle at 15% 20%, rgba(255, 250, 240, 0.14) 0%, transparent 40%),
-    radial-gradient(circle at 85% 15%, rgba(255, 233, 196, 0.12) 0%, transparent 42%),
-    radial-gradient(circle at 80% 85%, rgba(255, 250, 240, 0.13) 0%, transparent 42%),
-    radial-gradient(circle at 20% 85%, rgba(230, 200, 160, 0.11) 0%, transparent 45%);
-
-  animation: bgDrift 22s ease-in-out infinite alternate;
+    radial-gradient(circle at 15% 20%, rgba(255, 250, 240, 0.10) 0%, transparent 42%),
+    radial-gradient(circle at 85% 15%, rgba(255, 233, 196, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(255, 250, 240, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(230, 200, 160, 0.08) 0%, transparent 48%);
 }
 
-@keyframes bgDrift {
-  0%   { transform: translate(0, 0) scale(1);        filter: brightness(1); }
-  100% { transform: translate(-1%, 1%) scale(1.03);  filter: brightness(1.15); }
-}
-
-/* Layer 2 — one slow rotating aurora wheel */
+/* Static soft glow — no rotation, no pulse */
 body::after {
   content: "";
   position: fixed;
-  inset: -25%;
+  inset: 0;
   z-index: -2;
   pointer-events: none;
 
   background:
-    conic-gradient(
-      from 0deg at 50% 50%,
-      transparent 0deg,
-      rgba(255, 246, 226, 0.08) 8deg,
-      transparent 16deg,
-      transparent 60deg,
-      rgba(255, 246, 226, 0.08) 68deg,
-      transparent 76deg,
-      transparent 120deg,
-      rgba(255, 246, 226, 0.08) 128deg,
-      transparent 136deg,
-      transparent 180deg,
-      rgba(255, 246, 226, 0.08) 188deg,
-      transparent 196deg,
-      transparent 240deg,
-      rgba(255, 246, 226, 0.08) 248deg,
-      transparent 256deg,
-      transparent 300deg,
-      rgba(255, 246, 226, 0.08) 308deg,
-      transparent 316deg,
-      transparent 360deg
-    );
-
-  animation: rotateSlow 90s linear infinite;
-  opacity: 0.9;
-  filter: blur(8px);
+    radial-gradient(ellipse at 50% 25%, rgba(255, 246, 226, 0.10) 0%, transparent 55%);
 }
 
-@keyframes rotateSlow {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-/* =====================================================================
-   2. GLOBAL STARFIELD — gentle 12s pulse, no scale jitter
-===================================================================== */
+/* Remove the global starfield animation — keep it static */
 .hero::before {
   content: "";
   position: fixed;
@@ -134,26 +92,21 @@ body::after {
   pointer-events: none;
 
   background-image:
-    radial-gradient(1.6px 1.6px at 8% 15%,   rgba(255, 253, 248, 0.85) 0%, transparent 55%),
-    radial-gradient(1.4px 1.4px at 22% 38%, rgba(255, 246, 226, 0.75) 0%, transparent 55%),
-    radial-gradient(1.6px 1.6px at 67% 22%,  rgba(255, 253, 248, 0.85) 0%, transparent 55%),
-    radial-gradient(1.4px 1.4px at 82% 68%, rgba(255, 233, 196, 0.75) 0%, transparent 55%),
-    radial-gradient(1.6px 1.6px at 45% 85%,  rgba(255, 253, 248, 0.85) 0%, transparent 55%),
-    radial-gradient(1.4px 1.4px at 12% 72%, rgba(230, 200, 160, 0.75) 0%, transparent 55%),
-    radial-gradient(1.6px 1.6px at 92% 35%, rgba(255, 246, 226, 0.85) 0%, transparent 55%),
-    radial-gradient(1.4px 1.4px at 55% 55%, rgba(255, 253, 248, 0.85) 0%, transparent 55%);
+    radial-gradient(1.5px 1.5px at 8% 15%,   rgba(255, 253, 248, 0.7) 0%, transparent 55%),
+    radial-gradient(1.3px 1.3px at 22% 38%, rgba(255, 246, 226, 0.6) 0%, transparent 55%),
+    radial-gradient(1.5px 1.5px at 67% 22%,  rgba(255, 253, 248, 0.7) 0%, transparent 55%),
+    radial-gradient(1.3px 1.3px at 82% 68%, rgba(255, 233, 196, 0.6) 0%, transparent 55%),
+    radial-gradient(1.5px 1.5px at 45% 85%,  rgba(255, 253, 248, 0.7) 0%, transparent 55%),
+    radial-gradient(1.3px 1.3px at 12% 72%, rgba(230, 200, 160, 0.6) 0%, transparent 55%),
+    radial-gradient(1.5px 1.5px at 92% 35%, rgba(255, 246, 226, 0.7) 0%, transparent 55%),
+    radial-gradient(1.3px 1.3px at 55% 55%, rgba(255, 253, 248, 0.7) 0%, transparent 55%);
 
   opacity: 0.85;
-  animation: starPulse 12s ease-in-out infinite;
-}
-
-@keyframes starPulse {
-  0%, 100% { opacity: 0.7; }
-  50%      { opacity: 1; }
+  /* NO animation */
 }
 
 /* =====================================================================
-   3. HERO
+   2. HERO — static background glow
 ===================================================================== */
 .hero {
   position: relative;
@@ -172,25 +125,17 @@ body::after {
   z-index: -1;
   background: radial-gradient(
     ellipse at 50% 30%,
-    rgba(255, 246, 226, 0.22) 0%,
-    rgba(255, 233, 196, 0.10) 28%,
+    rgba(255, 246, 226, 0.18) 0%,
+    rgba(255, 233, 196, 0.08) 30%,
     transparent 68%
   );
   pointer-events: none;
-  animation: heroPool 14s ease-in-out infinite alternate;
-}
-
-@keyframes heroPool {
-  from { opacity: 0.85; transform: scale(1); }
-  to   { opacity: 1;    transform: scale(1.04); }
+  /* NO animation */
 }
 
 /* =====================================================================
-   4. THE LOGO — STABLE HALO (no jitter, no strobing)
-   • One slow rotating rays layer (48s per turn — smooth)
-   • One breathing halo (6s — slow and gentle)
-   • Logo glow stays constant — no pulse
-   • Logo position fixed — no sway
+   3. THE LOGO — ONE SINGLE SYNCHRONIZED ROTATION
+   Only ONE animated layer. Everything else is static.
 ===================================================================== */
 
 .hero-logo-wrap {
@@ -204,11 +149,11 @@ body::after {
   isolation: isolate;
 }
 
-/* Layer 1 — breathing halo (soft, 6s, gentle) */
+/* --- Layer 1: STATIC deep halo (no animation, ever) --- */
 .hero-logo-wrap::before {
   content: "";
   position: absolute;
-  inset: -60%;
+  inset: -55%;
   border-radius: 50%;
   background:
     radial-gradient(circle,
@@ -217,110 +162,70 @@ body::after {
       rgba(255, 233, 196, 0.22) 30%,
       rgba(230, 200, 160, 0.13) 45%,
       transparent 75%);
-  filter: blur(16px);
-  animation: haloBreathe 6s ease-in-out infinite;
+  filter: blur(18px);
   z-index: 0;
   pointer-events: none;
+  /* NO animation */
 }
 
-@keyframes haloBreathe {
-  0%, 100% { transform: scale(1);    opacity: 0.9; }
-  50%      { transform: scale(1.05); opacity: 1; }
-}
-
-/* Layer 2 — slow rotating rays (48s per turn — smooth, not fast) */
+/* --- Layer 2: THE ONE AND ONLY animated layer ---
+   A perfectly smooth continuous ray ring.
+   Same opacity everywhere, same spacing, no gaps, no jumps.
+   Rotates once every 30 seconds — smooth as silk. */
 .hero-logo-wrap::after {
   content: "";
   position: absolute;
-  inset: -75%;
+  inset: -70%;
   border-radius: 50%;
+
+  /* Use repeating-conic-gradient so the pattern is mathematically perfect.
+     Every ray is exactly the same size and spacing → no visible jump when it loops. */
   background:
-    conic-gradient(
+    repeating-conic-gradient(
       from 0deg at 50% 50%,
-      transparent 0deg,
-      rgba(255, 253, 248, 0.55) 6deg,
-      transparent 14deg,
-
-      transparent 60deg,
-      rgba(255, 250, 240, 0.45) 66deg,
-      transparent 74deg,
-
-      transparent 120deg,
-      rgba(255, 253, 248, 0.55) 126deg,
-      transparent 134deg,
-
-      transparent 180deg,
-      rgba(255, 250, 240, 0.45) 186deg,
-      transparent 194deg,
-
-      transparent 240deg,
-      rgba(255, 253, 248, 0.55) 246deg,
-      transparent 254deg,
-
-      transparent 300deg,
-      rgba(255, 250, 240, 0.45) 306deg,
-      transparent 314deg,
-
-      transparent 360deg
+      rgba(255, 253, 248, 0.00) 0deg,
+      rgba(255, 253, 248, 0.00) 18deg,
+      rgba(255, 253, 248, 0.40) 20deg,
+      rgba(255, 246, 226, 0.45) 22deg,
+      rgba(255, 253, 248, 0.40) 24deg,
+      rgba(255, 253, 248, 0.00) 26deg,
+      rgba(255, 253, 248, 0.00) 44deg
     );
-  animation: rotateRays 48s linear infinite;
-  filter: blur(6px);
+
+  filter: blur(5px);
   opacity: 0.9;
   z-index: 0;
   pointer-events: none;
+
+  /* ONE single animation, perfectly looped */
+  animation: smoothRotate 30s linear infinite;
+  transform-origin: 50% 50%;
+  will-change: transform;
 }
 
-@keyframes rotateRays {
+@keyframes smoothRotate {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
 
-/* Layer 3 — outer counter-rotating rays (72s per turn) */
+/* --- Layer 3 (halo-outer): STATIC, not animated --- */
 .hero-logo-wrap .halo-outer {
   position: absolute;
-  inset: -105%;
+  inset: -100%;
   border-radius: 50%;
   background:
-    conic-gradient(
-      from 90deg at 50% 50%,
-      transparent 0deg,
-      rgba(255, 246, 226, 0.35) 5deg,
-      transparent 12deg,
-
-      transparent 60deg,
-      rgba(255, 253, 248, 0.30) 65deg,
-      transparent 72deg,
-
-      transparent 120deg,
-      rgba(255, 233, 196, 0.32) 125deg,
-      transparent 132deg,
-
-      transparent 180deg,
-      rgba(255, 246, 226, 0.35) 185deg,
-      transparent 192deg,
-
-      transparent 240deg,
-      rgba(255, 253, 248, 0.30) 245deg,
-      transparent 252deg,
-
-      transparent 300deg,
-      rgba(255, 233, 196, 0.32) 305deg,
-      transparent 312deg,
-
-      transparent 360deg
-    );
-  filter: blur(12px);
-  animation: rotateRaysReverse 72s linear infinite;
+    radial-gradient(circle,
+      transparent 55%,
+      rgba(255, 246, 226, 0.15) 65%,
+      rgba(255, 233, 196, 0.10) 75%,
+      transparent 90%);
+  filter: blur(14px);
   z-index: 0;
   pointer-events: none;
+  /* NO animation */
 }
 
-@keyframes rotateRaysReverse {
-  from { transform: rotate(360deg); }
-  to   { transform: rotate(0deg); }
-}
-
-/* Layer 4 — the logo itself. STEADY glow. NO pulse, NO sway. */
+/* --- Layer 4: the logo itself. STATIC. No animation. --- */
 .hero-logo {
   position: relative;
   z-index: 3;
@@ -332,20 +237,20 @@ body::after {
   padding: 0.9rem;
   border: 4px solid var(--gold-light);
   box-shadow:
-    0 0 0 8px rgba(181, 139, 90, 0.25),
+    0 0 0 8px rgba(181, 139, 90, 0.28),
     0 0 35px 6px rgba(255, 253, 248, 0.75),
     0 0 80px 18px rgba(255, 246, 226, 0.55),
     0 0 150px 40px rgba(255, 233, 196, 0.38),
     0 0 240px 70px rgba(219, 189, 151, 0.25),
     0 22px 55px rgba(0, 0, 0, 0.7);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  /* NO animation — stays perfectly still */
+  /* NO animation */
 }
 
 .hero-logo-wrap:hover .hero-logo {
   transform: scale(1.04);
   box-shadow:
-    0 0 0 10px rgba(181, 139, 90, 0.35),
+    0 0 0 10px rgba(181, 139, 90, 0.38),
     0 0 50px 10px rgba(255, 253, 248, 0.9),
     0 0 110px 26px rgba(255, 246, 226, 0.7),
     0 0 190px 50px rgba(255, 233, 196, 0.5),
@@ -353,35 +258,30 @@ body::after {
     0 26px 60px rgba(0, 0, 0, 0.75);
 }
 
-/* Sparkles — very slow, gentle twinkle (5s, subtle) */
+/* --- Sparkles: STATIC (no twinkle animation) --- */
 .hero-logo-wrap .sparkle {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--gold-super);
   box-shadow:
-    0 0 14px 5px rgba(255, 253, 248, 0.85),
-    0 0 30px 12px rgba(255, 246, 226, 0.55);
+    0 0 12px 4px rgba(255, 253, 248, 0.9),
+    0 0 26px 10px rgba(255, 246, 226, 0.6);
   z-index: 4;
   pointer-events: none;
-  animation: twinkle 5s ease-in-out infinite;
+  /* NO animation — steady glow */
 }
 
-.hero-logo-wrap .sparkle:nth-child(2) { top: 3%;  left: 8%;  animation-delay: 0s;   }
-.hero-logo-wrap .sparkle:nth-child(3) { top: 8%;  right: 6%; animation-delay: 0.8s; width: 6px; height: 6px; }
-.hero-logo-wrap .sparkle:nth-child(4) { bottom: 5%; left: 10%; animation-delay: 1.6s; width: 7px; height: 7px; }
-.hero-logo-wrap .sparkle:nth-child(5) { bottom: 8%; right: 8%; animation-delay: 2.4s; width: 5px; height: 5px; }
-.hero-logo-wrap .sparkle:nth-child(6) { top: 48%; left: -6%;  animation-delay: 3.2s; width: 5px; height: 5px; }
-.hero-logo-wrap .sparkle:nth-child(7) { top: 48%; right: -6%; animation-delay: 4.0s; width: 6px; height: 6px; }
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.35; transform: scale(0.8); }
-  50%      { opacity: 1;    transform: scale(1.1); }
-}
+.hero-logo-wrap .sparkle:nth-child(2) { top: 4%;  left: 10%;  width: 8px; height: 8px; }
+.hero-logo-wrap .sparkle:nth-child(3) { top: 8%;  right: 8%;  width: 6px; height: 6px; }
+.hero-logo-wrap .sparkle:nth-child(4) { bottom: 6%; left: 12%; width: 7px; height: 7px; }
+.hero-logo-wrap .sparkle:nth-child(5) { bottom: 8%; right: 10%; width: 5px; height: 5px; }
+.hero-logo-wrap .sparkle:nth-child(6) { top: 48%; left: -4%;  width: 5px; height: 5px; }
+.hero-logo-wrap .sparkle:nth-child(7) { top: 48%; right: -4%; width: 6px; height: 6px; }
 
 /* =====================================================================
-   5. HERO TEXT
+   4. HERO TEXT — static
 ===================================================================== */
 .hero h1 {
   position: relative;
@@ -396,7 +296,6 @@ body::after {
     0 0 55px rgba(255, 233, 196, 0.35),
     3px 3px 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
-  /* NO animation — steady glow */
 }
 
 .hero h1 i {
@@ -449,7 +348,7 @@ body::after {
 }
 
 /* =====================================================================
-   6. TOP BAR
+   5. TOP BAR
 ===================================================================== */
 .top-bar {
   background-color: var(--brown-void);
@@ -470,7 +369,7 @@ body::after {
 .top-bar i    { color: var(--gold-light); }
 
 /* =====================================================================
-   7. NAV BUTTONS
+   6. NAV BUTTONS
 ===================================================================== */
 .nav-buttons {
   position: relative;
@@ -524,7 +423,7 @@ body::after {
 }
 
 /* =====================================================================
-   8. CONTAINER
+   7. CONTAINER
 ===================================================================== */
 .container {
   max-width: 1200px;
@@ -565,7 +464,7 @@ body::after {
 }
 
 /* =====================================================================
-   9. SNAIL CARDS
+   8. SNAIL CARDS
 ===================================================================== */
 .snail-gallery {
   display: grid;
@@ -583,8 +482,6 @@ body::after {
     0 15px 30px rgba(0, 0, 0, 0.5),
     inset 0 0 0 1px var(--gold-core);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  position: relative;
-  overflow: hidden;
 }
 
 .snail-card:hover {
@@ -614,7 +511,7 @@ body::after {
 .snail-card p  { font-size: 1rem; color: var(--cream-soft); line-height: 1.6; }
 
 /* =====================================================================
-   10. SERVICES
+   9. SERVICES
 ===================================================================== */
 .services-highlight {
   background: linear-gradient(135deg, var(--brown-deep) 0%, #3a261a 100%);
@@ -657,7 +554,7 @@ body::after {
 }
 
 /* =====================================================================
-   11. CONTACT
+   10. CONTACT
 ===================================================================== */
 .contact-grid {
   display: grid;
@@ -792,7 +689,7 @@ body::after {
 }
 
 /* =====================================================================
-   12. LOCATION
+   11. LOCATION
 ===================================================================== */
 .address-block {
   background: linear-gradient(135deg, var(--brown-void) 0%, #2a1c12 100%);
@@ -843,7 +740,7 @@ body::after {
 .pobox i { color: var(--gold-light); }
 
 /* =====================================================================
-   13. FOOTER
+   12. FOOTER
 ===================================================================== */
 .footer {
   background: var(--brown-void);
@@ -873,7 +770,7 @@ body::after {
 .footer p  { margin-top: 0.5rem; }
 
 /* =====================================================================
-   14. RESPONSIVE
+   13. RESPONSIVE
 ===================================================================== */
 @media (max-width: 720px) {
   .top-bar {
@@ -911,12 +808,10 @@ body::after {
 }
 
 /* =====================================================================
-   15. ACCESSIBILITY
+   14. ACCESSIBILITY
 ===================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
+  .hero-logo-wrap::after {
+    animation: none;
   }
-                                                 }
+     }
