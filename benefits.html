@@ -16,18 +16,12 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* =========================================================
-       BENEFITS PAGE — BLOOD-NUTRIENT VISUAL THEME
-    ========================================================= */
-
-    /* Blood-drop accent color */
     :root {
       --blood-red: #8b1a1a;
       --blood-red-soft: #a83232;
       --blood-red-glow: #c94040;
     }
 
-    /* ---- Hemoglobin hero accent (subtle) ---- */
     .benefits-hero-accent {
       display: inline-flex;
       align-items: center;
@@ -48,7 +42,6 @@
       filter: drop-shadow(0 0 6px rgba(201, 64, 64, 0.7));
     }
 
-    /* ---- Nutrient grid ---- */
     .nutrient-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -69,7 +62,6 @@
       isolation: isolate;
     }
 
-    /* Soft blood-red pulse line on each card */
     .nutrient-card::before {
       content: "";
       position: absolute;
@@ -130,11 +122,9 @@
       line-height: 1.7;
     }
 
-    /* ---- Blood-connection band ---- */
     .blood-band {
       position: relative;
-      background:
-        linear-gradient(135deg, #1e140e 0%, #2a1c12 100%);
+      background: linear-gradient(135deg, #1e140e 0%, #2a1c12 100%);
       border-radius: 8px;
       padding: 3rem 2.5rem;
       margin-bottom: 4rem;
@@ -148,15 +138,11 @@
       isolation: isolate;
     }
 
-    /* Faint red radial glow behind the band */
     .blood-band::before {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 50% 50%,
-          rgba(139, 26, 26, 0.18) 0%,
-          transparent 60%);
+      background: radial-gradient(circle at 50% 50%, rgba(139, 26, 26, 0.18) 0%, transparent 60%);
       z-index: -1;
       pointer-events: none;
     }
@@ -190,7 +176,6 @@
       font-weight: 600;
     }
 
-    /* ---- Why-choose band ---- */
     .why-choose {
       text-align: center;
       margin-bottom: 4rem;
@@ -225,7 +210,6 @@
       line-height: 1.75;
     }
 
-    /* ---- Order band (bottom CTA) ---- */
     .order-band {
       background: linear-gradient(135deg, var(--brown-deepest) 0%, #2a1c12 100%);
       border-radius: 8px;
@@ -260,7 +244,6 @@
       justify-content: center;
     }
 
-    /* Responsive tweaks */
     @media (max-width: 720px) {
       .blood-band { padding: 2.2rem 1.6rem; }
       .why-choose { padding: 2rem 1.4rem; }
@@ -271,29 +254,35 @@
 </head>
 <body>
 
-  <!-- ==================== TOP BAR ==================== -->
   <div class="top-bar">
     <span><i class="fas fa-map-pin"></i> Ikoto, Ijebu-Ode, Ogun State, Nigeria</span>
     <span><i class="fas fa-envelope"></i> stclaremonasteryhelicicuture@gmail.com</span>
     <span><i class="fas fa-phone-alt"></i> 07043021005 · 09160500267</span>
   </div>
 
-  <!-- ==================== JESUIT-STYLE NAVIGATION ==================== -->
   <nav class="jesuit-nav" aria-label="Primary navigation">
-    <a href="index.html" class="jesuit-btn">Home</a>
-    <a href="about.html" class="jesuit-btn">Our Story</a>
-    <a href="gallery.html" class="jesuit-btn">Our Work</a>
-    <a href="benefits.html" class="jesuit-btn">Benefits</a>
-    <a href="index.html#contact" class="jesuit-btn">Contact</a>
-    <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
-       class="jesuit-btn jesuit-btn-primary"
-       target="_blank"
-       rel="noopener noreferrer">
-      <i class="fab fa-whatsapp"></i> Order
+
+    <a href="index.html" class="nav-logo-badge" aria-label="St. Clare Monastery — Home">
+      <img src="st. clare monastery heliciculture.png" alt="St. Clare Monastery Logo" />
     </a>
+
+    <div class="nav-links">
+      <a href="index.html" class="jesuit-btn">Home</a>
+      <a href="about.html" class="jesuit-btn">Our Story</a>
+      <a href="gallery.html" class="jesuit-btn">Our Work</a>
+      <a href="benefits.html" class="jesuit-btn">Benefits</a>
+      <a href="index.html#contact" class="jesuit-btn">Contact</a>
+      <a href="index.html#location" class="jesuit-btn">Visit</a>
+      <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
+         class="jesuit-btn jesuit-btn-primary"
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> Order
+      </a>
+    </div>
+
   </nav>
 
-  <!-- ==================== HERO ==================== -->
   <header class="hero" style="padding: 3rem 2rem 3.5rem;">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: 2px; color: var(--cream-bright); text-shadow: 0 0 25px rgba(255, 253, 248, 0.5), 3px 3px 0 rgba(0,0,0,0.5); margin-bottom: 0.6rem;">
       <i class="fas fa-heart-pulse" style="color: var(--gold-pale); margin-right: 12px; filter: drop-shadow(0 0 12px rgba(255,253,248,0.8));"></i>
@@ -317,10 +306,8 @@
     </div>
   </header>
 
-  <!-- ==================== MAIN ==================== -->
   <main class="container">
 
-    <!-- ---------- NUTRITIONAL BENEFITS GRID ---------- -->
     <section id="nutrition">
       <h2 class="section-title"><i class="fas fa-leaf"></i> Nutritional Benefits</h2>
       <p class="section-subtitle">
@@ -374,7 +361,6 @@
       </div>
     </section>
 
-    <!-- ---------- BLOOD CONNECTION BAND ---------- -->
     <section class="blood-band">
       <div class="band-icon"><i class="fas fa-heart-pulse"></i></div>
       <h2>How Snail Meat Supports Your Blood</h2>
@@ -390,7 +376,6 @@
       </p>
     </section>
 
-    <!-- ---------- WHY CHOOSE ---------- -->
     <section class="why-choose">
       <h2 class="section-title"><i class="fas fa-check-circle"></i> Why Choose Snail Meat?</h2>
       <p class="why-line">
@@ -402,7 +387,6 @@
       </p>
     </section>
 
-    <!-- ---------- ORDER BAND (BOTTOM CTA) ---------- -->
     <section class="order-band" id="order">
       <h2><i class="fas fa-pray"></i> Place Your Order</h2>
       <p>
@@ -430,7 +414,6 @@
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="footer-brand">
       <i class="fas fa-church"></i> St. Clare Monastery Heliciculture
@@ -447,4 +430,4 @@
 
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
