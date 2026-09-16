@@ -129,6 +129,31 @@
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
+     /* -------------------------------------------------------------------
+   7. NAV CLICK PULSE — brief brown glow when a nav button is tapped
+------------------------------------------------------------------- */
+function initNavClickPulse() {
+  document.querySelectorAll('.jesuit-nav .jesuit-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.classList.add('nav-pulse');
+      setTimeout(() => btn.classList.remove('nav-pulse'), 700);
+    });
+  });
+}
+
+/* -------------------------------------------------------------------
+   8. AUTO-ACTIVE NAV — glows the button matching the current page
+------------------------------------------------------------------- */
+function initActiveNav() {
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.jesuit-nav .jesuit-btn').forEach((btn) => {
+    const href = btn.getAttribute('href') || '';
+    // Only auto-activate top-level page links (not anchors)
+    if (href.endsWith('.html') && href === path) {
+      btn.classList.add('jesuit-btn-active');
+    }
+  });
+}
   }
 
 })();
