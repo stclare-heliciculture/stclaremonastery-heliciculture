@@ -1,7 +1,8 @@
 /* =====================================================================
-   ST. CLARE MONASTERY HELICICULTURE — SCRIPT.JS  (V3 · STABLE)
+   ST. CLARE MONASTERY HELICICULTURE — SCRIPT.JS  (V4 · FULL)
    File: script.js
-   Purpose: Clean interactivity — zero animation overlap
+   Includes: year, smooth scroll, WhatsApp tracking, scroll reveal,
+             email copy, nav click pulse, active nav highlight
 ===================================================================== */
 
 (function () {
@@ -13,17 +14,15 @@
   };
 
   /* -------------------------------------------------------------------
-     1. AUTO-UPDATING FOOTER YEAR
+     1. AUTO YEAR
   ------------------------------------------------------------------- */
   function updateYear() {
     const yearEl = document.getElementById('year');
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
   /* -------------------------------------------------------------------
-     2. SMOOTH SCROLL — glides to sections without jitter
+     2. SMOOTH SCROLL
   ------------------------------------------------------------------- */
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -44,13 +43,12 @@
   }
 
   /* -------------------------------------------------------------------
-     3. WHATSAPP LINK TRACKING — silent, no visual effect
+     3. WHATSAPP TRACKING
   ------------------------------------------------------------------- */
   function initWhatsAppLinks() {
     document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
-
       link.addEventListener('click', () => {
         const number = link.href.match(/wa\.me\/(\d+)/)?.[1] || 'unknown';
         console.log(`[WhatsApp] Opening chat with: ${number}`);
@@ -59,16 +57,14 @@
   }
 
   /* -------------------------------------------------------------------
-     4. GENTLE SCROLL REVEAL — one-time only, no re-triggering
+     4. SCROLL REVEAL
   ------------------------------------------------------------------- */
   function initScrollReveal() {
     const targets = document.querySelectorAll(
-      '.snail-card, .service-item, .contact-card, .address-block'
+      '.snail-card, .service-item, .contact-card, .address-block, .value-card, .product-card, .about-closing'
     );
 
     if (!targets.length) return;
-
-    // Respect reduced motion
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     targets.forEach((el, i) => {
@@ -94,7 +90,7 @@
   }
 
   /* -------------------------------------------------------------------
-     5. EMAIL COPY ON CLICK — silent clipboard copy
+     5. EMAIL COPY
   ------------------------------------------------------------------- */
   function initEmailCopy() {
     document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
@@ -103,14 +99,39 @@
         if (navigator.clipboard) {
           navigator.clipboard.writeText(email).then(() => {
             console.log(`[Clipboard] Email copied: ${email}`);
-          }).catch(() => { /* silent */ });
+          }).catch(() => {});
         }
       });
     });
   }
 
   /* -------------------------------------------------------------------
-     6. BOOT
+     6. NAV CLICK PULSE — brief brown glow when a nav button is tapped
+  ------------------------------------------------------------------- */
+  function initNavClickPulse() {
+    document.querySelectorAll('.jesuit-nav .jesuit-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        btn.classList.add('nav-pulse');
+        setTimeout(() => btn.classList.remove('nav-pulse'), 700);
+      });
+    });
+  }
+
+  /* -------------------------------------------------------------------
+     7. AUTO-ACTIVE NAV — glows the button matching the current page
+  ------------------------------------------------------------------- */
+  function initActiveNav() {
+    const path = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.jesuit-nav .jesuit-btn').forEach((btn) => {
+      const href = btn.getAttribute('href') || '';
+      if (href.endsWith('.html') && href === path) {
+        btn.classList.add('jesuit-btn-active');
+      }
+    });
+  }
+
+  /* -------------------------------------------------------------------
+     8. BOOT
   ------------------------------------------------------------------- */
   function init() {
     updateYear();
@@ -118,6 +139,8 @@
     initWhatsAppLinks();
     initScrollReveal();
     initEmailCopy();
+    initNavClickPulse();
+    initActiveNav();
 
     console.log(
       `%c${CONFIG.businessName} — site ready ✓`,
@@ -129,31 +152,6 @@
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
-     /* -------------------------------------------------------------------
-   7. NAV CLICK PULSE — brief brown glow when a nav button is tapped
-------------------------------------------------------------------- */
-function initNavClickPulse() {
-  document.querySelectorAll('.jesuit-nav .jesuit-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      btn.classList.add('nav-pulse');
-      setTimeout(() => btn.classList.remove('nav-pulse'), 700);
-    });
-  });
-}
-
-/* -------------------------------------------------------------------
-   8. AUTO-ACTIVE NAV — glows the button matching the current page
-------------------------------------------------------------------- */
-function initActiveNav() {
-  const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.jesuit-nav .jesuit-btn').forEach((btn) => {
-    const href = btn.getAttribute('href') || '';
-    // Only auto-activate top-level page links (not anchors)
-    if (href.endsWith('.html') && href === path) {
-      btn.classList.add('jesuit-btn-active');
-    }
-  });
-}
   }
 
 })();
