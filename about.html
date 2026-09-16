@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About St. Clare Monastery Heliciculture — our story, mission, values, and sustainable snail farming in Ikoto, Ijebu-Ode, Nigeria." />
+  <meta name="keywords" content="about St Clare Monastery, heliciculture story, snail farming Nigeria, sustainable snails, Ijebu-Ode" />
+  <meta name="author" content="St. Clare Monastery Heliciculture" />
+  <title>About Us | St. Clare Monastery Heliciculture</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="st. clare monastery heliciculture.png" />
+
+  <!-- MAIN STYLESHEET -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PAGE-SPECIFIC STYLES (About page only) -->
+  <style>
+    /* =========================================================
+       ABOUT PAGE — MATHEMATICALLY POSITIONED ACTION BAR
+    ========================================================= */
+    .about-action-bar {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 1.5rem;
+
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 2rem;
+
+      background: linear-gradient(
+        180deg,
+        rgba(30, 20, 14, 0.85) 0%,
+        rgba(43, 28, 17, 0.9) 100%
+      );
+      border-bottom: 1px solid var(--brown-soft);
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.55),
+        inset 0 -1px 0 rgba(255, 233, 196, 0.08);
+      z-index: 5;
+    }
+
+    .about-action-bar .anchor-left,
+    .about-action-bar .anchor-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--cream-soft);
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+    }
+
+    .about-action-bar .anchor-left i,
+    .about-action-bar .anchor-right i {
+      color: var(--gold-light);
+      font-size: 1rem;
+    }
+
+    .about-action-bar .anchor-right {
+      justify-content: flex-end;
+    }
+
+    /* ---- The Holistic CTA Button ---- */
+    .what-we-do-cta {
+      --cta-h: 60px;
+      --cta-radius: 999px;
+      position: relative;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+
+      height: var(--cta-h);
+      padding: 0 2.4rem 0 1.4rem;
+
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+
+      color: var(--cream-bright);
+      background:
+        linear-gradient(135deg, #3c281a 0%, #2b1c11 55%, #1e140e 100%);
+      border: 2px solid var(--gold-core);
+      border-radius: var(--cta-radius);
+
+      cursor: pointer;
+      text-decoration: none;
+      overflow: hidden;
+      isolation: isolate;
+
+      box-shadow:
+        0 6px 0 var(--brown-void),
+        0 12px 24px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 233, 196, 0.18),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.35);
+
+      transition:
+        transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+    }
+
+    .what-we-do-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        115deg,
+        transparent 0%,
+        transparent 35%,
+        rgba(255, 246, 226, 0.22) 50%,
+        transparent 65%,
+        transparent 100%
+      );
+      transform: translateX(-100%);
+      transition: transform 0.7s ease;
+    }
+
+    .what-we-do-cta:hover::before {
+      transform: translateX(100%);
+    }
+
+    .what-we-do-cta .cta-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 30%, #ffe9c4 0%, #b58b5a 70%);
+      color: var(--brown-void);
+      font-size: 1rem;
+      box-shadow:
+        0 0 0 2px rgba(255, 233, 196, 0.35),
+        0 0 14px 2px rgba(255, 233, 196, 0.35),
+        inset 0 -2px 3px rgba(0, 0, 0, 0.25);
+      flex-shrink: 0;
+      transition: transform 0.35s ease;
+    }
+
+    .what-we-do-cta:hover .cta-icon {
+      transform: rotate(-8deg) scale(1.06);
+    }
+
+    .what-we-do-cta .cta-label {
+      display: inline-block;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .what-we-do-cta .cta-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      color: var(--gold-pale);
+      font-size: 0.9rem;
+      transition: transform 0.3s ease;
+    }
+
+    .what-we-do-cta:hover .cta-arrow {
+      transform: translateX(4px);
+      color: var(--gold-blaze);
+    }
+
+    .what-we-do-cta:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold-blaze);
+      box-shadow:
+        0 9px 0 var(--brown-void),
+        0 18px 34px rgba(0, 0, 0, 0.5),
+        0 0 30px 6px rgba(255, 246, 226, 0.35),
+        inset 0 1px 0 rgba(255, 233, 196, 0.28),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.35);
+    }
+
+    .what-we-do-cta:active {
+      transform: translateY(2px);
+      box-shadow:
+        0 3px 0 var(--brown-void),
+        0 6px 14px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 233, 196, 0.2),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .what-we-do-cta:focus-visible {
+      outline: 2px solid var(--gold-blaze);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 860px) {
+      .about-action-bar {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 1.4rem 1.2rem;
+        gap: 0.9rem;
+      }
+
+      .about-action-bar .anchor-left,
+      .about-action-bar .anchor-right {
+        justify-content: center;
+        font-size: 0.82rem;
+      }
+
+      .what-we-do-cta {
+        --cta-h: 56px;
+        padding: 0 1.8rem 0 1rem;
+        font-size: 0.95rem;
+      }
+
+      .what-we-do-cta .cta-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* =========================================================
+       ABOUT PAGE CONTENT
+    ========================================================= */
+    .about-hero {
+      position: relative;
+      padding: 4rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 3px solid var(--gold-core);
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      inset: -25% -12% 0;
+      z-index: -1;
+      background: radial-gradient(
+        ellipse at 50% 30%,
+        rgba(255, 246, 226, 0.16) 0%,
+        rgba(255, 233, 196, 0.07) 30%,
+        transparent 68%
+      );
+      pointer-events: none;
+    }
+
+    .about-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--cream-bright);
+      text-shadow:
+        0 0 25px rgba(255, 253, 248, 0.5),
+        3px 3px 0 rgba(0, 0, 0, 0.5);
+      margin-bottom: 0.6rem;
+    }
+
+    .about-hero h1 i {
+      color: var(--gold-pale);
+      margin-right: 12px;
+      filter: drop-shadow(0 0 12px rgba(255, 253, 248, 0.8));
+    }
+
+    .about-hero .about-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      color: var(--cream-soft);
+      max-width: 720px;
+      margin: 0 auto;
+      letter-spacing: 0.6px;
+    }
+
+    /* ---------------------------------------------------
+       INTRO BLOCK WITH SISTERS PHOTO (mathematically balanced)
+    --------------------------------------------------- */
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 3.2rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .about-intro h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      color: var(--cream-bright);
+      margin-bottom: 1.2rem;
+      text-shadow: 0 0 20px rgba(255, 253, 248, 0.3);
+    }
+
+    .about-intro p {
+      font-size: 1.05rem;
+      color: var(--cream-soft);
+      margin-bottom: 1rem;
+      line-height: 1.75;
+    }
+
+    .about-intro p strong {
+      color: var(--cream-bright);
+      font-weight: 600;
+    }
+
+    /* ---------------------------------------------------
+       SISTERS PHOTO — luxurious monastic frame
+    --------------------------------------------------- */
+    .sisters-portrait {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border-radius: 1.8rem;
+      overflow: hidden;
+      isolation: isolate;
+
+      background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-void) 100%);
+      border: 2px solid var(--gold-core);
+      box-shadow:
+        0 0 0 8px rgba(181, 139, 90, 0.12),
+        0 0 40px 8px rgba(255, 233, 196, 0.18),
+        0 25px 55px rgba(0, 0, 0, 0.65),
+        inset 0 0 0 1px rgba(255, 233, 196, 0.2);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .sisters-portrait:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow:
+        0 0 0 10px rgba(181, 139, 90, 0.18),
+        0 0 60px 14px rgba(255, 233, 196, 0.28),
+        0 30px 65px rgba(0, 0, 0, 0.7),
+        inset 0 0 0 1px rgba(255, 233, 196, 0.3);
+    }
+
+    .sisters-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: brightness(0.98) contrast(1.03) saturate(1.02);
+      transition: transform 0.7s ease, filter 0.5s ease;
+    }
+
+    .sisters-portrait:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.02) contrast(1.05) saturate(1.06);
+    }
+
+    /* Soft vignette + warm glaze over the photo */
+    .sisters-portrait::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 40%,
+          transparent 40%,
+          rgba(30, 20, 14, 0.28) 85%,
+          rgba(30, 20, 14, 0.55) 100%);
+      mix-blend-mode: multiply;
+    }
+
+    /* Caption under the frame */
+    .sisters-caption {
+      margin-top: 1rem;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--cream-soft);
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .sisters-caption i {
+      color: var(--gold-light);
+      filter: drop-shadow(0 0 8px rgba(255, 253, 248, 0.6));
+    }
+
+    /* Small gold corner accents on the frame */
+    .sisters-portrait .corner {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--gold-light);
+      z-index: 3;
+      pointer-events: none;
+      filter: drop-shadow(0 0 6px rgba(255, 246, 226, 0.55));
+    }
+    .sisters-portrait .corner.tl { top: 14px; left: 14px;  border-right: none; border-bottom: none; border-top-left-radius: 8px; }
+    .sisters-portrait .corner.tr { top: 14px; right: 14px; border-left: none;  border-bottom: none; border-top-right-radius: 8px; }
+    .sisters-portrait .corner.bl { bottom: 14px; left: 14px;  border-right: none; border-top: none;    border-bottom-left-radius: 8px; }
+    .sisters-portrait .corner.br { bottom: 14px; right: 14px; border-left: none;  border-top: none;    border-bottom-right-radius: 8px; }
+
+    /* Values grid */
+    .about-values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.6rem;
+      margin-bottom: 4rem;
+    }
+
+    .value-card {
+      background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
+      border-radius: 1.6rem;
+      padding: 2rem 1.6rem;
+      text-align: center;
+      box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px var(--gold-core);
+      transition: transform 0.32s ease, box-shadow 0.32s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 22px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px var(--gold-blaze),
+        0 0 40px 8px rgba(255, 246, 226, 0.28);
+    }
+
+    .value-card i {
+      font-size: 2.6rem;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 12px rgba(255, 253, 248, 0.55));
+    }
+
+    .value-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      color: var(--cream-bright);
+      margin-bottom: 0.5rem;
+    }
+
+    .value-card p {
+      font-size: 0.98rem;
+      color: var(--cream-soft);
+      line-height: 1.65;
+    }
+
+    /* Closing band */
+    .about-closing {
+      background: linear-gradient(135deg, var(--brown-deepest) 0%, #2a1c12 100%);
+      border-radius: 2rem;
+      padding: 2.6rem 2.2rem;
+      border-left: 8px solid var(--gold-core);
+      border-right: 8px solid var(--gold-core);
+      text-align: center;
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-closing h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--cream-bright);
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 20px rgba(255, 253, 248, 0.3);
+    }
+
+    .about-closing p {
+      font-size: 1.05rem;
+      color: var(--cream-soft);
+      max-width: 720px;
+      margin: 0 auto 1.6rem;
+      line-height: 1.7;
+    }
+
+    .about-closing .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    @media (max-width: 860px) {
+      .about-intro {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .sisters-portrait {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <span><i class="fas fa-map-pin"></i> Ikoto, Ijebu-Ode, Ogun State, Nigeria</span>
+    <span><i class="fas fa-envelope"></i> stclaremonasteryhelicicuture@gmail.com</span>
+    <span><i class="fas fa-phone-alt"></i> 07043021005 · 09160500267</span>
+  </div>
+
+  <!-- ==================== ABOUT ACTION BAR ==================== -->
+  <div class="about-action-bar" role="region" aria-label="Page navigation">
+
+    <div class="anchor-left">
+      <i class="fas fa-arrow-left"></i>
+      <a href="index.html" style="color: var(--cream-soft); text-decoration: none; transition: color 0.25s ease;"
+         onmouseover="this.style.color='var(--gold-blaze)'"
+         onmouseout="this.style.color='var(--cream-soft)'">
+        Back to Home
+      </a>
+    </div>
+
+    <a href="index.html#services"
+       class="what-we-do-cta"
+       aria-label="See what St. Clare Monastery Heliciculture does">
+      <span class="cta-icon"><i class="fas fa-hand-holding-heart"></i></span>
+      <span class="cta-label">What We Do</span>
+      <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+    </a>
+
+    <div class="anchor-right">
+      <span>Est. Ikoto</span>
+      <i class="fas fa-dove"></i>
+    </div>
+
+  </div>
+
+  <!-- ==================== ABOUT HERO ==================== -->
+  <header class="about-hero">
+    <h1><i class="fas fa-church"></i> About Our Monastery</h1>
+    <p class="about-sub">
+      A story of quiet labour, sustainable farming, and premium heliciculture — rooted in faith, guided by tradition.
+    </p>
+  </header>
+
+  <!-- ==================== MAIN ==================== -->
+  <main class="container">
+
+    <!-- ---------- INTRO WITH SISTERS PHOTO ---------- -->
+    <section class="about-intro">
+      <div>
+        <h2>Where Faith Meets Sustainability</h2>
+        <p>
+          <strong>St. Clare Monastery Heliciculture</strong> is a ministry of the monastery — a small but dedicated
+          farming community in Ikoto, Ijebu-Ode, Ogun State, Nigeria. We raise snails with the same care and
+          patience that has guided monastic life for centuries.
+        </p>
+        <p>
+          What began as a humble effort to cultivate snails for local needs has grown into a trusted source
+          of <strong>live and frozen snails</strong> for families, restaurants, markets, and exporters across Nigeria.
+        </p>
+        <p>
+          Every snail is raised in a clean, ethical, and sustainable environment — no shortcuts, no compromises,
+          just the quiet discipline of monastic work.
+        </p>
+      </div>
+
+      <!-- SISTERS PHOTO -->
+      <figure style="margin: 0;">
+        <div class="sisters-portrait">
+          <img
+            src="picvalidityofsisters.jpg"
+            alt="The Sisters of St. Clare Monastery Heliciculture"
+            loading="lazy"
+          />
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="corner bl"></span>
+          <span class="corner br"></span>
+        </div>
+        <figcaption class="sisters-caption">
+          <i class="fas fa-dove"></i>
+          The Sisters of St. Clare Monastery — the heart of our ministry
+          <i class="fas fa-leaf"></i>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ---------- VALUES ---------- -->
+    <section>
+      <h2 class="section-title"><i class="fas fa-heart"></i> Our Values</h2>
+      <p class="section-subtitle">
+        Four principles shape everything we do — from how we raise our snails to how we serve our customers.
+      </p>
+
+      <div class="about-values">
+        <article class="value-card">
+          <i class="fas fa-dove"></i>
+          <h3>Faith</h3>
+          <p>Work is prayer. Every task is done with reverence and quiet intention.</p>
+        </article>
+
+        <article class="value-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Sustainability</h3>
+          <p>We protect the land and give back more than we take — for the next generation.</p>
+        </article>
+
+        <article class="value-card">
+          <i class="fas fa-handshake"></i>
+          <h3>Integrity</h3>
+          <p>Honest pricing, honest quality. What we promise is what we deliver.</p>
+        </article>
+
+        <article class="value-card">
+          <i class="fas fa-award"></i>
+          <h3>Excellence</h3>
+          <p>Premium snails, careful handling, and reliable service — every single order.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- CLOSING BAND ---------- -->
+    <section class="about-closing">
+      <h2><i class="fas fa-pray"></i> Ready to place an order?</h2>
+      <p>
+        Message us on WhatsApp, send an email, or visit the monastery. We welcome families, restaurants,
+        and bulk buyers.
+      </p>
+
+      <div class="btn-row">
+        <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%20Heliciculture%2C%20I%20would%20like%20to%20place%20an%20order."
+           class="whatsapp-chat-btn"
+           style="max-width: 320px; margin-top: 0;"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+
+        <a href="index.html#contact"
+           class="holistic-btn"
+           style="padding: 1rem 1.8rem;">
+          <i class="fas fa-envelope"></i> Contact Details
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <i class="fas fa-church"></i> St. Clare Monastery Heliciculture
+    </div>
+    <p>
+      <i class="fas fa-dove"></i>
+      Sustainable snail farming, rooted in faith and tradition.
+      <i class="fas fa-leaf"></i>
+    </p>
+    <p style="margin-top: 0.8rem; font-size: 0.85rem;">
+      &copy; <span id="year"></span> St. Clare Monastery Heliciculture · Ikoto, Ijebu-Ode, Ogun State, Nigeria
+    </p>
+  </footer>
+
+  <!-- MAIN SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
