@@ -1160,3 +1160,165 @@ body::after {
     font-size: 0.8rem;
   }
 }
+/* =====================================================================
+   JESUIT-STYLE BUTTON SYSTEM — Brown + White Touch
+   Clean, short text, airy space (Jesuit.org inspired)
+===================================================================== */
+
+/* ---- Primary Navigation Bar ---- */
+.jesuit-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(181, 139, 90, 0.25);
+}
+
+/* ---- Base Button ---- */
+.jesuit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #d9c2a7;
+  background: transparent;
+  border: 1px solid rgba(181, 139, 90, 0.35);
+  border-radius: 3px;
+
+  cursor: pointer;
+  transition: all 0.22s ease;
+  position: relative;
+}
+
+.jesuit-btn:hover {
+  color: #f5efe6;
+  background: #2b1c11;
+  border-color: #b58b5a;
+}
+
+.jesuit-btn:active {
+  background: #1e140e;
+}
+
+/* ---- Primary (filled) Button ---- */
+.jesuit-btn-primary {
+  color: #f5efe6;
+  background: #2b1c11;
+  border-color: #2b1c11;
+}
+
+.jesuit-btn-primary:hover {
+  background: #4a2c1b;
+  border-color: #b58b5a;
+}
+
+/* ---- White touch on primary (thin underline) ---- */
+.jesuit-btn-primary::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.jesuit-btn-primary:hover::after {
+  opacity: 0.85;
+}
+
+/* ---- Action CTA (larger, used for "Read Our Story") ---- */
+.jesuit-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 36px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #f5efe6;
+  background: #2b1c11;
+  border: 1px solid #7d5d3f;
+  border-radius: 3px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.jesuit-cta::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.jesuit-cta:hover {
+  background: #4a2c1b;
+  border-color: #b58b5a;
+}
+
+.jesuit-cta:hover::after {
+  opacity: 0.9;
+}
+
+.jesuit-cta .cta-arrow {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.jesuit-cta:hover .cta-arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 720px) {
+  .jesuit-nav {
+    padding: 12px 12px;
+    gap: 3px;
+  }
+
+  .jesuit-btn {
+    padding: 10px 16px;
+    font-size: 0.72rem;
+    letter-spacing: 0.8px;
+  }
+
+  .jesuit-cta {
+    padding: 13px 28px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ---- About page: stack intro on mobile ---- */
+@media (max-width: 860px) {
+  .about-intro-section {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
