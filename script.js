@@ -1,26 +1,29 @@
 /* =====================================================================
-   ST. CLARE MONASTERY HELICICULTURE — SCRIPT.JS  (V2 · STABLE)
+   ST. CLARE MONASTERY HELICICULTURE — SCRIPT.JS  (V3 · STABLE)
    File: script.js
-   Purpose: Smooth, stable interactivity without visual glitches
+   Purpose: Clean interactivity — zero animation overlap
 ===================================================================== */
 
 (function () {
   'use strict';
 
   const CONFIG = {
-    businessName: 'St. Clare Monastery Heliciculture'
+    businessName: 'St. Clare Monastery Heliciculture',
+    phonePrimary: '2347043021005'
   };
 
   /* -------------------------------------------------------------------
-     1. AUTO YEAR
+     1. AUTO-UPDATING FOOTER YEAR
   ------------------------------------------------------------------- */
   function updateYear() {
     const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   }
 
   /* -------------------------------------------------------------------
-     2. SMOOTH SCROLL (no header offset jitter)
+     2. SMOOTH SCROLL — glides to sections without jitter
   ------------------------------------------------------------------- */
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -41,7 +44,7 @@
   }
 
   /* -------------------------------------------------------------------
-     3. WHATSAPP TRACKING (silent, no UI glitch)
+     3. WHATSAPP LINK TRACKING — silent, no visual effect
   ------------------------------------------------------------------- */
   function initWhatsAppLinks() {
     document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
@@ -56,7 +59,7 @@
   }
 
   /* -------------------------------------------------------------------
-     4. SCROLL REVEAL (gentle, one-time only — no re-triggering)
+     4. GENTLE SCROLL REVEAL — one-time only, no re-triggering
   ------------------------------------------------------------------- */
   function initScrollReveal() {
     const targets = document.querySelectorAll(
@@ -65,10 +68,13 @@
 
     if (!targets.length) return;
 
+    // Respect reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     targets.forEach((el, i) => {
       el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = `opacity 1s ease ${i * 0.05}s, transform 1s ease ${i * 0.05}s`;
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = `opacity 0.9s ease ${i * 0.05}s, transform 0.9s ease ${i * 0.05}s`;
     });
 
     const observer = new IntersectionObserver(
@@ -81,20 +87,37 @@
           }
         });
       },
-      { threshold: 0.2, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.2 }
     );
 
     targets.forEach((el) => observer.observe(el));
   }
 
   /* -------------------------------------------------------------------
-     5. BOOT
+     5. EMAIL COPY ON CLICK — silent clipboard copy
+  ------------------------------------------------------------------- */
+  function initEmailCopy() {
+    document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const email = link.getAttribute('href').replace('mailto:', '');
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(email).then(() => {
+            console.log(`[Clipboard] Email copied: ${email}`);
+          }).catch(() => { /* silent */ });
+        }
+      });
+    });
+  }
+
+  /* -------------------------------------------------------------------
+     6. BOOT
   ------------------------------------------------------------------- */
   function init() {
     updateYear();
     initSmoothScroll();
     initWhatsAppLinks();
     initScrollReveal();
+    initEmailCopy();
 
     console.log(
       `%c${CONFIG.businessName} — site ready ✓`,
