@@ -8,34 +8,25 @@
   <meta name="author" content="St. Clare Monastery Heliciculture" />
   <title>About Us | St. Clare Monastery Heliciculture</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="st. clare monastery heliciculture.png" />
-
-  <!-- MAIN STYLESHEET -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ==================== TOP BAR ==================== -->
   <div class="top-bar">
     <span><i class="fas fa-map-pin"></i> Ikoto, Ijebu-Ode, Ogun State, Nigeria</span>
     <span><i class="fas fa-envelope"></i> stclaremonasteryhelicicuture@gmail.com</span>
     <span><i class="fas fa-phone-alt"></i> 07043021005 · 09160500267</span>
   </div>
 
-  <!-- ==================== JESUIT-STYLE NAVIGATION ==================== -->
   <nav class="jesuit-nav" aria-label="Primary navigation">
     <a href="index.html" class="jesuit-btn">Home</a>
     <a href="about.html" class="jesuit-btn">Our Story</a>
-    <a href="index.html#services" class="jesuit-btn">Our Work</a>
+    <a href="gallery.html" class="jesuit-btn">Our Work</a>
     <a href="index.html#contact" class="jesuit-btn">Contact</a>
     <a href="index.html#location" class="jesuit-btn">Visit</a>
     <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
@@ -46,7 +37,6 @@
     </a>
   </nav>
 
-  <!-- ==================== ABOUT HERO ==================== -->
   <header class="hero" style="padding: 3rem 2rem 3.5rem;">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: 2px; color: var(--cream-bright); text-shadow: 0 0 25px rgba(255, 253, 248, 0.5), 3px 3px 0 rgba(0,0,0,0.5); margin-bottom: 0.6rem;">
       <i class="fas fa-church" style="color: var(--gold-pale); margin-right: 12px; filter: drop-shadow(0 0 12px rgba(255,253,248,0.8));"></i>
@@ -65,18 +55,10 @@
     </p>
   </header>
 
-  <!-- ==================== MAIN ==================== -->
   <main class="container">
 
     <!-- ---------- INTRO WITH SISTERS PHOTO ---------- -->
-    <section style="
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 3.2rem;
-      align-items: center;
-      margin-bottom: 4rem;
-    " class="about-intro-section">
-
+    <section class="about-intro-section">
       <div>
         <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 3vw, 2.3rem); color: var(--cream-bright); margin-bottom: 1.2rem; text-shadow: 0 0 20px rgba(255,253,248,0.3);">
           Where Faith Meets Sustainability
@@ -96,50 +78,18 @@
       </div>
 
       <figure style="margin: 0;">
-        <div style="
-          position: relative;
-          aspect-ratio: 4 / 5;
-          border-radius: 6px;
-          overflow: hidden;
-          isolation: isolate;
-          background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-void) 100%);
-          border: 1px solid var(--gold-core);
-          box-shadow:
-            0 0 0 6px rgba(181, 139, 90, 0.10),
-            0 20px 45px rgba(0, 0, 0, 0.6);
-          transition: transform 0.5s ease, box-shadow 0.5s ease;
-        ">
+        <div class="sisters-portrait">
           <img
             src="picvalidityofsisters.jpg"
             alt="The Sisters of St. Clare Monastery Heliciculture"
             loading="lazy"
-            style="
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              object-position: center;
-              display: block;
-              filter: brightness(0.98) contrast(1.03) saturate(1.02);
-            "
           />
         </div>
 
-        <figcaption style="
-          margin-top: 1rem;
-          text-align: center;
-          font-family: 'Cormorant Garamond', serif;
-          font-style: italic;
-          font-size: 1rem;
-          color: var(--cream-soft);
-          letter-spacing: 0.5px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-        ">
-          <i class="fas fa-dove" style="color: var(--gold-light);"></i>
+        <figcaption class="sisters-caption">
+          <i class="fas fa-dove"></i>
           The Sisters of St. Clare Monastery — the heart of our ministry
-          <i class="fas fa-leaf" style="color: var(--gold-light);"></i>
+          <i class="fas fa-leaf"></i>
         </figcaption>
       </figure>
     </section>
@@ -151,56 +101,41 @@
         Four principles shape everything we do — from how we raise our snails to how we serve our customers.
       </p>
 
-      <div style="
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 1.6rem;
-        margin-bottom: 4rem;
-      ">
-        <article style="background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%); border-radius: 8px; padding: 2rem 1.6rem; text-align: center; box-shadow: 0 10px 24px rgba(0,0,0,0.5), inset 0 0 0 1px var(--gold-core);">
-          <i class="fas fa-dove" style="font-size: 2.4rem; color: var(--gold-light); margin-bottom: 1rem; display: inline-block; filter: drop-shadow(0 0 12px rgba(255,253,248,0.5));"></i>
-          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--cream-bright); margin-bottom: 0.5rem;">Faith</h3>
-          <p style="font-size: 0.98rem; color: var(--cream-soft); line-height: 1.65;">Work is prayer. Every task is done with reverence and quiet intention.</p>
+      <div class="about-values">
+        <article class="value-card">
+          <i class="fas fa-dove"></i>
+          <h3>Faith</h3>
+          <p>Work is prayer. Every task is done with reverence and quiet intention.</p>
         </article>
 
-        <article style="background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%); border-radius: 8px; padding: 2rem 1.6rem; text-align: center; box-shadow: 0 10px 24px rgba(0,0,0,0.5), inset 0 0 0 1px var(--gold-core);">
-          <i class="fas fa-leaf" style="font-size: 2.4rem; color: var(--gold-light); margin-bottom: 1rem; display: inline-block; filter: drop-shadow(0 0 12px rgba(255,253,248,0.5));"></i>
-          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--cream-bright); margin-bottom: 0.5rem;">Sustainability</h3>
-          <p style="font-size: 0.98rem; color: var(--cream-soft); line-height: 1.65;">We protect the land and give back more than we take — for the next generation.</p>
+        <article class="value-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Sustainability</h3>
+          <p>We protect the land and give back more than we take — for the next generation.</p>
         </article>
 
-        <article style="background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%); border-radius: 8px; padding: 2rem 1.6rem; text-align: center; box-shadow: 0 10px 24px rgba(0,0,0,0.5), inset 0 0 0 1px var(--gold-core);">
-          <i class="fas fa-handshake" style="font-size: 2.4rem; color: var(--gold-light); margin-bottom: 1rem; display: inline-block; filter: drop-shadow(0 0 12px rgba(255,253,248,0.5));"></i>
-          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--cream-bright); margin-bottom: 0.5rem;">Integrity</h3>
-          <p style="font-size: 0.98rem; color: var(--cream-soft); line-height: 1.65;">Honest pricing, honest quality. What we promise is what we deliver.</p>
+        <article class="value-card">
+          <i class="fas fa-handshake"></i>
+          <h3>Integrity</h3>
+          <p>Honest pricing, honest quality. What we promise is what we deliver.</p>
         </article>
 
-        <article style="background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%); border-radius: 8px; padding: 2rem 1.6rem; text-align: center; box-shadow: 0 10px 24px rgba(0,0,0,0.5), inset 0 0 0 1px var(--gold-core);">
-          <i class="fas fa-award" style="font-size: 2.4rem; color: var(--gold-light); margin-bottom: 1rem; display: inline-block; filter: drop-shadow(0 0 12px rgba(255,253,248,0.5));"></i>
-          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--cream-bright); margin-bottom: 0.5rem;">Excellence</h3>
-          <p style="font-size: 0.98rem; color: var(--cream-soft); line-height: 1.65;">Premium snails, careful handling, and reliable service — every single order.</p>
+        <article class="value-card">
+          <i class="fas fa-award"></i>
+          <h3>Excellence</h3>
+          <p>Premium snails, careful handling, and reliable service — every single order.</p>
         </article>
       </div>
     </section>
 
     <!-- ---------- CLOSING BAND ---------- -->
-    <section style="
-      background: linear-gradient(135deg, var(--brown-deepest) 0%, #2a1c12 100%);
-      border-radius: 8px;
-      padding: 2.6rem 2.2rem;
-      border-left: 6px solid var(--gold-core);
-      border-right: 6px solid var(--gold-core);
-      text-align: center;
-      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
-    ">
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--cream-bright); margin-bottom: 0.8rem; text-shadow: 0 0 20px rgba(255,253,248,0.3);">
-        <i class="fas fa-pray"></i> Ready to place an order?
-      </h2>
-      <p style="font-size: 1.05rem; color: var(--cream-soft); max-width: 720px; margin: 0 auto 1.6rem; line-height: 1.7;">
+    <section class="about-closing">
+      <h2><i class="fas fa-pray"></i> Ready to place an order?</h2>
+      <p>
         Message us on WhatsApp, send an email, or visit the monastery. We welcome families, restaurants, and bulk buyers.
       </p>
 
-      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+      <div class="btn-row">
         <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
            class="jesuit-btn jesuit-btn-primary"
            target="_blank"
@@ -216,7 +151,6 @@
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="footer-brand">
       <i class="fas fa-church"></i> St. Clare Monastery Heliciculture
@@ -231,8 +165,6 @@
     </p>
   </footer>
 
-  <!-- MAIN SCRIPT -->
   <script src="script.js"></script>
-
 </body>
 </html>
