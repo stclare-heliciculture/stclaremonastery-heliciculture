@@ -6,13 +6,13 @@
 
   <!-- ============================================================
        ST. CLARE MONASTERY HELICICULTURE — SITEMAP
-       Domain: https://stclaremonasteryheliciculture.github.io/
+       Site: https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/
        Last updated: 2026-09-17
   ============================================================ -->
 
   <!-- Homepage -->
   <url>
-    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/</loc>
+    <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -20,7 +20,7 @@
 
   <!-- About / Our Story -->
   <url>
-    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/about.html</loc>
+    <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/about.html</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -28,7 +28,7 @@
 
   <!-- Our Work / Gallery -->
   <url>
-    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/gallery.html</loc>
+    <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/gallery.html</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -36,7 +36,7 @@
 
   <!-- Our Sanctuary / Videos -->
   <url>
-    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/sanctuary.html</loc>
+    <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sanctuary.html</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -44,7 +44,7 @@
 
   <!-- Health Benefits -->
   <url>
-    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/benefits.html</loc>
+    <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/benefits.html</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
