@@ -1,15 +1,4 @@
-# ============================================================
-# St. Clare Monastery Heliciculture — robots.txt
-# https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/
-# ============================================================
-
 User-agent: *
-Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
 Allow: /
 
 Sitemap: https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sitemap.xml
