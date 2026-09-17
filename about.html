@@ -23,6 +23,7 @@
     <span><i class="fas fa-phone-alt"></i> 07043021005 · 09160500267</span>
   </div>
 
+  <!-- ==================== JESUIT-STYLE NAVIGATION + MINI LOGO ==================== -->
   <nav class="jesuit-nav" aria-label="Primary navigation">
 
     <a href="index.html" class="nav-logo-badge" aria-label="St. Clare Monastery — Home">
@@ -66,6 +67,7 @@
 
   <main class="container">
 
+    <!-- ---------- INTRO WITH SISTERS SLIDESHOW ---------- -->
     <section class="about-intro-section">
       <div>
         <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 3vw, 2.3rem); color: var(--cream-bright); margin-bottom: 1.2rem; text-shadow: 0 0 20px rgba(255,253,248,0.3);">
@@ -85,13 +87,29 @@
         </p>
       </div>
 
+      <!-- SISTERS SLIDESHOW -->
       <figure style="margin: 0;">
-        <div class="sisters-portrait">
-          <img
-            src="picvalidityofsisters.jpg"
-            alt="The Sisters of St. Clare Monastery Heliciculture"
-            loading="lazy"
-          />
+        <div class="sisters-slideshow" id="sistersSlideshow">
+
+          <div class="slide is-active">
+            <img src="picvalidityofsisters.jpg" alt="The Sisters of St. Clare Monastery" loading="lazy" />
+          </div>
+
+          <div class="slide">
+            <img src="sisters bond1.jpg" alt="Sisters of St. Clare Monastery — in fellowship" loading="lazy" />
+          </div>
+
+          <div class="slide">
+            <img src="sisters bond2.jpg" alt="Sisters of St. Clare Monastery — in service" loading="lazy" />
+          </div>
+
+          <!-- Slide indicator dots -->
+          <div class="slide-dots" aria-hidden="true">
+            <span class="dot is-active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
         </div>
 
         <figcaption class="sisters-caption">
@@ -102,6 +120,7 @@
       </figure>
     </section>
 
+    <!-- ---------- VALUES ---------- -->
     <section>
       <h2 class="section-title"><i class="fas fa-heart"></i> Our Values</h2>
       <p class="section-subtitle">
@@ -135,6 +154,7 @@
       </div>
     </section>
 
+    <!-- ---------- CLOSING BAND ---------- -->
     <section class="about-closing">
       <h2><i class="fas fa-pray"></i> Ready to place an order?</h2>
       <p>
