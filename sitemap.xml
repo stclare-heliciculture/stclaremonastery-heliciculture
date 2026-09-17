@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ============================================================
+       ST. CLARE MONASTERY HELICICULTURE — SITEMAP
+       Domain: https://stclaremonasteryheliciculture.github.io/
+       Last updated: 2026-09-17
+  ============================================================ -->
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About / Our Story -->
+  <url>
+    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/about.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Our Work / Gallery -->
+  <url>
+    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/gallery.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Our Sanctuary / Videos -->
+  <url>
+    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/sanctuary.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Health Benefits -->
+  <url>
+    <loc>https://stclaremonasteryheliciculture.github.io/st-claremonasteryheliciculture/benefits.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
