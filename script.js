@@ -1,15 +1,6 @@
 /* =====================================================================
-   ST. CLARE MONASTERY HELICICULTURE — SCRIPT.JS  (V5 · SLIDESHOW)
+   ST. CLARE MONASTERY HELICICULTURE — SCRIPT.JS  (V6 · ACTIVITY GALLERY)
    File: script.js
-   Includes:
-     1. Auto-updating footer year
-     2. Smooth scroll to sections
-     3. WhatsApp click tracking
-     4. Scroll reveal (fade-in on scroll)
-     5. Email copy on click
-     6. Nav click pulse (brown glow flash)
-     7. Auto-active nav (glows the current page button)
-     8. Sisters slideshow (auto-rotates every 5 seconds)
 ===================================================================== */
 
 (function () {
@@ -20,28 +11,20 @@
     phonePrimary: '2347043021005'
   };
 
-  /* -------------------------------------------------------------------
-     1. AUTO-UPDATING FOOTER YEAR
-  ------------------------------------------------------------------- */
+  /* --- 1. Auto year --- */
   function updateYear() {
     const yearEl = document.getElementById('year');
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
-  /* -------------------------------------------------------------------
-     2. SMOOTH SCROLL — glides to anchor sections without jitter
-  ------------------------------------------------------------------- */
+  /* --- 2. Smooth scroll --- */
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
       link.addEventListener('click', (e) => {
         const id = link.getAttribute('href');
         if (id === '#' || id.length < 2) return;
-
         const target = document.querySelector(id);
         if (!target) return;
-
         e.preventDefault();
         window.scrollTo({
           top: target.getBoundingClientRect().top + window.pageYOffset - 20,
@@ -51,14 +34,11 @@
     });
   }
 
-  /* -------------------------------------------------------------------
-     3. WHATSAPP LINK TRACKING — silent, no visual effect
-  ------------------------------------------------------------------- */
+  /* --- 3. WhatsApp tracking --- */
   function initWhatsAppLinks() {
     document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
-
       link.addEventListener('click', () => {
         const number = link.href.match(/wa\.me\/(\d+)/)?.[1] || 'unknown';
         console.log(`[WhatsApp] Opening chat with: ${number}`);
@@ -66,13 +46,11 @@
     });
   }
 
-  /* -------------------------------------------------------------------
-     4. GENTLE SCROLL REVEAL — one-time only, no re-triggering
-  ------------------------------------------------------------------- */
+  /* --- 4. Scroll reveal (now includes .activity-card) --- */
   function initScrollReveal() {
     const targets = document.querySelectorAll(
       '.snail-card, .service-item, .contact-card, .address-block, ' +
-      '.value-card, .product-card, .about-closing, ' +
+      '.value-card, .product-card, .activity-card, .about-closing, ' +
       '.nutrient-card, .blood-band, .why-choose, .order-band'
     );
 
@@ -101,9 +79,7 @@
     targets.forEach((el) => observer.observe(el));
   }
 
-  /* -------------------------------------------------------------------
-     5. EMAIL COPY ON CLICK — silent clipboard copy
-  ------------------------------------------------------------------- */
+  /* --- 5. Email copy --- */
   function initEmailCopy() {
     document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
       link.addEventListener('click', () => {
@@ -111,15 +87,13 @@
         if (navigator.clipboard) {
           navigator.clipboard.writeText(email).then(() => {
             console.log(`[Clipboard] Email copied: ${email}`);
-          }).catch(() => { /* silent */ });
+          }).catch(() => {});
         }
       });
     });
   }
 
-  /* -------------------------------------------------------------------
-     6. NAV CLICK PULSE — brief brown glow when a nav button is tapped
-  ------------------------------------------------------------------- */
+  /* --- 6. Nav click pulse --- */
   function initNavClickPulse() {
     document.querySelectorAll('.jesuit-nav .jesuit-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -129,27 +103,18 @@
     });
   }
 
-  /* -------------------------------------------------------------------
-     7. AUTO-ACTIVE NAV — glows the button matching the current page
-  ------------------------------------------------------------------- */
+  /* --- 7. Auto-active nav --- */
   function initActiveNav() {
     const path = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.jesuit-nav .jesuit-btn').forEach((btn) => {
       const href = btn.getAttribute('href') || '';
-      // Only auto-activate top-level page links (not anchors)
       if (href.endsWith('.html') && href === path) {
         btn.classList.add('jesuit-btn-active');
       }
     });
   }
 
-  /* -------------------------------------------------------------------
-     8. SISTERS SLIDESHOW — auto-rotates every 5 seconds
-        - 3 images in the about.html slideshow
-        - Smooth fade transitions
-        - Dot indicators update live
-        - Pauses on hover and when tab is hidden (saves CPU)
-  ------------------------------------------------------------------- */
+  /* --- 8. Sisters slideshow --- */
   function initSistersSlideshow() {
     const slideshow = document.getElementById('sistersSlideshow');
     if (!slideshow) return;
@@ -160,7 +125,7 @@
     if (slides.length < 2) return;
 
     let current = 0;
-    const INTERVAL = 5000; // 5 seconds per slide
+    const INTERVAL = 5000;
 
     function goTo(index) {
       slides.forEach((slide, i) => {
@@ -176,20 +141,13 @@
       goTo((current + 1) % slides.length);
     }
 
-    // Start the rotation
     let timer = setInterval(next, INTERVAL);
 
-    // Pause on hover
-    slideshow.addEventListener('mouseenter', () => {
-      clearInterval(timer);
-    });
-
+    slideshow.addEventListener('mouseenter', () => clearInterval(timer));
     slideshow.addEventListener('mouseleave', () => {
-      clearInterval(timer);
       timer = setInterval(next, INTERVAL);
     });
 
-    // Pause when the browser tab is hidden (saves battery)
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
         clearInterval(timer);
@@ -199,15 +157,12 @@
       }
     });
 
-    // Respect reduced-motion preference: don't auto-rotate
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       clearInterval(timer);
     }
   }
 
-  /* -------------------------------------------------------------------
-     9. BOOT — run everything on DOM ready
-  ------------------------------------------------------------------- */
+  /* --- Boot --- */
   function init() {
     updateYear();
     initSmoothScroll();
