@@ -1514,3 +1514,61 @@ body::after {
   background:
     linear-gradient(135deg, #1e140e 0%, #2b1c11 100%);
 }
+/* =====================================================================
+   ACTIVITY GALLERY — "Life at the Monastery" section on gallery.html
+===================================================================== */
+.activity-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.activity-card {
+  margin: 0;
+  background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--brown-soft);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.6),
+    0 0 30px 4px rgba(181, 139, 90, 0.28);
+}
+
+.activity-card a {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #1e140e;
+}
+
+.activity-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.4s ease;
+  filter: brightness(0.97) contrast(1.03);
+}
+
+.activity-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.02) contrast(1.05);
+}
+
+.activity-card figcaption {
+  padding: 0.9rem 1rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--cream-soft);
+  border-top: 1px solid rgba(181, 139, 90, 0.25);
+  letter-spacing: 0.4px;
+}
