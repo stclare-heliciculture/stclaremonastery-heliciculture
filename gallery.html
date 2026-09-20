@@ -20,7 +20,6 @@
        GALLERY PAGE — ACTIVITY SECTION
     ========================================================= */
 
-    /* Section divider — subtle band between the two galleries */
     .gallery-divider {
       max-width: 720px;
       margin: 4rem auto 3rem;
@@ -48,7 +47,6 @@
       filter: drop-shadow(0 0 10px rgba(255, 253, 248, 0.6));
     }
 
-    /* Activity gallery — same grid as products */
     .activity-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -105,7 +103,6 @@
       letter-spacing: 0.4px;
     }
 
-    /* Responsive tweaks */
     @media (max-width: 720px) {
       .gallery-divider { margin: 3rem auto 2rem; }
     }
@@ -166,12 +163,17 @@
     <section id="products">
       <h2 class="section-title"><i class="fas fa-images"></i> Product Gallery</h2>
       <p class="section-subtitle">
-        Please tap on any image to view full size.
+        Tap any image to view full size.
       </p>
 
       <div class="product-gallery">
 
-        
+        <figure class="product-card">
+          <a href="snailpic1.jpg" target="_blank" rel="noopener">
+            <img src="snailpic1.jpg" alt="Live snails — photo 1" loading="lazy" />
+          </a>
+          <figcaption>Live Snails · Ikoto</figcaption>
+        </figure>
 
         <figure class="product-card">
           <a href="snailpic2.jpg" target="_blank" rel="noopener">
@@ -191,12 +193,27 @@
           <a href="snailpic4.jpg" target="_blank" rel="noopener">
             <img src="snailpic4.jpg" alt="Frozen snails — photo 4" loading="lazy" />
           </a>
-          <figcaption>Healthy Snails · Available</figcaption>
+          <figcaption>Frozen Snails · Packaged</figcaption>
         </figure>
 
-        
+        <figure class="product-card">
+          <a href="snailpic5.jpg" target="_blank" rel="noopener">
+            <img src="snailpic5.jpg" alt="Snails in the monastery — photo 5" loading="lazy" />
+          </a>
+          <figcaption>Monastery Grounds</figcaption>
+        </figure>
 
-        
+        <figure class="product-card">
+          <a href="snailpic6.jpg" target="_blank" rel="noopener">
+            <img src="snailpic6.jpg" alt="Freshly harvested snails — photo 6" loading="lazy" />
+          </a>
+          <figcaption>Fresh Harvest</figcaption>
+        </figure>
+
+        <figure class="product-card">
+          <a href="snailpic7.jpg" target="_blank" rel="noopener">
+            <img src="snailpic7.jpg" alt="Ready for order — photo 7" loading="lazy" />
+          </a>
           <figcaption>Ready for Order</figcaption>
         </figure>
 
@@ -247,13 +264,11 @@
           <figcaption>Daily Labour</figcaption>
         </figure>
 
-        
-
         <figure class="activity-card">
-          <a href="activity16.jpg" target="_blank" rel="noopener">
-            <img src="activity16.jpg" alt="Monastery activity — photo 6" loading="lazy" />
+          <a href="activity 15.jpg" target="_blank" rel="noopener">
+            <img src="activity 15.jpg" alt="Monastery activity — photo 5" loading="lazy" />
           </a>
-          <figcaption>Tending the Gift</figcaption>
+          <figcaption>Fellowship</figcaption>
         </figure>
 
         <figure class="activity-card">
