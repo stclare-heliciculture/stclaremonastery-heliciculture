@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Step into the sanctuary of St. Clare Monastery Heliciculture — witness the quiet life of our snails, raised with prayer, care, and purpose in Ikoto, Ijebu-Ode, Nigeria." />
-  <meta name="keywords" content="snail farm videos, monastery snail sanctuary, heliciculture Nigeria, live snails video, snail farming Ijebu-Ode" />
+  <meta name="description" content="View our live and frozen snails and monastery life — premium quality from St. Clare Monastery Heliciculture, Ikoto, Ijebu-Ode, Nigeria." />
+  <meta name="keywords" content="snail farm photos, monastery snail life, heliciculture Nigeria, live snails gallery, Ijebu-Ode" />
   <meta name="author" content="St. Clare Monastery Heliciculture" />
-  <title>Our Sanctuary | St. Clare Monastery Heliciculture</title>
+  <title>Our Work | St. Clare Monastery Heliciculture</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,265 +17,108 @@
 
   <style>
     /* =========================================================
-       SANCTUARY PAGE — VIDEO GALLERY
+       GALLERY PAGE — ACTIVITY SECTION
     ========================================================= */
 
-    .sanctuary-reflection {
-      max-width: 820px;
-      margin: 0 auto 4rem;
+    /* Section divider — subtle band between the two galleries */
+    .gallery-divider {
+      max-width: 720px;
+      margin: 4rem auto 3rem;
       text-align: center;
-      padding: 2rem 1.5rem;
-      border-top: 1px solid rgba(181, 139, 90, 0.3);
-      border-bottom: 1px solid rgba(181, 139, 90, 0.3);
-    }
-
-    .sanctuary-reflection .reflection-icon {
-      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
       color: var(--gold-light);
-      margin-bottom: 0.8rem;
-      display: inline-block;
-      filter: drop-shadow(0 0 12px rgba(255, 253, 248, 0.6));
     }
 
-    .sanctuary-reflection .reflection-text {
+    .gallery-divider .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold-core),
+        transparent
+      );
+      box-shadow: 0 0 8px rgba(181, 139, 90, 0.4);
+    }
+
+    .gallery-divider i {
+      font-size: 1.4rem;
+      filter: drop-shadow(0 0 10px rgba(255, 253, 248, 0.6));
+    }
+
+    /* Activity gallery — same grid as products */
+    .activity-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .activity-card {
+      margin: 0;
+      background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--brown-soft);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 18px 36px rgba(0, 0, 0, 0.6),
+        0 0 30px 4px rgba(181, 139, 90, 0.28);
+    }
+
+    .activity-card a {
+      display: block;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #1e140e;
+    }
+
+    .activity-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      filter: brightness(0.97) contrast(1.03);
+    }
+
+    .activity-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.02) contrast(1.05);
+    }
+
+    .activity-card figcaption {
+      padding: 0.9rem 1rem;
+      text-align: center;
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
-      line-height: 1.7;
-      color: var(--cream-bright);
+      font-size: 0.98rem;
+      color: var(--cream-soft);
+      border-top: 1px solid rgba(181, 139, 90, 0.25);
       letter-spacing: 0.4px;
     }
 
-    .sanctuary-reflection .reflection-source {
-      display: block;
-      margin-top: 0.9rem;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.82rem;
-      font-style: normal;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-light);
-    }
-
-    /* ---- Video grid ---- */
-    .video-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      max-width: 900px;
-      margin: 0 auto 4rem;
-    }
-
-    /* ---- Individual video card ---- */
-    .video-card {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      isolation: isolate;
-      background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-void) 100%);
-      border: 1px solid var(--gold-core);
-      box-shadow:
-        0 0 0 6px rgba(181, 139, 90, 0.10),
-        0 22px 50px rgba(0, 0, 0, 0.65);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .video-card:hover {
-      transform: translateY(-4px);
-      box-shadow:
-        0 0 0 8px rgba(181, 139, 90, 0.16),
-        0 30px 60px rgba(0, 0, 0, 0.7),
-        0 0 40px 8px rgba(255, 233, 196, 0.18);
-    }
-
-    .video-card video {
-      width: 100%;
-      height: auto;
-      display: block;
-      background: #0d0805;
-      border-radius: 8px 8px 0 0;
-      outline: none;
-    }
-
-    .video-card .video-meta {
-      padding: 1.2rem 1.5rem;
-      background: linear-gradient(180deg,
-        rgba(30, 20, 14, 0.6) 0%,
-        rgba(30, 20, 14, 0.95) 100%);
-      border-top: 1px solid rgba(181, 139, 90, 0.3);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.8rem;
-    }
-
-    .video-card .video-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      color: var(--cream-bright);
-      letter-spacing: 0.6px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .video-card .video-title i {
-      color: var(--gold-light);
-      font-size: 0.9em;
-      filter: drop-shadow(0 0 8px rgba(255, 253, 248, 0.5));
-    }
-
-    .video-card .video-note {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      letter-spacing: 1.3px;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .video-card .video-note i {
-      color: var(--gold-pale);
-    }
-
-    /* ---- Devotional quote band ---- */
-    .devotional-band {
-      max-width: 900px;
-      margin: 0 auto 4rem;
-      padding: 3rem 2.5rem;
-      text-align: center;
-      background:
-        linear-gradient(135deg, #1e140e 0%, #2a1c12 100%);
-      border-radius: 8px;
-      border-left: 6px solid var(--gold-core);
-      border-right: 6px solid var(--gold-core);
-      box-shadow:
-        inset 0 0 50px rgba(0, 0, 0, 0.5),
-        0 0 40px 4px rgba(181, 139, 90, 0.12);
-      position: relative;
-      isolation: isolate;
-    }
-
-    .devotional-band::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 50% 30%,
-          rgba(255, 233, 196, 0.10) 0%,
-          transparent 65%);
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    .devotional-band .dev-icon {
-      font-size: 2.4rem;
-      color: var(--gold-light);
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 0 20px rgba(255, 233, 196, 0.6));
-      display: inline-block;
-    }
-
-    .devotional-band h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
-      color: var(--cream-bright);
-      margin-bottom: 1rem;
-      text-shadow: 0 0 22px rgba(255, 253, 248, 0.3);
-    }
-
-    .devotional-band p {
-      font-size: 1.05rem;
-      color: var(--cream-soft);
-      max-width: 720px;
-      margin: 0 auto 0.8rem;
-      line-height: 1.85;
-    }
-
-    .devotional-band p strong {
-      color: var(--cream-bright);
-      font-weight: 600;
-    }
-
-    .devotional-band .verse {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.15rem;
-      color: var(--gold-pale);
-      display: block;
-      margin-top: 1.2rem;
-      letter-spacing: 0.5px;
-    }
-
-    .devotional-band .verse cite {
-      display: block;
-      font-size: 0.85rem;
-      font-style: normal;
-      color: var(--gold-light);
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      margin-top: 0.5rem;
-    }
-
-    /* ---- Blessing / closing CTA ---- */
-    .sanctuary-closing {
-      max-width: 900px;
-      margin: 0 auto 2rem;
-      text-align: center;
-      padding: 2.6rem 2.2rem;
-      background: linear-gradient(135deg, var(--brown-deepest) 0%, #2a1c12 100%);
-      border-radius: 8px;
-      border-left: 6px solid var(--gold-core);
-      border-right: 6px solid var(--gold-core);
-      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
-    }
-
-    .sanctuary-closing h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      color: var(--cream-bright);
-      margin-bottom: 0.8rem;
-      text-shadow: 0 0 20px rgba(255, 253, 248, 0.3);
-    }
-
-    .sanctuary-closing p {
-      font-size: 1.05rem;
-      color: var(--cream-soft);
-      max-width: 720px;
-      margin: 0 auto 1.8rem;
-      line-height: 1.75;
-    }
-
-    .sanctuary-closing .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    /* ---- Responsive ---- */
+    /* Responsive tweaks */
     @media (max-width: 720px) {
-      .sanctuary-reflection { padding: 1.5rem 1rem; }
-      .devotional-band { padding: 2.2rem 1.6rem; }
-      .sanctuary-closing { padding: 2.2rem 1.6rem; }
-      .video-card .video-meta { padding: 1rem 1.2rem; }
-      .video-card .video-title { font-size: 1.15rem; }
+      .gallery-divider { margin: 3rem auto 2rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ==================== TOP BAR ==================== -->
   <div class="top-bar">
     <span><i class="fas fa-map-pin"></i> Ikoto, Ijebu-Ode, Ogun State, Nigeria</span>
     <span><i class="fas fa-envelope"></i> stclaremonasteryhelicicuture@gmail.com</span>
     <span><i class="fas fa-phone-alt"></i> 07043021005 · 09160500267</span>
   </div>
 
-  <!-- ==================== JESUIT-STYLE NAVIGATION + MINI LOGO ==================== -->
   <nav class="jesuit-nav" aria-label="Primary navigation">
 
     <a href="index.html" class="nav-logo-badge" aria-label="St. Clare Monastery — Home">
@@ -299,108 +142,172 @@
 
   </nav>
 
-  <!-- ==================== HERO ==================== -->
   <header class="hero" style="padding: 3rem 2rem 3.5rem;">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: 2px; color: var(--cream-bright); text-shadow: 0 0 25px rgba(255, 253, 248, 0.5), 3px 3px 0 rgba(0,0,0,0.5); margin-bottom: 0.6rem;">
-      <i class="fas fa-church" style="color: var(--gold-pale); margin-right: 12px; filter: drop-shadow(0 0 12px rgba(255,253,248,0.8));"></i>
-      Our Sanctuary
+      <i class="fas fa-seedling" style="color: var(--gold-pale); margin-right: 12px; filter: drop-shadow(0 0 12px rgba(255,253,248,0.8));"></i>
+      Our Work
     </h1>
 
     <div class="hero-divider">
+      <span class="line"></span>
+      <i class="fas fa-leaf"></i>
+      <span class="line"></span>
+    </div>
+
+    <p class="tagline">
+      A gallery of our live and frozen snails, and the quiet<br />
+      life of the monastery that raises them.
+    </p>
+  </header>
+
+  <main class="container">
+
+    <!-- ==================== PRODUCT GALLERY ==================== -->
+    <section id="products">
+      <h2 class="section-title"><i class="fas fa-images"></i> Product Gallery</h2>
+      <p class="section-subtitle">
+        Tap any image to view full size.
+      </p>
+
+      <div class="product-gallery">
+
+        <figure class="product-card">
+          <a href="snailpic1.jpg" target="_blank" rel="noopener">
+            <img src="snailpic1.jpg" alt="Live snails — photo 1" loading="lazy" />
+          </a>
+          <figcaption>Live Snails · Ikoto</figcaption>
+        </figure>
+
+        <figure class="product-card">
+          <a href="snailpic2.jpg" target="_blank" rel="noopener">
+            <img src="snailpic2.jpg" alt="Live snails — photo 2" loading="lazy" />
+          </a>
+          <figcaption>Live Snails · Fresh Harvest</figcaption>
+        </figure>
+
+        <figure class="product-card">
+          <a href="snailpic3.jpg" target="_blank" rel="noopener">
+            <img src="snailpic3.jpg" alt="Premium snails — photo 3" loading="lazy" />
+          </a>
+          <figcaption>Premium Quality</figcaption>
+        </figure>
+
+        <figure class="product-card">
+          <a href="snailpic4.jpg" target="_blank" rel="noopener">
+            <img src="snailpic4.jpg" alt="Frozen snails — photo 4" loading="lazy" />
+          </a>
+          <figcaption>Frozen Snails · Packaged</figcaption>
+        </figure>
+
+        <figure class="product-card">
+          <a href="snailpic5.jpg" target="_blank" rel="noopener">
+            <img src="snailpic5.jpg" alt="Snails in the monastery — photo 5" loading="lazy" />
+          </a>
+          <figcaption>Monastery Grounds</figcaption>
+        </figure>
+
+        <figure class="product-card">
+          <a href="snailpic6.jpg" target="_blank" rel="noopener">
+            <img src="snailpic6.jpg" alt="Freshly harvested snails — photo 6" loading="lazy" />
+          </a>
+          <figcaption>Fresh Harvest</figcaption>
+        </figure>
+
+        <figure class="product-card">
+          <a href="snailpic7.jpg" target="_blank" rel="noopener">
+            <img src="snailpic7.jpg" alt="Ready for order — photo 7" loading="lazy" />
+          </a>
+          <figcaption>Ready for Order</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ==================== DIVIDER ==================== -->
+    <div class="gallery-divider" aria-hidden="true">
       <span class="line"></span>
       <i class="fas fa-dove"></i>
       <span class="line"></span>
     </div>
 
-    <p class="tagline">
-      Step into the quiet life of our snails —<br />
-      a living sanctuary where prayer and purpose meet.
-    </p>
-  </header>
-
-  <!-- ==================== MAIN ==================== -->
-  <main class="container">
-
-    <!-- ---------- REFLECTION BAND ---------- -->
-    <section class="sanctuary-reflection">
-      <div class="reflection-icon"><i class="fas fa-quote-left"></i></div>
-      <p class="reflection-text">
-        We do not merely raise snails — we tend a living gift. Every creature entrusted to us is a
-        testimony of the harmony between faith and labour, between stillness and growth.
-      </p>
-      <span class="reflection-source">— The Sisters of St. Clare</span>
-    </section>
-
-    <!-- ---------- VIDEO ---------- -->
-    <section class="video-grid">
-
-      <article class="video-card">
-        <video controls preload="metadata" playsinline>
-          <source src="activity snail.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        <div class="video-meta">
-          <div class="video-title">
-            <i class="fas fa-seedling"></i> Life in the Sanctuary
-          </div>
-          <div class="video-note">
-            <i class="fas fa-play-circle"></i> Watch closely
-          </div>
-        </div>
-      </article>
-
-    </section>
-
-    <!-- ---------- DEVOTIONAL BAND ---------- -->
-    <section class="devotional-band">
-      <div class="dev-icon"><i class="fas fa-pray"></i></div>
-      <h2>Witness of the Quiet Hours</h2>
-      <p>
-        Long before the world wakes, the monastery is already at prayer. Then the work begins —
-        <strong>patient, deliberate, reverent</strong>. Our snails are fed, tended, and watched over
-        with the same faithfulness we offer to God.
-      </p>
-      <p>
-        We believe that whatever your hands find to do, do it with all your heart — and so we do.
-        This sanctuary is not a business hidden from our calling; it is our calling, made visible.
-      </p>
-      <span class="verse">
-        “Whatever you do, work at it with all your heart, as working for the Lord.”
-        <cite>Colossians 3:23</cite>
-      </span>
-    </section>
-
-    <!-- ---------- CLOSING BLESSING CTA ---------- -->
-    <section class="sanctuary-closing">
-      <h2><i class="fas fa-dove"></i> A Sanctuary That Serves You</h2>
-      <p>
-        What you have seen is only a glimpse. This monastery is a working ministry of provision —
-        and its harvest is for you. Order fresh, live, or frozen snails, and let the labour of our
-        hands serve your table with grace.
+    <!-- ==================== ACTIVITY GALLERY ==================== -->
+    <section id="activity">
+      <h2 class="section-title"><i class="fas fa-church"></i> Life at the Monastery</h2>
+      <p class="section-subtitle">
+        Quiet moments of work, fellowship, and daily ministry — captured in the monastery grounds.
       </p>
 
-      <div class="cta-row">
-        <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
-           class="jesuit-btn jesuit-btn-primary"
-           target="_blank"
-           rel="noopener noreferrer">
-          <i class="fab fa-whatsapp"></i> Order on WhatsApp
-        </a>
+      <div class="activity-gallery">
 
-        <a href="gallery.html" class="jesuit-btn">
-          <i class="fas fa-images"></i> View Our Products
-        </a>
+        <figure class="activity-card">
+          <a href="activity11.jpg" target="_blank" rel="noopener">
+            <img src="activity11.jpg" alt="Monastery activity — photo 1" loading="lazy" />
+          </a>
+          <figcaption>Morning Work</figcaption>
+        </figure>
 
-        <a href="index.html#contact" class="jesuit-btn">
-          <i class="fas fa-envelope"></i> Contact Details
-        </a>
+        <figure class="activity-card">
+          <a href="activity12.jpg" target="_blank" rel="noopener">
+            <img src="activity12.jpg" alt="Monastery activity — photo 2" loading="lazy" />
+          </a>
+          <figcaption>In the Sanctuary</figcaption>
+        </figure>
+
+        <figure class="activity-card">
+          <a href="activity13.jpg" target="_blank" rel="noopener">
+            <img src="activity13.jpg" alt="Monastery activity — photo 3" loading="lazy" />
+          </a>
+          <figcaption>Careful Hands</figcaption>
+        </figure>
+
+        <figure class="activity-card">
+          <a href="activity14.jpg" target="_blank" rel="noopener">
+            <img src="activity14.jpg" alt="Monastery activity — photo 4" loading="lazy" />
+          </a>
+          <figcaption>Daily Labour</figcaption>
+        </figure>
+
+        <figure class="activity-card">
+          <a href="activity 15.jpg" target="_blank" rel="noopener">
+            <img src="activity 15.jpg" alt="Monastery activity — photo 5" loading="lazy" />
+          </a>
+          <figcaption>Fellowship</figcaption>
+        </figure>
+
+        <figure class="activity-card">
+          <a href="activity16.jpg" target="_blank" rel="noopener">
+            <img src="activity16.jpg" alt="Monastery activity — photo 6" loading="lazy" />
+          </a>
+          <figcaption>Tending the Gift</figcaption>
+        </figure>
+
+        <figure class="activity-card">
+          <a href="activity17.jpg" target="_blank" rel="noopener">
+            <img src="activity17.jpg" alt="Monastery activity — photo 7" loading="lazy" />
+          </a>
+          <figcaption>Evening Stillness</figcaption>
+        </figure>
+
       </div>
+    </section>
+
+    <!-- ==================== CLOSING CTA ==================== -->
+    <section class="about-closing" style="margin-top: 3rem;">
+      <h2><i class="fas fa-pray"></i> Ready to order?</h2>
+      <p>
+        Message us on WhatsApp with your quantity and location — we deliver across Nigeria.
+      </p>
+
+      <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
+         class="jesuit-btn jesuit-btn-primary"
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+      </a>
     </section>
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="footer-brand">
       <i class="fas fa-church"></i> St. Clare Monastery Heliciculture
