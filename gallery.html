@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="View our live and frozen snails and monastery life — premium quality from St. Clare Monastery Heliciculture, Ikoto, Ijebu-Ode, Nigeria." />
-  <meta name="keywords" content="snail farm photos, monastery snail life, heliciculture Nigeria, live snails gallery, Ijebu-Ode" />
+  <meta name="description" content="View our live and frozen snails, monastery life, and the peaceful surroundings of St. Clare Monastery Heliciculture — Ikoto, Ijebu-Ode, Nigeria." />
+  <meta name="keywords" content="snail farm photos, monastery snail life, heliciculture Nigeria, live snails gallery, Ijebu-Ode, monastery grounds" />
   <meta name="author" content="St. Clare Monastery Heliciculture" />
   <title>Our Work | St. Clare Monastery Heliciculture</title>
 
@@ -17,7 +17,7 @@
 
   <style>
     /* =========================================================
-       GALLERY PAGE — ACTIVITY SECTION
+       GALLERY PAGE — ACTIVITY & SURROUNDINGS SECTIONS
     ========================================================= */
 
     .gallery-divider {
@@ -47,14 +47,17 @@
       filter: drop-shadow(0 0 10px rgba(255, 253, 248, 0.6));
     }
 
-    .activity-gallery {
+    /* Shared grid for activity + surroundings */
+    .activity-gallery,
+    .surroundings-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.8rem;
       margin-bottom: 2rem;
     }
 
-    .activity-card {
+    .activity-card,
+    .surroundings-card {
       margin: 0;
       background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
       border-radius: 6px;
@@ -64,21 +67,24 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .activity-card:hover {
+    .activity-card:hover,
+    .surroundings-card:hover {
       transform: translateY(-4px);
       box-shadow:
         0 18px 36px rgba(0, 0, 0, 0.6),
         0 0 30px 4px rgba(181, 139, 90, 0.28);
     }
 
-    .activity-card a {
+    .activity-card a,
+    .surroundings-card a {
       display: block;
       aspect-ratio: 4 / 3;
       overflow: hidden;
       background: #1e140e;
     }
 
-    .activity-card img {
+    .activity-card img,
+    .surroundings-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -87,12 +93,14 @@
       filter: brightness(0.97) contrast(1.03);
     }
 
-    .activity-card:hover img {
+    .activity-card:hover img,
+    .surroundings-card:hover img {
       transform: scale(1.05);
       filter: brightness(1.02) contrast(1.05);
     }
 
-    .activity-card figcaption {
+    .activity-card figcaption,
+    .surroundings-card figcaption {
       padding: 0.9rem 1rem;
       text-align: center;
       font-family: 'Cormorant Garamond', serif;
@@ -152,8 +160,8 @@
     </div>
 
     <p class="tagline">
-      A gallery of our live and frozen snails, and the quiet<br />
-      life of the monastery that raises them.
+      A gallery of our live and frozen snails, the quiet life of<br />
+      the monastery, and the peaceful place we call home.
     </p>
   </header>
 
@@ -255,6 +263,46 @@
             <img src="activity18.jpg" alt="Monastery activity — photo 8" loading="lazy" />
           </a>
           <figcaption>Grace in the Ordinary</figcaption>
+        </figure>
+
+        <figure class="activity-card">
+          <a href="activity19.jpg" target="_blank" rel="noopener">
+            <img src="activity19.jpg" alt="Monastery activity — photo 9" loading="lazy" />
+          </a>
+          <figcaption>Faithful Labour</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ==================== DIVIDER ==================== -->
+    <div class="gallery-divider" aria-hidden="true">
+      <span class="line"></span>
+      <i class="fas fa-map-pin"></i>
+      <span class="line"></span>
+    </div>
+
+    <!-- ==================== SURROUNDINGS GALLERY ==================== -->
+    <section id="surroundings">
+      <h2 class="section-title"><i class="fas fa-tree"></i> Our Surroundings</h2>
+      <p class="section-subtitle">
+        The site and the peaceful environment that shelters our monastery and its ministry.
+      </p>
+
+      <div class="surroundings-gallery">
+
+        <figure class="surroundings-card">
+          <a href="surrounding1.jpg" target="_blank" rel="noopener">
+            <img src="surrounding1.jpg" alt="St. Clare Monastery site" loading="lazy" />
+          </a>
+          <figcaption>The Monastery Site</figcaption>
+        </figure>
+
+        <figure class="surroundings-card">
+          <a href="surrounding2.jpg" target="_blank" rel="noopener">
+            <img src="surrounding2.jpg" alt="Peaceful environment around the monastery" loading="lazy" />
+          </a>
+          <figcaption>The Surrounding Environment</figcaption>
         </figure>
 
       </div>
