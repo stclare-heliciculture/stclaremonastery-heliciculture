@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
+  <!-- ============================================================
+       HOMEPAGE
+  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/st.%20clare%20monastery%20heliciculture.png</image:loc>
+      <image:title>St. Clare Monastery Heliciculture Logo</image:title>
+    </image:image>
   </url>
 
+  <!-- ============================================================
+       ABOUT / OUR STORY
+  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/about.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/picvalidityofsisters.jpg</image:loc>
+      <image:title>The Sisters of St. Clare Monastery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisters%20bond1.jpg</image:loc>
+      <image:title>Sisters of St. Clare Monastery in fellowship</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisters%20bond2.jpg</image:loc>
+      <image:title>Sisters of St. Clare Monastery in service</image:title>
+    </image:image>
   </url>
 
+  <!-- ============================================================
+       GALLERY MENU
+  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/gallery.html</loc>
     <lastmod>2026-09-24</lastmod>
@@ -22,39 +49,158 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- ============================================================
+       PRODUCTS GALLERY
+  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/products.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snailpic2.jpg</image:loc>
+      <image:title>Live Snails - Fresh Harvest</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snailpic3.jpg</image:loc>
+      <image:title>Premium Quality Snails</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snailpic4.jpg</image:loc>
+      <image:title>Frozen Snails - Packaged</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20pic21.jpg</image:loc>
+      <image:title>Premium Snail Selection</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20pic22.jpg</image:loc>
+      <image:title>Fresh from the Farm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20pic23.jpg</image:loc>
+      <image:title>Carefully Handled Snails</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20pic24.jpg</image:loc>
+      <image:title>Healthy and Well-Fed Snails</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20pic25.jpg</image:loc>
+      <image:title>Ready for Order</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20pic26.jpg</image:loc>
+      <image:title>Monastery Quality Snails</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20pic27.jpg</image:loc>
+      <image:title>Selected with Care</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20pic28.jpg</image:loc>
+      <image:title>Nature's Finest Snails</image:title>
+    </image:image>
   </url>
 
+  <!-- ============================================================
+       WORK SITE / MONASTERY SITE
+  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/site.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/beautiful%20sisters1.jpg</image:loc>
+      <image:title>The Sisters managing the snail farm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/beautiful%20sisters2.jpg</image:loc>
+      <image:title>The Sisters overseeing the snail farm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/activity11.jpg</image:loc>
+      <image:title>Morning Work at the Monastery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/activity12.jpg</image:loc>
+      <image:title>In the Sanctuary</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/activity13.jpg</image:loc>
+      <image:title>Careful Hands at Work</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/activity14.jpg</image:loc>
+      <image:title>Daily Labour</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/activity16.jpg</image:loc>
+      <image:title>Tending the Gift</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/activity17.jpg</image:loc>
+      <image:title>Evening Stillness</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/activity18.jpg</image:loc>
+      <image:title>Grace in the Ordinary</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/surrounding1.jpg</image:loc>
+      <image:title>The Monastery Work Site</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/surrounding2.jpg</image:loc>
+      <image:title>The Surrounding Environment</image:title>
+    </image:image>
   </url>
 
+  <!-- ============================================================
+       THE ENVIRONS
+  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/environs.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/surrounding2.jpg</image:loc>
+      <image:title>The Peaceful Environment</image:title>
+    </image:image>
   </url>
 
+  <!-- ============================================================
+       SANCTUARY — with videos
+  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sanctuary.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/st.%20clare%20monastery%20heliciculture.png</video:thumbnail_loc>
+      <video:title>Life in the Sanctuary - St. Clare Monastery</video:title>
+      <video:description>The quiet life of the snails raised at St. Clare Monastery Heliciculture.</video:description>
+      <video:content_loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/activity%20snail.mp4</video:content_loc>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/st.%20clare%20monastery%20heliciculture.png</video:thumbnail_loc>
+      <video:title>The Snails' Sanctuary - St. Clare Monastery</video:title>
+      <video:description>Snails in their natural monastery environment.</video:description>
+      <video:content_loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/snail%20video1.mp4</video:content_loc>
+    </video:video>
   </url>
 
+  <!-- ============================================================
+       BENEFITS
+  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/benefits.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
