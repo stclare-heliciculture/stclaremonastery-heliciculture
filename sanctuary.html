@@ -3,24 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Step into the sanctuary of St. Clare Monastery Heliciculture — witness the quiet life of our snails, raised with prayer, care, and purpose in Ikoto, Ijebu-Ode, Nigeria." />
-  <meta name="keywords" content="snail farm videos, monastery snail sanctuary, heliciculture Nigeria, live snails video, snail farming Ijebu-Ode" />
+  <meta name="description" content="Videos from the sanctuary of St. Clare Monastery Heliciculture — the quiet life of our snails, raised with prayer and purpose in Ikoto, Ijebu-Ode, Nigeria." />
+  <meta name="keywords" content="snail farm videos, monastery snail sanctuary, heliciculture Nigeria, live snails video" />
   <meta name="author" content="St. Clare Monastery Heliciculture" />
   <title>Our Sanctuary | St. Clare Monastery Heliciculture</title>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoGallery",
-  "name": "Our Sanctuary — St. Clare Monastery Heliciculture",
-  "description": "Videos from the sanctuary of St. Clare Monastery Heliciculture — the quiet life of our snails, raised with prayer and purpose.",
-  "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sanctuary.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "St. Clare Monastery Heliciculture",
-    "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/"
-  }
-}
-  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,12 +15,22 @@
   <link rel="icon" type="image/png" href="st. clare monastery heliciculture.png" />
   <link rel="stylesheet" href="style.css" />
 
-  <style>
-    /* =========================================================
-       SANCTUARY PAGE — VIDEO GALLERY
-    ========================================================= */
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGallery",
+    "name": "Our Sanctuary — St. Clare Monastery Heliciculture",
+    "description": "Videos from the sanctuary — the quiet life of our snails.",
+    "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sanctuary.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "St. Clare Monastery Heliciculture",
+      "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/"
+    }
+  }
+  </script>
 
-    /* ---- Sacred reflection band under the hero ---- */
+  <style>
     .sanctuary-reflection {
       max-width: 820px;
       margin: 0 auto 4rem;
@@ -43,7 +39,6 @@
       border-top: 1px solid rgba(181, 139, 90, 0.3);
       border-bottom: 1px solid rgba(181, 139, 90, 0.3);
     }
-
     .sanctuary-reflection .reflection-icon {
       font-size: 1.6rem;
       color: var(--gold-light);
@@ -51,7 +46,6 @@
       display: inline-block;
       filter: drop-shadow(0 0 12px rgba(255, 253, 248, 0.6));
     }
-
     .sanctuary-reflection .reflection-text {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
@@ -60,7 +54,6 @@
       color: var(--cream-bright);
       letter-spacing: 0.4px;
     }
-
     .sanctuary-reflection .reflection-source {
       display: block;
       margin-top: 0.9rem;
@@ -72,7 +65,6 @@
       color: var(--gold-light);
     }
 
-    /* ---- Video grid ---- */
     .video-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -81,7 +73,6 @@
       margin: 0 auto 4rem;
     }
 
-    /* ---- Individual video card ---- */
     .video-card {
       position: relative;
       border-radius: 8px;
@@ -89,20 +80,13 @@
       isolation: isolate;
       background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-void) 100%);
       border: 1px solid var(--gold-core);
-      box-shadow:
-        0 0 0 6px rgba(181, 139, 90, 0.10),
-        0 22px 50px rgba(0, 0, 0, 0.65);
+      box-shadow: 0 0 0 6px rgba(181, 139, 90, 0.10), 0 22px 50px rgba(0, 0, 0, 0.65);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-
     .video-card:hover {
       transform: translateY(-4px);
-      box-shadow:
-        0 0 0 8px rgba(181, 139, 90, 0.16),
-        0 30px 60px rgba(0, 0, 0, 0.7),
-        0 0 40px 8px rgba(255, 233, 196, 0.18);
+      box-shadow: 0 0 0 8px rgba(181, 139, 90, 0.16), 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 40px 8px rgba(255, 233, 196, 0.18);
     }
-
     .video-card video {
       width: 100%;
       height: auto;
@@ -111,13 +95,9 @@
       border-radius: 8px 8px 0 0;
       outline: none;
     }
-
-    /* Video caption band below each clip */
     .video-card .video-meta {
       padding: 1.2rem 1.5rem;
-      background: linear-gradient(180deg,
-        rgba(30, 20, 14, 0.6) 0%,
-        rgba(30, 20, 14, 0.95) 100%);
+      background: linear-gradient(180deg, rgba(30, 20, 14, 0.6) 0%, rgba(30, 20, 14, 0.95) 100%);
       border-top: 1px solid rgba(181, 139, 90, 0.3);
       display: flex;
       flex-wrap: wrap;
@@ -125,7 +105,6 @@
       justify-content: space-between;
       gap: 0.8rem;
     }
-
     .video-card .video-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.3rem;
@@ -135,13 +114,11 @@
       align-items: center;
       gap: 10px;
     }
-
     .video-card .video-title i {
       color: var(--gold-light);
       font-size: 0.9em;
       filter: drop-shadow(0 0 8px rgba(255, 253, 248, 0.5));
     }
-
     .video-card .video-note {
       font-family: 'Inter', sans-serif;
       font-size: 0.8rem;
@@ -152,41 +129,29 @@
       align-items: center;
       gap: 8px;
     }
+    .video-card .video-note i { color: var(--gold-pale); }
 
-    .video-card .video-note i {
-      color: var(--gold-pale);
-    }
-
-    /* ---- Devotional quote band between videos ---- */
     .devotional-band {
       max-width: 900px;
       margin: 0 auto 4rem;
       padding: 3rem 2.5rem;
       text-align: center;
-      background:
-        linear-gradient(135deg, #1e140e 0%, #2a1c12 100%);
+      background: linear-gradient(135deg, #1e140e 0%, #2a1c12 100%);
       border-radius: 8px;
       border-left: 6px solid var(--gold-core);
       border-right: 6px solid var(--gold-core);
-      box-shadow:
-        inset 0 0 50px rgba(0, 0, 0, 0.5),
-        0 0 40px 4px rgba(181, 139, 90, 0.12);
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5), 0 0 40px 4px rgba(181, 139, 90, 0.12);
       position: relative;
       isolation: isolate;
     }
-
     .devotional-band::before {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 50% 30%,
-          rgba(255, 233, 196, 0.10) 0%,
-          transparent 65%);
+      background: radial-gradient(circle at 50% 30%, rgba(255, 233, 196, 0.10) 0%, transparent 65%);
       z-index: -1;
       pointer-events: none;
     }
-
     .devotional-band .dev-icon {
       font-size: 2.4rem;
       color: var(--gold-light);
@@ -194,7 +159,6 @@
       filter: drop-shadow(0 0 20px rgba(255, 233, 196, 0.6));
       display: inline-block;
     }
-
     .devotional-band h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.5rem, 3vw, 2.1rem);
@@ -202,7 +166,6 @@
       margin-bottom: 1rem;
       text-shadow: 0 0 22px rgba(255, 253, 248, 0.3);
     }
-
     .devotional-band p {
       font-size: 1.05rem;
       color: var(--cream-soft);
@@ -210,12 +173,7 @@
       margin: 0 auto 0.8rem;
       line-height: 1.85;
     }
-
-    .devotional-band p strong {
-      color: var(--cream-bright);
-      font-weight: 600;
-    }
-
+    .devotional-band p strong { color: var(--cream-bright); font-weight: 600; }
     .devotional-band .verse {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
@@ -225,7 +183,6 @@
       margin-top: 1.2rem;
       letter-spacing: 0.5px;
     }
-
     .devotional-band .verse cite {
       display: block;
       font-size: 0.85rem;
@@ -236,7 +193,6 @@
       margin-top: 0.5rem;
     }
 
-    /* ---- Blessing / closing CTA ---- */
     .sanctuary-closing {
       max-width: 900px;
       margin: 0 auto 2rem;
@@ -248,7 +204,6 @@
       border-right: 6px solid var(--gold-core);
       box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
     }
-
     .sanctuary-closing h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.5rem, 3vw, 2rem);
@@ -256,7 +211,6 @@
       margin-bottom: 0.8rem;
       text-shadow: 0 0 20px rgba(255, 253, 248, 0.3);
     }
-
     .sanctuary-closing p {
       font-size: 1.05rem;
       color: var(--cream-soft);
@@ -264,40 +218,26 @@
       margin: 0 auto 1.8rem;
       line-height: 1.75;
     }
-
     .sanctuary-closing .cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
     }
-
-    /* ---- Responsive ---- */
-    @media (max-width: 720px) {
-      .sanctuary-reflection { padding: 1.5rem 1rem; }
-      .devotional-band { padding: 2.2rem 1.6rem; }
-      .sanctuary-closing { padding: 2.2rem 1.6rem; }
-      .video-card .video-meta { padding: 1rem 1.2rem; }
-      .video-card .video-title { font-size: 1.15rem; }
-    }
   </style>
 </head>
 <body>
 
-  <!-- ==================== TOP BAR ==================== -->
   <div class="top-bar">
     <span><i class="fas fa-map-pin"></i> Ikoto, Ijebu-Ode, Ogun State, Nigeria</span>
     <span><i class="fas fa-envelope"></i> stclaremonasteryhelicicuture@gmail.com</span>
     <span><i class="fas fa-phone-alt"></i> 07043021005 · 09160500267</span>
   </div>
 
-  <!-- ==================== JESUIT-STYLE NAVIGATION + MINI LOGO ==================== -->
   <nav class="jesuit-nav" aria-label="Primary navigation">
-
-    <a href="index.html" class="nav-logo-badge" aria-label="St. Clare Monastery — Home">
+    <a href="index.html" class="nav-logo-badge" aria-label="Home">
       <img src="st. clare monastery heliciculture.png" alt="St. Clare Monastery Logo" />
     </a>
-
     <div class="nav-links">
       <a href="index.html" class="jesuit-btn">Home</a>
       <a href="about.html" class="jesuit-btn">Our Story</a>
@@ -312,32 +252,22 @@
         <i class="fab fa-whatsapp"></i> Order
       </a>
     </div>
-
   </nav>
 
-  <!-- ==================== HERO ==================== -->
   <header class="hero" style="padding: 3rem 2rem 3.5rem;">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: 2px; color: var(--cream-bright); text-shadow: 0 0 25px rgba(255, 253, 248, 0.5), 3px 3px 0 rgba(0,0,0,0.5); margin-bottom: 0.6rem;">
-      <i class="fas fa-church" style="color: var(--gold-pale); margin-right: 12px; filter: drop-shadow(0 0 12px rgba(255,253,248,0.8));"></i>
+      <i class="fas fa-church" style="color: var(--gold-pale); margin-right: 12px;"></i>
       Our Sanctuary
     </h1>
-
-    <div class="hero-divider">
-      <span class="line"></span>
-      <i class="fas fa-dove"></i>
-      <span class="line"></span>
-    </div>
-
+    <div class="hero-divider"><span class="line"></span><i class="fas fa-dove"></i><span class="line"></span></div>
     <p class="tagline">
       Step into the quiet life of our snails —<br />
       a living sanctuary where prayer and purpose meet.
     </p>
   </header>
 
-  <!-- ==================== MAIN ==================== -->
   <main class="container">
 
-    <!-- ---------- REFLECTION BAND ---------- -->
     <section class="sanctuary-reflection">
       <div class="reflection-icon"><i class="fas fa-quote-left"></i></div>
       <p class="reflection-text">
@@ -347,7 +277,6 @@
       <span class="reflection-source">— The Sisters of St. Clare</span>
     </section>
 
-    <!-- ---------- VIDEO 1 ---------- -->
     <section class="video-grid">
 
       <article class="video-card">
@@ -355,43 +284,43 @@
           <source src="activity snail.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
         <div class="video-meta">
-          <div class="video-title">
-            <i class="fas fa-seedling"></i> Life in the Sanctuary
-          </div>
-          <div class="video-note">
-            <i class="fas fa-play-circle"></i> Watch closely
-          </div>
+          <div class="video-title"><i class="fas fa-seedling"></i> Life in the Sanctuary</div>
+          <div class="video-note"><i class="fas fa-play-circle"></i> Watch closely</div>
         </div>
       </article>
 
-      <!-- ---------- DEVOTIONAL BAND BETWEEN VIDEOS ---------- -->
-      <section class="devotional-band">
-        <div class="dev-icon"><i class="fas fa-pray"></i></div>
-        <h2>Witness of the Quiet Hours</h2>
-        <p>
-          Long before the world wakes, the monastery is already at prayer. Then the work begins —
-          <strong>patient, deliberate, reverent</strong>. Our snails are fed, tended, and watched over
-          with the same faithfulness we offer to God.
-        </p>
-        <p>
-          We believe that whatever your hands find to do, do it with all your heart — and so we do.
-          This sanctuary is not a business hidden from our calling; it is our calling, made visible.
-        </p>
-        <span class="verse">
-          “Whatever you do, work at it with all your heart, as working for the Lord.”
-          <cite>Colossians 3:23</cite>
-        </span>
-      </section>
-
-      
+      <article class="video-card">
+        <video controls preload="metadata" playsinline>
+          <source src="snail video1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-meta">
+          <div class="video-title"><i class="fas fa-hand-holding-heart"></i> Hands of the Ministry</div>
+          <div class="video-note"><i class="fas fa-play-circle"></i> Watch closely</div>
         </div>
       </article>
 
     </section>
 
-    <!-- ---------- CLOSING BLESSING CTA ---------- -->
+    <section class="devotional-band">
+      <div class="dev-icon"><i class="fas fa-pray"></i></div>
+      <h2>Witness of the Quiet Hours</h2>
+      <p>
+        Long before the world wakes, the monastery is already at prayer. Then the work begins —
+        <strong>patient, deliberate, reverent</strong>. Our snails are fed, tended, and watched over
+        with the same faithfulness we offer to God.
+      </p>
+      <p>
+        We believe that whatever your hands find to do, do it with all your heart — and so we do.
+        This sanctuary is not a business hidden from our calling; it is our calling, made visible.
+      </p>
+      <span class="verse">
+        “Whatever you do, work at it with all your heart, as working for the Lord.”
+        <cite>Colossians 3:23</cite>
+      </span>
+    </section>
+
     <section class="sanctuary-closing">
       <h2><i class="fas fa-dove"></i> A Sanctuary That Serves You</h2>
       <p>
@@ -399,7 +328,6 @@
         and its harvest is for you. Order fresh, live, or frozen snails, and let the labour of our
         hands serve your table with grace.
       </p>
-
       <div class="cta-row">
         <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
            class="jesuit-btn jesuit-btn-primary"
@@ -407,11 +335,9 @@
            rel="noopener noreferrer">
           <i class="fab fa-whatsapp"></i> Order on WhatsApp
         </a>
-
         <a href="gallery.html" class="jesuit-btn">
           <i class="fas fa-images"></i> View Our Products
         </a>
-
         <a href="index.html#contact" class="jesuit-btn">
           <i class="fas fa-envelope"></i> Contact Details
         </a>
@@ -420,16 +346,9 @@
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
-    <div class="footer-brand">
-      <i class="fas fa-church"></i> St. Clare Monastery Heliciculture
-    </div>
-    <p>
-      <i class="fas fa-dove"></i>
-      Sustainable snail farming, rooted in faith and tradition.
-      <i class="fas fa-leaf"></i>
-    </p>
+    <div class="footer-brand"><i class="fas fa-church"></i> St. Clare Monastery Heliciculture</div>
+    <p><i class="fas fa-dove"></i> Sustainable snail farming, rooted in faith and tradition. <i class="fas fa-leaf"></i></p>
     <p style="margin-top: 0.8rem; font-size: 0.85rem;">
       &copy; <span id="year"></span> St. Clare Monastery Heliciculture · Ikoto, Ijebu-Ode, Ogun State, Nigeria
     </p>
@@ -437,4 +356,4 @@
 
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
