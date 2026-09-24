@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The monastery site — the grounds of St. Clare Monastery Heliciculture, Ikoto, Ijebu-Ode, Nigeria." />
+  <meta name="description" content="Work Site / Monastery Site — the working grounds of St. Clare Monastery Heliciculture, led by the Sisters who manage the snail farm, in Ikoto, Ijebu-Ode, Nigeria." />
+  <meta name="keywords" content="monastery work site, snail farm Sisters, Ijebu-Ode monastery, Nigeria heliciculture" />
   <meta name="author" content="St. Clare Monastery Heliciculture" />
-  <title>The Site | St. Clare Monastery Heliciculture</title>
+  <title>Work Site / Monastery Site | St. Clare Monastery Heliciculture</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +19,131 @@
   {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
-    "name": "The Site — St. Clare Monastery Heliciculture",
-    "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/site.html"
+    "name": "Work Site / Monastery Site — St. Clare Monastery Heliciculture",
+    "description": "The working grounds of the monastery and the Sisters who manage the snail farm.",
+    "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/site.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "St. Clare Monastery Heliciculture",
+      "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/"
+    }
   }
   </script>
+
+  <style>
+    /* =========================================================
+       SITE PAGE — SISTERS FEATURE SECTION
+    ========================================================= */
+    .sisters-feature {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sisters-feature .feature-card {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-void) 100%);
+      border: 1px solid var(--gold-core);
+      box-shadow:
+        0 0 0 6px rgba(181, 139, 90, 0.10),
+        0 20px 45px rgba(0, 0, 0, 0.6);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .sisters-feature .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 0 0 8px rgba(181, 139, 90, 0.16),
+        0 28px 55px rgba(0, 0, 0, 0.7),
+        0 0 40px 8px rgba(255, 233, 196, 0.15);
+    }
+
+    .sisters-feature .feature-card a {
+      display: block;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #1e140e;
+    }
+
+    .sisters-feature .feature-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.7s ease, filter 0.5s ease;
+      filter: brightness(0.98) contrast(1.03) saturate(1.02);
+    }
+
+    .sisters-feature .feature-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.02) contrast(1.05) saturate(1.06);
+    }
+
+    .sisters-feature .feature-caption {
+      padding: 1.1rem 1.4rem;
+      background: linear-gradient(180deg,
+        rgba(30, 20, 14, 0.6) 0%,
+        rgba(30, 20, 14, 0.95) 100%);
+      border-top: 1px solid rgba(181, 139, 90, 0.3);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--cream-bright);
+      text-align: center;
+      letter-spacing: 0.4px;
+    }
+
+    .sisters-feature .feature-caption i {
+      color: var(--gold-light);
+      margin-right: 8px;
+      filter: drop-shadow(0 0 8px rgba(255, 253, 248, 0.5));
+    }
+
+    /* Leadership note */
+    .leadership-note {
+      max-width: 900px;
+      margin: 0 auto 3.5rem;
+      padding: 2rem 2.2rem;
+      background: linear-gradient(135deg, #1e140e 0%, #2a1c12 100%);
+      border-radius: 8px;
+      border-left: 6px solid var(--gold-core);
+      border-right: 6px solid var(--gold-core);
+      text-align: center;
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .leadership-note .note-icon {
+      font-size: 2rem;
+      color: var(--gold-light);
+      margin-bottom: 0.8rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 14px rgba(255, 253, 248, 0.6));
+    }
+
+    .leadership-note h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+      color: var(--cream-bright);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px rgba(255, 253, 248, 0.3);
+    }
+
+    .leadership-note p {
+      font-size: 1.05rem;
+      color: var(--cream-soft);
+      line-height: 1.85;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
 
@@ -54,29 +176,75 @@
   <header class="hero" style="padding: 3rem 2rem 3.5rem;">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: 2px; color: var(--cream-bright); text-shadow: 0 0 25px rgba(255, 253, 248, 0.5), 3px 3px 0 rgba(0,0,0,0.5); margin-bottom: 0.6rem;">
       <i class="fas fa-church" style="color: var(--gold-pale); margin-right: 12px;"></i>
-      The Site
+      Work Site / Monastery Site
     </h1>
     <div class="hero-divider"><span class="line"></span><i class="fas fa-leaf"></i><span class="line"></span></div>
-    <p class="tagline">The grounds of St. Clare Monastery — where our snails are raised.</p>
+    <p class="tagline">
+      The working grounds of the monastery —<br />
+      led with diligence by the Sisters who manage the snail farm.
+    </p>
   </header>
 
   <main class="container">
+
+    <!-- ==================== SISTERS FEATURE ==================== -->
     <section>
-      <h2 class="section-title"><i class="fas fa-images"></i> Site Gallery</h2>
+      <h2 class="section-title"><i class="fas fa-dove"></i> The Sisters Who Lead</h2>
+      <p class="section-subtitle">
+        Direct oversight, monastic discipline, and a steady hand — the Sisters entrusted with the daily management of the snail farm.
+      </p>
+
+      <div class="sisters-feature">
+
+        <figure class="feature-card" style="margin: 0;">
+          <a href="beautiful sisters1.jpg" target="_blank" rel="noopener">
+            <img src="beautiful sisters1.jpg" alt="The Sisters managing St. Clare Monastery Heliciculture snail farm" loading="lazy" />
+          </a>
+          <figcaption class="feature-caption">
+            <i class="fas fa-dove"></i> On-site · Leading the work
+          </figcaption>
+        </figure>
+
+        <figure class="feature-card" style="margin: 0;">
+          <a href="beautiful sisters2.jpg" target="_blank" rel="noopener">
+            <img src="beautiful sisters2.jpg" alt="The Sisters overseeing the monastery snail farm" loading="lazy" />
+          </a>
+          <figcaption class="feature-caption">
+            <i class="fas fa-leaf"></i> Direct oversight · Daily operations
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="leadership-note">
+        <div class="note-icon"><i class="fas fa-award"></i></div>
+        <h2>Trusted Management</h2>
+        <p>
+          The two Sisters pictured above are the entrusted managers of St. Clare Monastery Heliciculture.
+          They oversee every stage of the operation — feeding, breeding, harvesting, and packaging —
+          with the same discipline and reverence that defines monastic life.
+          Their direct involvement ensures consistent quality, ethical handling, and reliable delivery on every order.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SITE GALLERY ==================== -->
+    <section>
+      <h2 class="section-title"><i class="fas fa-images"></i> The Working Grounds</h2>
       <p class="section-subtitle">Tap any image to view full size.</p>
 
       <div class="activity-gallery">
 
         <figure class="activity-card">
           <a href="surrounding1.jpg" target="_blank" rel="noopener">
-            <img src="surrounding1.jpg" alt="St. Clare Monastery site" loading="lazy" />
+            <img src="surrounding1.jpg" alt="St. Clare Monastery work site" loading="lazy" />
           </a>
-          <figcaption>The Monastery Site</figcaption>
+          <figcaption>The Monastery Work Site</figcaption>
         </figure>
 
         <figure class="activity-card">
           <a href="activity11.jpg" target="_blank" rel="noopener">
-            <img src="activity11.jpg" alt="Monastery activity" loading="lazy" />
+            <img src="activity11.jpg" alt="Morning work at the monastery" loading="lazy" />
           </a>
           <figcaption>Morning Work</figcaption>
         </figure>
@@ -90,42 +258,42 @@
 
         <figure class="activity-card">
           <a href="activity13.jpg" target="_blank" rel="noopener">
-            <img src="activity13.jpg" alt="Monastery activity" loading="lazy" />
+            <img src="activity13.jpg" alt="Careful hands at work" loading="lazy" />
           </a>
           <figcaption>Careful Hands</figcaption>
         </figure>
 
         <figure class="activity-card">
           <a href="activity14.jpg" target="_blank" rel="noopener">
-            <img src="activity14.jpg" alt="Monastery activity" loading="lazy" />
+            <img src="activity14.jpg" alt="Daily labour" loading="lazy" />
           </a>
           <figcaption>Daily Labour</figcaption>
         </figure>
 
         <figure class="activity-card">
           <a href="activity16.jpg" target="_blank" rel="noopener">
-            <img src="activity16.jpg" alt="Monastery activity" loading="lazy" />
+            <img src="activity16.jpg" alt="Tending the gift" loading="lazy" />
           </a>
           <figcaption>Tending the Gift</figcaption>
         </figure>
 
         <figure class="activity-card">
           <a href="activity17.jpg" target="_blank" rel="noopener">
-            <img src="activity17.jpg" alt="Monastery activity" loading="lazy" />
+            <img src="activity17.jpg" alt="Evening stillness" loading="lazy" />
           </a>
           <figcaption>Evening Stillness</figcaption>
         </figure>
 
         <figure class="activity-card">
           <a href="activity18.jpg" target="_blank" rel="noopener">
-            <img src="activity18.jpg" alt="Monastery activity" loading="lazy" />
+            <img src="activity18.jpg" alt="Grace in the ordinary" loading="lazy" />
           </a>
           <figcaption>Grace in the Ordinary</figcaption>
         </figure>
 
         <figure class="activity-card">
           <a href="activity19.jpg" target="_blank" rel="noopener">
-            <img src="activity19.jpg" alt="Monastery activity" loading="lazy" />
+            <img src="activity19.jpg" alt="Faithful labour" loading="lazy" />
           </a>
           <figcaption>Faithful Labour</figcaption>
         </figure>
@@ -140,6 +308,7 @@
         <i class="fas fa-images"></i> All Galleries
       </a>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -152,4 +321,4 @@
 
   <script src="script.js"></script>
 </body>
-                                                         </html>
+</html>
