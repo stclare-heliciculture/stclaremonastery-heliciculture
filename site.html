@@ -20,7 +20,7 @@
     "@context": "https://schema.org",
     "@type": "ImageGallery",
     "name": "Work Site / Monastery Site — St. Clare Monastery Heliciculture",
-    "description": "The working grounds of the monastery and the Sisters who manage the snail farm.",
+    "description": "The Sisters who lead the monastery snail farm, and the working grounds of St. Clare Monastery Heliciculture.",
     "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/site.html",
     "isPartOf": {
       "@type": "WebSite",
@@ -32,33 +32,31 @@
 
   <style>
     /* =========================================================
-       SITE PAGE — SISTERS FEATURE + WORKING GROUNDS
+       SITE PAGE — COMBINED SISTERS GALLERY + WORKING GROUNDS
     ========================================================= */
 
-    .sisters-feature {
+    /* Sisters combined gallery — 2 portrait cards + 7 standard cards */
+    .sisters-combined {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
       margin-bottom: 3.5rem;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    .sisters-feature .feature-card {
-      position: relative;
+    /* Portrait card — used for the two Sisters photos (tall ratio) */
+    .sisters-combined .portrait-card {
+      margin: 0;
+      background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
       border-radius: 6px;
       overflow: hidden;
-      isolation: isolate;
-      background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-void) 100%);
       border: 1px solid var(--gold-core);
       box-shadow:
         0 0 0 6px rgba(181, 139, 90, 0.10),
         0 20px 45px rgba(0, 0, 0, 0.6);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
-    .sisters-feature .feature-card:hover {
+    .sisters-combined .portrait-card:hover {
       transform: translateY(-4px);
       box-shadow:
         0 0 0 8px rgba(181, 139, 90, 0.16),
@@ -66,14 +64,14 @@
         0 0 40px 8px rgba(255, 233, 196, 0.15);
     }
 
-    .sisters-feature .feature-card a {
+    .sisters-combined .portrait-card a {
       display: block;
       aspect-ratio: 4 / 5;
       overflow: hidden;
       background: #1e140e;
     }
 
-    .sisters-feature .feature-card img {
+    .sisters-combined .portrait-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -83,12 +81,12 @@
       filter: brightness(0.98) contrast(1.03) saturate(1.02);
     }
 
-    .sisters-feature .feature-card:hover img {
+    .sisters-combined .portrait-card:hover img {
       transform: scale(1.05);
       filter: brightness(1.02) contrast(1.05) saturate(1.06);
     }
 
-    .sisters-feature .feature-caption {
+    .sisters-combined .portrait-card figcaption {
       padding: 1.1rem 1.4rem;
       background: linear-gradient(180deg,
         rgba(30, 20, 14, 0.6) 0%,
@@ -102,12 +100,13 @@
       letter-spacing: 0.4px;
     }
 
-    .sisters-feature .feature-caption i {
+    .sisters-combined .portrait-card figcaption i {
       color: var(--gold-light);
       margin-right: 8px;
       filter: drop-shadow(0 0 8px rgba(255, 253, 248, 0.5));
     }
 
+    /* Leadership note under the gallery */
     .leadership-note {
       max-width: 900px;
       margin: 0 auto 3.5rem;
@@ -187,31 +186,89 @@
 
   <main class="container">
 
-    <!-- ==================== THE SISTERS WHO LEAD ==================== -->
+    <!-- ==================== THE SISTERS WHO LEAD (COMBINED) ==================== -->
     <section>
       <h2 class="section-title"><i class="fas fa-dove"></i> The Sisters Who Lead</h2>
       <p class="section-subtitle">
         Direct oversight, monastic discipline, and a steady hand — the Sisters entrusted with the daily management of the snail farm.
       </p>
 
-      <div class="sisters-feature">
+      <div class="sisters-combined">
 
-        <figure class="feature-card" style="margin: 0;">
+        <!-- Portrait 1 -->
+        <figure class="portrait-card">
           <a href="beautiful sisters1.jpg" target="_blank" rel="noopener">
             <img src="beautiful sisters1.jpg" alt="The Sisters managing St. Clare Monastery Heliciculture snail farm" loading="lazy" />
           </a>
-          <figcaption class="feature-caption">
+          <figcaption>
             <i class="fas fa-dove"></i> On-site · Leading the work
           </figcaption>
         </figure>
 
-        <figure class="feature-card" style="margin: 0;">
+        <!-- Portrait 2 -->
+        <figure class="portrait-card">
           <a href="beautiful sisters2.jpg" target="_blank" rel="noopener">
             <img src="beautiful sisters2.jpg" alt="The Sisters overseeing the monastery snail farm" loading="lazy" />
           </a>
-          <figcaption class="feature-caption">
+          <figcaption>
             <i class="fas fa-leaf"></i> Direct oversight · Daily operations
           </figcaption>
+        </figure>
+
+        <!-- Activity 11 -->
+        <figure class="activity-card">
+          <a href="activity11.jpg" target="_blank" rel="noopener">
+            <img src="activity11.jpg" alt="Morning work at the monastery" loading="lazy" />
+          </a>
+          <figcaption>Morning Work</figcaption>
+        </figure>
+
+        <!-- Activity 12 -->
+        <figure class="activity-card">
+          <a href="activity12.jpg" target="_blank" rel="noopener">
+            <img src="activity12.jpg" alt="Monastery activity" loading="lazy" />
+          </a>
+          <figcaption>In the Sanctuary</figcaption>
+        </figure>
+
+        <!-- Activity 13 -->
+        <figure class="activity-card">
+          <a href="activity13.jpg" target="_blank" rel="noopener">
+            <img src="activity13.jpg" alt="Careful hands at work" loading="lazy" />
+          </a>
+          <figcaption>Careful Hands</figcaption>
+        </figure>
+
+        <!-- Activity 14 -->
+        <figure class="activity-card">
+          <a href="activity14.jpg" target="_blank" rel="noopener">
+            <img src="activity14.jpg" alt="Daily labour" loading="lazy" />
+          </a>
+          <figcaption>Daily Labour</figcaption>
+        </figure>
+
+        <!-- Activity 16 -->
+        <figure class="activity-card">
+          <a href="activity16.jpg" target="_blank" rel="noopener">
+            <img src="activity16.jpg" alt="Tending the gift" loading="lazy" />
+          </a>
+          <figcaption>Tending the Gift</figcaption>
+        </figure>
+
+        <!-- Activity 17 -->
+        <figure class="activity-card">
+          <a href="activity17.jpg" target="_blank" rel="noopener">
+            <img src="activity17.jpg" alt="Evening stillness" loading="lazy" />
+          </a>
+          <figcaption>Evening Stillness</figcaption>
+        </figure>
+
+        <!-- Activity 18 -->
+        <figure class="activity-card">
+          <a href="activity18.jpg" target="_blank" rel="noopener">
+            <img src="activity18.jpg" alt="Grace in the ordinary" loading="lazy" />
+          </a>
+          <figcaption>Grace in the Ordinary</figcaption>
         </figure>
 
       </div>
@@ -220,72 +277,11 @@
         <div class="note-icon"><i class="fas fa-award"></i></div>
         <h2>Trusted Management</h2>
         <p>
-          The Sisters pictured above are the entrusted managers of St. Clare Monastery Heliciculture.
+          The two Sisters pictured above are the entrusted managers of St. Clare Monastery Heliciculture.
           They oversee every stage of the operation — feeding, breeding, harvesting, and packaging —
           with the same discipline and reverence that defines monastic life.
           Their direct involvement ensures consistent quality, ethical handling, and reliable delivery on every order.
         </p>
-      </div>
-    </section>
-
-    <!-- ==================== SISTERS AT WORK ==================== -->
-    <section>
-      <h2 class="section-title"><i class="fas fa-hands"></i> The Sisters at Work</h2>
-      <p class="section-subtitle">
-        Moments from the daily ministry — captured in the monastery grounds.
-      </p>
-
-      <div class="activity-gallery">
-
-        <figure class="activity-card">
-          <a href="activity11.jpg" target="_blank" rel="noopener">
-            <img src="activity11.jpg" alt="Morning work at the monastery" loading="lazy" />
-          </a>
-          <figcaption>Morning Work</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity12.jpg" target="_blank" rel="noopener">
-            <img src="activity12.jpg" alt="Monastery activity" loading="lazy" />
-          </a>
-          <figcaption>In the Sanctuary</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity13.jpg" target="_blank" rel="noopener">
-            <img src="activity13.jpg" alt="Careful hands at work" loading="lazy" />
-          </a>
-          <figcaption>Careful Hands</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity14.jpg" target="_blank" rel="noopener">
-            <img src="activity14.jpg" alt="Daily labour" loading="lazy" />
-          </a>
-          <figcaption>Daily Labour</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity16.jpg" target="_blank" rel="noopener">
-            <img src="activity16.jpg" alt="Tending the gift" loading="lazy" />
-          </a>
-          <figcaption>Tending the Gift</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity17.jpg" target="_blank" rel="noopener">
-            <img src="activity17.jpg" alt="Evening stillness" loading="lazy" />
-          </a>
-          <figcaption>Evening Stillness</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity18.jpg" target="_blank" rel="noopener">
-            <img src="activity18.jpg" alt="Grace in the ordinary" loading="lazy" />
-          </a>
-          <figcaption>Grace in the Ordinary</figcaption>
-        </figure>
-
       </div>
     </section>
 
