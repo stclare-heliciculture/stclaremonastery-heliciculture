@@ -3,12 +3,9 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-  <!-- ============================================================
-       HOMEPAGE
-  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,12 +14,9 @@
     </image:image>
   </url>
 
-  <!-- ============================================================
-       ABOUT / OUR STORY
-  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/about.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -39,22 +33,16 @@
     </image:image>
   </url>
 
-  <!-- ============================================================
-       GALLERY MENU
-  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/gallery.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- ============================================================
-       PRODUCTS GALLERY
-  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/products.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -103,12 +91,9 @@
     </image:image>
   </url>
 
-  <!-- ============================================================
-       WORK SITE / MONASTERY SITE
-  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/site.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -148,6 +133,46 @@
       <image:title>Grace in the Ordinary</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork1.jpg</image:loc>
+      <image:title>Joy in the Work - A Sister smiling in service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork2.jpg</image:loc>
+      <image:title>A Sister observing the snail farm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork3.jpg</image:loc>
+      <image:title>A Sister smiling at the camera in the snail farm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork4.jpg</image:loc>
+      <image:title>A Sister in joyful service - joy in abundance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork5.jpg</image:loc>
+      <image:title>A Sister posing to the camera - joy in service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork6.jpg</image:loc>
+      <image:title>A Sister presenting healthy snails with a loving smile</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork7.jpg</image:loc>
+      <image:title>A Sister presenting beautiful sharp snails ready for picking</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork8.jpg</image:loc>
+      <image:title>A Sister inspecting an implement for perfection</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork9.jpg</image:loc>
+      <image:title>A Sister inspecting the snail farm - no room for error</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sisterswork10.jpg</image:loc>
+      <image:title>A Sister observing that everything is as it should be</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/surrounding1.jpg</image:loc>
       <image:title>The Monastery Work Site</image:title>
     </image:image>
@@ -157,12 +182,9 @@
     </image:image>
   </url>
 
-  <!-- ============================================================
-       THE ENVIRONS
-  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/environs.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -171,12 +193,9 @@
     </image:image>
   </url>
 
-  <!-- ============================================================
-       SANCTUARY — with videos
-  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/sanctuary.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <video:video>
@@ -193,12 +212,9 @@
     </video:video>
   </url>
 
-  <!-- ============================================================
-       BENEFITS
-  ============================================================ -->
   <url>
     <loc>https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/benefits.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
