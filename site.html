@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Work Site / Monastery Site — the working grounds of St. Clare Monastery Heliciculture, led with diligence by the Sisters who manage the snail farm in Ikoto, Ijebu-Ode, Nigeria." />
-  <meta name="keywords" content="monastery work site, snail farm Sisters, Ijebu-Ode monastery, Nigeria heliciculture" />
+  <meta name="description" content="Work Site / Monastery Site — the working grounds of St. Clare Monastery Heliciculture, led by the Sisters who manage the snail farm." />
   <meta name="author" content="St. Clare Monastery Heliciculture" />
   <title>Work Site / Monastery Site | St. Clare Monastery Heliciculture</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Work Site / Monastery Site — St. Clare Monastery Heliciculture",
+    "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/site.html",
+    "isPartOf": { "@type": "WebSite", "name": "St. Clare Monastery Heliciculture", "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/" }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,134 +24,21 @@
   <link rel="icon" type="image/png" href="st. clare monastery heliciculture.png" />
   <link rel="stylesheet" href="style.css" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    "name": "Work Site / Monastery Site — St. Clare Monastery Heliciculture",
-    "description": "The Sisters who lead the monastery snail farm, and the working grounds of St. Clare Monastery Heliciculture.",
-    "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/site.html",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "St. Clare Monastery Heliciculture",
-      "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/"
-    }
-  }
-  </script>
-
   <style>
-    /* =========================================================
-       SITE PAGE — SISTERS FEATURE + WORKING GROUNDS
-    ========================================================= */
-
-    .sisters-combined {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
-      margin-bottom: 3.5rem;
-    }
-
-    .sisters-combined .portrait-card {
-      margin: 0;
-      background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
-      border-radius: 6px;
-      overflow: hidden;
-      border: 1px solid var(--gold-core);
-      box-shadow: 0 0 0 6px rgba(181, 139, 90, 0.10), 0 20px 45px rgba(0, 0, 0, 0.6);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .sisters-combined .portrait-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 0 8px rgba(181, 139, 90, 0.16), 0 28px 55px rgba(0, 0, 0, 0.7), 0 0 40px 8px rgba(255, 233, 196, 0.15);
-    }
-    .sisters-combined .portrait-card a {
-      display: block;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      background: #1e140e;
-    }
-    .sisters-combined .portrait-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      transition: transform 0.7s ease, filter 0.5s ease;
-      filter: brightness(0.98) contrast(1.03) saturate(1.02);
-    }
-    .sisters-combined .portrait-card:hover img {
-      transform: scale(1.05);
-      filter: brightness(1.02) contrast(1.05) saturate(1.06);
-    }
-    .sisters-combined .portrait-card figcaption {
-      padding: 1.1rem 1.4rem;
-      background: linear-gradient(180deg, rgba(30, 20, 14, 0.6) 0%, rgba(30, 20, 14, 0.95) 100%);
-      border-top: 1px solid rgba(181, 139, 90, 0.3);
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--cream-bright);
-      text-align: center;
-      letter-spacing: 0.4px;
-    }
-    .sisters-combined .portrait-card figcaption i {
-      color: var(--gold-light);
-      margin-right: 8px;
-      filter: drop-shadow(0 0 8px rgba(255, 253, 248, 0.5));
-    }
-
-    .leadership-note {
-      max-width: 900px;
-      margin: 0 auto 3.5rem;
-      padding: 2rem 2.2rem;
-      background: linear-gradient(135deg, #1e140e 0%, #2a1c12 100%);
-      border-radius: 8px;
-      border-left: 6px solid var(--gold-core);
-      border-right: 6px solid var(--gold-core);
-      text-align: center;
-      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
-    }
-    .leadership-note .note-icon {
-      font-size: 2rem;
-      color: var(--gold-light);
-      margin-bottom: 0.8rem;
-      display: inline-block;
-      filter: drop-shadow(0 0 14px rgba(255, 253, 248, 0.6));
-    }
-    .leadership-note h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.4rem, 2.8vw, 1.9rem);
-      color: var(--cream-bright);
-      margin-bottom: 1rem;
-      text-shadow: 0 0 20px rgba(255, 253, 248, 0.3);
-    }
-    .leadership-note p {
-      font-size: 1.05rem;
-      color: var(--cream-soft);
-      line-height: 1.85;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    /* Sub-heading inside a section */
-    .sub-heading {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.3rem, 2.6vw, 1.75rem);
-      color: var(--cream-bright);
-      margin: 0 auto 1.4rem;
-      text-align: center;
-      letter-spacing: 0.5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      text-shadow: 0 0 18px rgba(255, 253, 248, 0.25);
-    }
-    .sub-heading i {
-      color: var(--gold-light);
-      font-size: 0.9em;
-      filter: drop-shadow(0 0 10px rgba(255, 253, 248, 0.55));
-    }
+    .sisters-combined { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; margin-bottom: 3.5rem; }
+    .sisters-combined .portrait-card { margin: 0; background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%); border-radius: 6px; overflow: hidden; border: 1px solid var(--gold-core); box-shadow: 0 0 0 6px rgba(181,139,90,0.10), 0 20px 45px rgba(0,0,0,0.6); transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .sisters-combined .portrait-card:hover { transform: translateY(-4px); box-shadow: 0 0 0 8px rgba(181,139,90,0.16), 0 28px 55px rgba(0,0,0,0.7), 0 0 40px 8px rgba(255,233,196,0.15); }
+    .sisters-combined .portrait-card a { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #1e140e; }
+    .sisters-combined .portrait-card img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.7s ease, filter 0.5s ease; filter: brightness(0.98) contrast(1.03) saturate(1.02); }
+    .sisters-combined .portrait-card:hover img { transform: scale(1.05); filter: brightness(1.02) contrast(1.05) saturate(1.06); }
+    .sisters-combined .portrait-card figcaption { padding: 1.1rem 1.4rem; background: linear-gradient(180deg, rgba(30,20,14,0.6) 0%, rgba(30,20,14,0.95) 100%); border-top: 1px solid rgba(181,139,90,0.3); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--cream-bright); text-align: center; letter-spacing: 0.4px; }
+    .sisters-combined .portrait-card figcaption i { color: var(--gold-light); margin-right: 8px; filter: drop-shadow(0 0 8px rgba(255,253,248,0.5)); }
+    .leadership-note { max-width: 900px; margin: 0 auto 3.5rem; padding: 2rem 2.2rem; background: linear-gradient(135deg, #1e140e 0%, #2a1c12 100%); border-radius: 8px; border-left: 6px solid var(--gold-core); border-right: 6px solid var(--gold-core); text-align: center; box-shadow: inset 0 0 40px rgba(0,0,0,0.5); }
+    .leadership-note .note-icon { font-size: 2rem; color: var(--gold-light); margin-bottom: 0.8rem; display: inline-block; filter: drop-shadow(0 0 14px rgba(255,253,248,0.6)); }
+    .leadership-note h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.8vw, 1.9rem); color: var(--cream-bright); margin-bottom: 1rem; text-shadow: 0 0 20px rgba(255,253,248,0.3); }
+    .leadership-note p { font-size: 1.05rem; color: var(--cream-soft); line-height: 1.85; max-width: 720px; margin: 0 auto; }
+    .sub-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 2.6vw, 1.75rem); color: var(--cream-bright); margin: 0 auto 1.4rem; text-align: center; letter-spacing: 0.5px; display: flex; align-items: center; justify-content: center; gap: 12px; text-shadow: 0 0 18px rgba(255,253,248,0.25); }
+    .sub-heading i { color: var(--gold-light); font-size: 0.9em; filter: drop-shadow(0 0 10px rgba(255,253,248,0.55)); }
   </style>
 </head>
 <body>
@@ -154,9 +50,7 @@
   </div>
 
   <nav class="jesuit-nav" aria-label="Primary navigation">
-    <a href="index.html" class="nav-logo-badge" aria-label="Home">
-      <img src="st. clare monastery heliciculture.png" alt="St. Clare Monastery Logo" />
-    </a>
+    <a href="index.html" class="nav-logo-badge" aria-label="Home"><img src="st. clare monastery heliciculture.png" alt="St. Clare Monastery Logo" /></a>
     <div class="nav-links">
       <a href="index.html" class="jesuit-btn">Home</a>
       <a href="about.html" class="jesuit-btn">Our Story</a>
@@ -164,246 +58,83 @@
       <a href="sanctuary.html" class="jesuit-btn">Our Sanctuary</a>
       <a href="benefits.html" class="jesuit-btn">Benefits</a>
       <a href="index.html#contact" class="jesuit-btn">Contact</a>
-      <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
-         class="jesuit-btn jesuit-btn-primary"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> Order
-      </a>
+      <a href="https://st-clarecandle-altar-bread-ent.github.io/St.-Clare-Candle-and-Altar-Bread-Enterprise-/" class="jesuit-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-candle-holder"></i> Candle &amp; Altar Bread</a>
+      <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order." class="jesuit-btn jesuit-btn-primary" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Order</a>
     </div>
   </nav>
 
   <header class="hero" style="padding: 3rem 2rem 3.5rem;">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: 2px; color: var(--cream-bright); text-shadow: 0 0 25px rgba(255, 253, 248, 0.5), 3px 3px 0 rgba(0,0,0,0.5); margin-bottom: 0.6rem;">
-      <i class="fas fa-church" style="color: var(--gold-pale); margin-right: 12px;"></i>
-      Work Site / Monastery Site
+      <i class="fas fa-church" style="color: var(--gold-pale); margin-right: 12px;"></i> Work Site / Monastery Site
     </h1>
     <div class="hero-divider"><span class="line"></span><i class="fas fa-leaf"></i><span class="line"></span></div>
-    <p class="tagline">
-      The working grounds of the monastery —<br />
-      led with diligence by the Sisters who manage the snail farm.
-    </p>
+    <p class="tagline">The working grounds of the monastery —<br />led with diligence by the Sisters who manage the snail farm.</p>
   </header>
 
   <main class="container">
 
-    <!-- ==================== THE SISTERS WHO LEAD ==================== -->
     <section>
       <h2 class="section-title"><i class="fas fa-dove"></i> The Sisters Who Lead</h2>
-      <p class="section-subtitle">
-        Direct oversight, monastic discipline, and a steady hand — the Sisters entrusted with the daily management of the snail farm.
-      </p>
+      <p class="section-subtitle">Direct oversight, monastic discipline, and a steady hand — the Sisters entrusted with the daily management of the snail farm.</p>
 
-      <!-- Portraits -->
       <div class="sisters-combined" data-lightbox-gallery>
-
-        <figure class="portrait-card">
-          <a href="beautiful sisters1.jpg" data-lightbox="sisters">
-            <img src="beautiful sisters1.jpg" alt="The Sisters managing the snail farm" loading="lazy" />
-          </a>
-          <figcaption><i class="fas fa-dove"></i> On-site · Leading the work</figcaption>
-        </figure>
-
-        <figure class="portrait-card">
-          <a href="beautiful sisters2.jpg" data-lightbox="sisters">
-            <img src="beautiful sisters2.jpg" alt="The Sisters overseeing the snail farm" loading="lazy" />
-          </a>
-          <figcaption><i class="fas fa-leaf"></i> Direct oversight · Daily operations</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity11.jpg" data-lightbox="sisters">
-            <img src="activity11.jpg" alt="Morning work" loading="lazy" />
-          </a>
-          <figcaption>Morning Work</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity12.jpg" data-lightbox="sisters">
-            <img src="activity12.jpg" alt="In the sanctuary" loading="lazy" />
-          </a>
-          <figcaption>In the Sanctuary</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity13.jpg" data-lightbox="sisters">
-            <img src="activity13.jpg" alt="Careful hands" loading="lazy" />
-          </a>
-          <figcaption>Careful Hands</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity14.jpg" data-lightbox="sisters">
-            <img src="activity14.jpg" alt="Daily labour" loading="lazy" />
-          </a>
-          <figcaption>Daily Labour</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity16.jpg" data-lightbox="sisters">
-            <img src="activity16.jpg" alt="Tending the gift" loading="lazy" />
-          </a>
-          <figcaption>Tending the Gift</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity17.jpg" data-lightbox="sisters">
-            <img src="activity17.jpg" alt="Evening stillness" loading="lazy" />
-          </a>
-          <figcaption>Evening Stillness</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="activity18.jpg" data-lightbox="sisters">
-            <img src="activity18.jpg" alt="Grace in the ordinary" loading="lazy" />
-          </a>
-          <figcaption>Grace in the Ordinary</figcaption>
-        </figure>
-
+        <figure class="portrait-card"><a href="beautiful sisters1.jpg" data-lightbox="sisters"><img src="beautiful sisters1.jpg" alt="The Sisters managing the snail farm" loading="lazy" /></a><figcaption><i class="fas fa-dove"></i> On-site · Leading the work</figcaption></figure>
+        <figure class="portrait-card"><a href="beautiful sisters2.jpg" data-lightbox="sisters"><img src="beautiful sisters2.jpg" alt="The Sisters overseeing the snail farm" loading="lazy" /></a><figcaption><i class="fas fa-leaf"></i> Direct oversight · Daily operations</figcaption></figure>
+        <figure class="activity-card"><a href="activity11.jpg" data-lightbox="sisters"><img src="activity11.jpg" alt="Morning work" loading="lazy" /></a><figcaption>Morning Work</figcaption></figure>
+        <figure class="activity-card"><a href="activity12.jpg" data-lightbox="sisters"><img src="activity12.jpg" alt="In the sanctuary" loading="lazy" /></a><figcaption>In the Sanctuary</figcaption></figure>
+        <figure class="activity-card"><a href="activity13.jpg" data-lightbox="sisters"><img src="activity13.jpg" alt="Careful hands" loading="lazy" /></a><figcaption>Careful Hands</figcaption></figure>
+        <figure class="activity-card"><a href="activity14.jpg" data-lightbox="sisters"><img src="activity14.jpg" alt="Daily labour" loading="lazy" /></a><figcaption>Daily Labour</figcaption></figure>
+        <figure class="activity-card"><a href="activity16.jpg" data-lightbox="sisters"><img src="activity16.jpg" alt="Tending the gift" loading="lazy" /></a><figcaption>Tending the Gift</figcaption></figure>
+        <figure class="activity-card"><a href="activity17.jpg" data-lightbox="sisters"><img src="activity17.jpg" alt="Evening stillness" loading="lazy" /></a><figcaption>Evening Stillness</figcaption></figure>
+        <figure class="activity-card"><a href="activity18.jpg" data-lightbox="sisters"><img src="activity18.jpg" alt="Grace in the ordinary" loading="lazy" /></a><figcaption>Grace in the Ordinary</figcaption></figure>
       </div>
 
-      <!-- NEW: Sisters at Work sub-section -->
-      <h3 class="sub-heading" style="margin-top: 2rem;">
-        <i class="fas fa-hands"></i> Sisters at Work · Joy in Service
-      </h3>
+      <h3 class="sub-heading" style="margin-top: 2rem;"><i class="fas fa-hands"></i> Sisters at Work · Joy in Service</h3>
 
       <div class="sisters-combined" data-lightbox-gallery>
-
-        <figure class="activity-card">
-          <a href="sisterswork1.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork1.jpg" alt="A Sister smiling in joyful service at the snail farm" loading="lazy" />
-          </a>
-          <figcaption>Joy in the Work</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork2.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork2.jpg" alt="A Sister observing closely in the snail farm" loading="lazy" />
-          </a>
-          <figcaption>Attentive Observation</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork3.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork3.jpg" alt="A Sister smiling warmly at the camera in the snail farm" loading="lazy" />
-          </a>
-          <figcaption>Serenity of Service</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork4.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork4.jpg" alt="A Sister smiling mid-service — joy in abundance" loading="lazy" />
-          </a>
-          <figcaption>Joy in Abundance</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork5.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork5.jpg" alt="A Sister posing to the camera — joy in service" loading="lazy" />
-          </a>
-          <figcaption>Joy in Service</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork6.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork6.jpg" alt="A Sister presenting healthy snails to the camera with a loving smile" loading="lazy" />
-          </a>
-          <figcaption>Presenting the Harvest</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork7.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork7.jpg" alt="A Sister presenting premium snails ready for picking" loading="lazy" />
-          </a>
-          <figcaption>Ready for Picking</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork8.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork8.jpg" alt="A Sister inspecting an implement for perfect precision" loading="lazy" />
-          </a>
-          <figcaption>Precision in Every Detail</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork9.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork9.jpg" alt="A Sister inspecting the snail farm — no room for error" loading="lazy" />
-          </a>
-          <figcaption>No Room for Error</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="sisterswork10.jpg" data-lightbox="sisters-work">
-            <img src="sisterswork10.jpg" alt="A Sister observing that everything is as it should be" loading="lazy" />
-          </a>
-          <figcaption>Everything in Order</figcaption>
-        </figure>
-
+        <figure class="activity-card"><a href="sisterswork1.jpg" data-lightbox="sisters-work"><img src="sisterswork1.jpg" alt="A Sister smiling in joyful service at the snail farm" loading="lazy" /></a><figcaption>Joy in the Work</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork2.jpg" data-lightbox="sisters-work"><img src="sisterswork2.jpg" alt="A Sister observing closely in the snail farm" loading="lazy" /></a><figcaption>Attentive Observation</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork3.jpg" data-lightbox="sisters-work"><img src="sisterswork3.jpg" alt="A Sister smiling warmly at the camera in the snail farm" loading="lazy" /></a><figcaption>Serenity of Service</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork4.jpg" data-lightbox="sisters-work"><img src="sisterswork4.jpg" alt="A Sister smiling mid-service — joy in abundance" loading="lazy" /></a><figcaption>Joy in Abundance</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork5.jpg" data-lightbox="sisters-work"><img src="sisterswork5.jpg" alt="A Sister posing to the camera — joy in service" loading="lazy" /></a><figcaption>Joy in Service</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork6.jpg" data-lightbox="sisters-work"><img src="sisterswork6.jpg" alt="A Sister presenting healthy snails to the camera with a loving smile" loading="lazy" /></a><figcaption>Presenting the Harvest</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork7.jpg" data-lightbox="sisters-work"><img src="sisterswork7.jpg" alt="A Sister presenting premium snails ready for picking" loading="lazy" /></a><figcaption>Ready for Picking</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork8.jpg" data-lightbox="sisters-work"><img src="sisterswork8.jpg" alt="A Sister inspecting an implement for perfect precision" loading="lazy" /></a><figcaption>Precision in Every Detail</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork9.jpg" data-lightbox="sisters-work"><img src="sisterswork9.jpg" alt="A Sister inspecting the snail farm — no room for error" loading="lazy" /></a><figcaption>No Room for Error</figcaption></figure>
+        <figure class="activity-card"><a href="sisterswork10.jpg" data-lightbox="sisters-work"><img src="sisterswork10.jpg" alt="A Sister observing that everything is as it should be" loading="lazy" /></a><figcaption>Everything in Order</figcaption></figure>
       </div>
 
       <div class="leadership-note">
         <div class="note-icon"><i class="fas fa-award"></i></div>
         <h2>Trusted Management</h2>
-        <p>
-          The Sisters pictured above are the entrusted managers of St. Clare Monastery Heliciculture.
-          They oversee every stage of the operation — feeding, breeding, harvesting, and packaging —
-          with the same discipline and reverence that defines monastic life.
-          Their direct involvement ensures consistent quality, ethical handling, and reliable delivery on every order.
-        </p>
+        <p>The Sisters pictured above are the entrusted managers of St. Clare Monastery Heliciculture. They oversee every stage of the operation — feeding, breeding, harvesting, and packaging — with the same discipline and reverence that defines monastic life. Their direct involvement ensures consistent quality, ethical handling, and reliable delivery on every order.</p>
       </div>
     </section>
 
-    <!-- ==================== THE WORKING GROUNDS ==================== -->
     <section style="margin-top: 3.5rem;">
       <h2 class="section-title"><i class="fas fa-images"></i> The Working Grounds</h2>
-      <p class="section-subtitle">
-        Tap any image to open the viewer — then use the arrows or your keyboard to move between photos.
-      </p>
-
+      <p class="section-subtitle">Tap any image to open the viewer — then use the arrows or your keyboard to move between photos.</p>
       <div class="activity-gallery" data-lightbox-gallery>
-
-        <figure class="activity-card">
-          <a href="surrounding1.jpg" data-lightbox="grounds">
-            <img src="surrounding1.jpg" alt="St. Clare Monastery work site" loading="lazy" />
-          </a>
-          <figcaption>The Monastery Work Site</figcaption>
-        </figure>
-
-        <figure class="activity-card">
-          <a href="surrounding2.jpg" data-lightbox="grounds">
-            <img src="surrounding2.jpg" alt="Peaceful environment around the monastery" loading="lazy" />
-          </a>
-          <figcaption>The Surrounding Environment</figcaption>
-        </figure>
-
+        <figure class="activity-card"><a href="surrounding1.jpg" data-lightbox="grounds"><img src="surrounding1.jpg" alt="St. Clare Monastery work site" loading="lazy" /></a><figcaption>The Monastery Work Site</figcaption></figure>
+        <figure class="activity-card"><a href="surrounding2.jpg" data-lightbox="grounds"><img src="surrounding2.jpg" alt="Peaceful environment around the monastery" loading="lazy" /></a><figcaption>The Surrounding Environment</figcaption></figure>
       </div>
     </section>
 
     <section class="about-closing" style="margin-top: 3rem;">
       <h2><i class="fas fa-arrow-left"></i> Back to Gallery Menu</h2>
       <p>Return to choose another gallery.</p>
-      <a href="gallery.html" class="jesuit-btn">
-        <i class="fas fa-images"></i> All Galleries
-      </a>
+      <a href="gallery.html" class="jesuit-btn"><i class="fas fa-images"></i> All Galleries</a>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="footer-brand"><i class="fas fa-church"></i> St. Clare Monastery Heliciculture</div>
     <p><i class="fas fa-dove"></i> Sustainable snail farming, rooted in faith and tradition. <i class="fas fa-leaf"></i></p>
     <p style="margin-top: 1.2rem;">
-  <a href="https://share.google/wUkG1nlkInnzcUFiG"
-     class="jesuit-btn"
-     target="_blank"
-     rel="noopener noreferrer"
-     style="font-size: 0.78rem; padding: 8px 18px;">
-    <i class="fab fa-google"></i> Find Us on Google
-  </a>
-</p>
-<p style="margin-top: 0.8rem; font-size: 0.85rem;">
-  &copy; <span id="year"></span> St. Clare Monastery Heliciculture
-</p>
+      <a href="https://st-clarecandle-altar-bread-ent.github.io/St.-Clare-Candle-and-Altar-Bread-Enterprise-/" class="jesuit-btn" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; padding: 8px 18px; margin-right: 0.5rem;"><i class="fas fa-candle-holder"></i> Candle &amp; Altar Bread</a>
+      <a href="https://share.google/wUkG1nlkInnzcUFiG" class="jesuit-btn" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; padding: 8px 18px;"><i class="fab fa-google"></i> Find Us on Google</a>
+    </p>
+    <p style="margin-top: 0.8rem; font-size: 0.85rem;">&copy; <span id="year"></span> St. Clare Monastery Heliciculture</p>
   </footer>
 
   <script src="script.js"></script>
