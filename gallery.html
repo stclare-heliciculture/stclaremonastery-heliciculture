@@ -4,9 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Choose what to view — product photos, the monastery site, or the peaceful surroundings of St. Clare Monastery Heliciculture." />
-  <meta name="keywords" content="monastery gallery, snail products, monastery site, monastery environs, Ijebu-Ode" />
   <meta name="author" content="St. Clare Monastery Heliciculture" />
   <title>Our Work / Gallery | St. Clare Monastery Heliciculture</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Our Work / Gallery — St. Clare Monastery Heliciculture",
+    "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/gallery.html",
+    "isPartOf": { "@type": "WebSite", "name": "St. Clare Monastery Heliciculture", "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/" }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,109 +24,16 @@
   <link rel="icon" type="image/png" href="st. clare monastery heliciculture.png" />
   <link rel="stylesheet" href="style.css" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Our Work / Gallery — St. Clare Monastery Heliciculture",
-    "description": "Choose from product photos, monastery site, and peaceful surroundings.",
-    "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/gallery.html",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "St. Clare Monastery Heliciculture",
-      "url": "https://stclare-heliciculture.github.io/stclaremonastery-heliciculture/"
-    }
-  }
-  </script>
-
   <style>
-    .choice-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto 3rem;
-    }
-
-    .choice-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 3rem 2rem;
-      background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
-      border: 1px solid var(--gold-core);
-      border-radius: 8px;
-      text-decoration: none;
-      color: var(--cream-bright);
-      box-shadow:
-        0 15px 30px rgba(0, 0, 0, 0.5),
-        inset 0 0 0 1px rgba(181, 139, 90, 0.2);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .choice-card:hover {
-      transform: translateY(-6px);
-      box-shadow:
-        0 25px 45px rgba(0, 0, 0, 0.6),
-        inset 0 0 0 1px var(--gold-blaze),
-        0 0 40px 8px rgba(255, 246, 226, 0.25);
-    }
-
-    .choice-card .choice-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #ffe9c4 0%, #b58b5a 70%);
-      color: var(--brown-void);
-      font-size: 2.4rem;
-      margin-bottom: 1.4rem;
-      box-shadow:
-        0 0 0 3px rgba(255, 233, 196, 0.25),
-        0 0 24px 4px rgba(255, 233, 196, 0.35);
-      transition: transform 0.4s ease;
-    }
-
-    .choice-card:hover .choice-icon {
-      transform: scale(1.08) rotate(-4deg);
-    }
-
-    .choice-card .choice-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      margin-bottom: 0.6rem;
-      color: var(--cream-bright);
-    }
-
-    .choice-card .choice-desc {
-      font-size: 1rem;
-      color: var(--cream-soft);
-      line-height: 1.6;
-      max-width: 260px;
-    }
-
-    .choice-card .choice-arrow {
-      margin-top: 1.4rem;
-      font-size: 0.85rem;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .choice-card:hover .choice-arrow {
-      color: var(--gold-blaze);
-    }
+    .choice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto 3rem; }
+    .choice-card { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3rem 2rem; background: linear-gradient(160deg, var(--brown-deep) 0%, var(--brown-mid) 100%); border: 1px solid var(--gold-core); border-radius: 8px; text-decoration: none; color: var(--cream-bright); box-shadow: 0 15px 30px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(181,139,90,0.2); transition: transform 0.35s ease, box-shadow 0.35s ease; position: relative; overflow: hidden; }
+    .choice-card:hover { transform: translateY(-6px); box-shadow: 0 25px 45px rgba(0,0,0,0.6), inset 0 0 0 1px var(--gold-blaze), 0 0 40px 8px rgba(255,246,226,0.25); }
+    .choice-card .choice-icon { display: inline-flex; align-items: center; justify-content: center; width: 90px; height: 90px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #ffe9c4 0%, #b58b5a 70%); color: var(--brown-void); font-size: 2.4rem; margin-bottom: 1.4rem; box-shadow: 0 0 0 3px rgba(255,233,196,0.25), 0 0 24px 4px rgba(255,233,196,0.35); transition: transform 0.4s ease; }
+    .choice-card:hover .choice-icon { transform: scale(1.08) rotate(-4deg); }
+    .choice-card .choice-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 0.6rem; color: var(--cream-bright); }
+    .choice-card .choice-desc { font-size: 1rem; color: var(--cream-soft); line-height: 1.6; max-width: 260px; }
+    .choice-card .choice-arrow { margin-top: 1.4rem; font-size: 0.85rem; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold-light); display: inline-flex; align-items: center; gap: 8px; }
+    .choice-card:hover .choice-arrow { color: var(--gold-blaze); }
   </style>
 </head>
 <body>
@@ -129,11 +45,7 @@
   </div>
 
   <nav class="jesuit-nav" aria-label="Primary navigation">
-
-    <a href="index.html" class="nav-logo-badge" aria-label="St. Clare Monastery — Home">
-      <img src="st. clare monastery heliciculture.png" alt="St. Clare Monastery Logo" />
-    </a>
-
+    <a href="index.html" class="nav-logo-badge" aria-label="Home"><img src="st. clare monastery heliciculture.png" alt="St. Clare Monastery Logo" /></a>
     <div class="nav-links">
       <a href="index.html" class="jesuit-btn">Home</a>
       <a href="about.html" class="jesuit-btn">Our Story</a>
@@ -141,106 +53,60 @@
       <a href="sanctuary.html" class="jesuit-btn">Our Sanctuary</a>
       <a href="benefits.html" class="jesuit-btn">Benefits</a>
       <a href="index.html#contact" class="jesuit-btn">Contact</a>
-      <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
-         class="jesuit-btn jesuit-btn-primary"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> Order
-      </a>
+      <a href="https://st-clarecandle-altar-bread-ent.github.io/St.-Clare-Candle-and-Altar-Bread-Enterprise-/" class="jesuit-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-candle-holder"></i> Candle &amp; Altar Bread</a>
+      <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order." class="jesuit-btn jesuit-btn-primary" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Order</a>
     </div>
-
   </nav>
 
   <header class="hero" style="padding: 3rem 2rem 3.5rem;">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: 2px; color: var(--cream-bright); text-shadow: 0 0 25px rgba(255, 253, 248, 0.5), 3px 3px 0 rgba(0,0,0,0.5); margin-bottom: 0.6rem;">
-      <i class="fas fa-images" style="color: var(--gold-pale); margin-right: 12px; filter: drop-shadow(0 0 12px rgba(255,253,248,0.8));"></i>
-      Our Work / Gallery
+      <i class="fas fa-images" style="color: var(--gold-pale); margin-right: 12px; filter: drop-shadow(0 0 12px rgba(255,253,248,0.8));"></i> Our Work / Gallery
     </h1>
-
-    <div class="hero-divider">
-      <span class="line"></span>
-      <i class="fas fa-leaf"></i>
-      <span class="line"></span>
-    </div>
-
-    <p class="tagline">
-      Choose what you would like to see —<br />
-      the products, the site, or the surroundings.
-    </p>
+    <div class="hero-divider"><span class="line"></span><i class="fas fa-leaf"></i><span class="line"></span></div>
+    <p class="tagline">Choose what you would like to see —<br />the products, the site, or the surroundings.</p>
   </header>
 
   <main class="container">
-
     <section>
       <h2 class="section-title"><i class="fas fa-compass"></i> Choose a Gallery</h2>
-      <p class="section-subtitle">
-        Please tap on any of the options below to view the collection.
-      </p>
-
+      <p class="section-subtitle">Tap any option below to view the collection.</p>
       <div class="choice-grid">
-
         <a href="products.html" class="choice-card">
           <span class="choice-icon"><i class="fas fa-dove"></i></span>
           <span class="choice-title">Products</span>
           <span class="choice-desc">Live and frozen snails — our premium offerings, ready for order.</span>
           <span class="choice-arrow">View Gallery <i class="fas fa-arrow-right"></i></span>
         </a>
-
         <a href="site.html" class="choice-card">
-        <a href="site.html" class="choice-card">
-  <span class="choice-icon"><i class="fas fa-church"></i></span>
-  <span class="choice-title">Work Site / Monastery Site</span>
-  <span class="choice-desc">The working grounds of the monastery — led by the Sisters who manage the snail farm.</span>
-  <span class="choice-arrow">View Gallery <i class="fas fa-arrow-right"></i></span>
+          <span class="choice-icon"><i class="fas fa-church"></i></span>
+          <span class="choice-title">Work Site / Monastery Site</span>
+          <span class="choice-desc">The working grounds of the monastery — led by the Sisters who manage the snail farm.</span>
+          <span class="choice-arrow">View Gallery <i class="fas fa-arrow-right"></i></span>
         </a>
-
         <a href="environs.html" class="choice-card">
           <span class="choice-icon"><i class="fas fa-tree"></i></span>
           <span class="choice-title">The Environs</span>
           <span class="choice-desc">The peaceful environment that surrounds our monastery.</span>
           <span class="choice-arrow">View Gallery <i class="fas fa-arrow-right"></i></span>
         </a>
-
       </div>
     </section>
 
     <section class="about-closing" style="margin-top: 3rem;">
       <h2><i class="fas fa-pray"></i> Ready to order?</h2>
-      <p>
-        Message us on WhatsApp with your quantity and location — we deliver across Nigeria.
-      </p>
-
-      <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order."
-         class="jesuit-btn jesuit-btn-primary"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> Order on WhatsApp
-      </a>
+      <p>Message us on WhatsApp with your quantity and location — we deliver across Nigeria.</p>
+      <a href="https://wa.me/2347043021005?text=Hello%20St.%20Clare%20Monastery%2C%20I%20would%20like%20to%20order." class="jesuit-btn jesuit-btn-primary" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
     </section>
-
   </main>
 
   <footer class="footer">
-    <div class="footer-brand">
-      <i class="fas fa-church"></i> St. Clare Monastery Heliciculture
-    </div>
-    <p>
-      <i class="fas fa-dove"></i>
-      Sustainable snail farming, rooted in faith and tradition.
-      <i class="fas fa-leaf"></i>
-    </p>
+    <div class="footer-brand"><i class="fas fa-church"></i> St. Clare Monastery Heliciculture</div>
+    <p><i class="fas fa-dove"></i> Sustainable snail farming, rooted in faith and tradition. <i class="fas fa-leaf"></i></p>
     <p style="margin-top: 1.2rem;">
-  <a href="https://share.google/wUkG1nlkInnzcUFiG"
-     class="jesuit-btn"
-     target="_blank"
-     rel="noopener noreferrer"
-     style="font-size: 0.78rem; padding: 8px 18px;">
-    <i class="fab fa-google"></i> Find Us on Google
-  </a>
-</p>
-<p style="margin-top: 0.8rem; font-size: 0.85rem;">
-  &copy; <span id="year"></span> St. Clare Monastery Heliciculture
-</p>
+      <a href="https://st-clarecandle-altar-bread-ent.github.io/St.-Clare-Candle-and-Altar-Bread-Enterprise-/" class="jesuit-btn" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; padding: 8px 18px; margin-right: 0.5rem;"><i class="fas fa-candle-holder"></i> Candle &amp; Altar Bread</a>
+      <a href="https://share.google/wUkG1nlkInnzcUFiG" class="jesuit-btn" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; padding: 8px 18px;"><i class="fab fa-google"></i> Find Us on Google</a>
+    </p>
+    <p style="margin-top: 0.8rem; font-size: 0.85rem;">&copy; <span id="year"></span> St. Clare Monastery Heliciculture · Ikoto, Ijebu-Ode, Ogun State, Nigeria</p>
   </footer>
 
   <script src="script.js"></script>
